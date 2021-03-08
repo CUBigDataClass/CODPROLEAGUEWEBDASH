@@ -1,2 +1,25 @@
 /trip-planner/node_modules
 /trip-planner/client/node_modules
+
+# dependencies
+
+/trip-planner/client/.pnp
+/trip-planner/client/.pnp.js
+
+# testing
+/trip-planner/client/coverage
+
+# production
+/trip-planner/client/build
+
+# misc
+/trip-planner/client/.DS_Store
+/trip-planner/client/.env.local
+/trip-planner/client/.env.development.local
+/trip-planner/client/.env.test.local
+/trip-planner/client/.env.production.local
+
+/trip-planner/client/npm-debug.log*
+/trip-planner/client/yarn-debug.log*
+/trip-planner/client/yarn-error.log*
+
