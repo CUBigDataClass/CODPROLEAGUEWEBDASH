@@ -1,6 +1,6 @@
-/trip-planner/node_modules
-/trip-planner/client/node_modules
-/trip-planner/.env
+trip-planner/node_modules
+trip-planner/client/node_modules
+trip-planner/.env
 
 # dependencies
 
