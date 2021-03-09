@@ -63,7 +63,7 @@ function weathercron() {
             qs: {
                 q: 'Moscow',
                 type: 'hour',
-                APPID: '90e950aff470e5f4460878176ab198f3'
+                APPID: process.env.WEATHER_API_KEY //'90e950aff470e5f4460878176ab198f3'
             }
         };
     
