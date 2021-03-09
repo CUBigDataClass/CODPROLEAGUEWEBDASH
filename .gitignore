@@ -1,5 +1,6 @@
 trip-planner/node_modules
 trip-planner/client/node_modules
+trip-planner/scripts/lambda/node_modules
 trip-planner/.env
 
 # dependencies

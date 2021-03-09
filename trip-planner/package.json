@@ -9,11 +9,15 @@
   "dependencies": {
     "@elastic/elasticsearch": "^7.11.0",
     "aws-elasticsearch-connector": "^9.0.3",
-    "aws-sdk": "^2.858.0",
+    "aws-sdk": "^2.859.0",
+    "aws-xray-sdk": "^3.2.0",
+    "aws4": "^1.11.0",
     "body-parser": "^1.18.3",
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
     "node-cron": "^2.0.3",
-    "react-bootstrap": "^1.5.1"
+    "react-bootstrap": "^1.5.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"
