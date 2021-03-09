@@ -13,4 +13,6 @@ app.use('/api', require('./routes/api'));
 // refresh data in S3 bucket
 cronJob.yelpcron();
 
+cronJob.weathercron();
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
