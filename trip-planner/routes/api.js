@@ -12,7 +12,7 @@ router.post('/world', (req, res) => {
         `I received your POST request. This is what you sent me: ${req.body.post}`,
     );
 });
-
+//TEST YELP
 router.get('/yelp', (req, res) => {
     const options = {
         method: 'GET',
@@ -31,6 +31,26 @@ router.get('/yelp', (req, res) => {
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
 
+        console.log(body);
+        // res.render(path.join(__dirname, '../client/index.ejs'), {res_arr: res_arr});
+    });
+});
+
+//TEST WEATHER
+router.get('/weather', (req, res) => {
+    const options = {
+        method: 'GET',
+        url: 'http://api.openweathermap.org/data/2.5/weather',
+        qs: {
+            q: 'Moscow',
+            type: 'hour',
+            APPID: '90e950aff470e5f4460878176ab198f3'
+        }
+    };
+
+    // send request to API
+    request(options, function (error, response, body) {
+        if (error) throw new Error(error);
         console.log(body);
         // res.render(path.join(__dirname, '../client/index.ejs'), {res_arr: res_arr});
     });
