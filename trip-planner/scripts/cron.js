@@ -42,6 +42,7 @@ function yelpcron() {
             };
         
             // Uploading files to the bucket
+            
             s3.upload(params, function(err, data) {
                 if (err) {
                     throw err;
@@ -63,7 +64,7 @@ function weathercron() {
             qs: {
                 q: 'Moscow',
                 type: 'hour',
-                APPID: process.env.WEATHER_API_KEY //'90e950aff470e5f4460878176ab198f3'
+                APPID: process.env.WEATHER_API_KEY 
             }
         };
     
