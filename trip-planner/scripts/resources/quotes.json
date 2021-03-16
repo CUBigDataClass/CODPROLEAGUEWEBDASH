@@ -1,0 +1,580 @@
+[
+  {
+    "QuoteId": 1,
+    "MinPrice": 98,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        851
+      ],
+      "OriginId": 60987,
+      "DestinationId": 65368,
+      "DepartureDate": "2021-03-30T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T18:49:00",
+    "Carrier": "Alaska Airlines",
+    "OriginCity": "New York",
+    "DestinationCity": "Los Angeles"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 108,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 73076,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T16:16:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Chicago"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 154,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 67815,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T18:38:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Chicago"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 109,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 58440,
+      "DepartureDate": "2021-03-30T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T18:53:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Houston",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 155,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 56821,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T00:24:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Houston",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 103,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 74920,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T15:43:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Phoenix"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 97,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 74908,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T19:38:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Philadelphia"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 142,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 81486,
+      "DepartureDate": "2021-03-31T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-15T20:34:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "San Diego"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 88,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 47175,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T20:37:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Dallas",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 146,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        851
+      ],
+      "OriginId": 60987,
+      "DestinationId": 46924,
+      "DepartureDate": "2021-03-31T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T14:12:00",
+    "Carrier": "Alaska Airlines",
+    "OriginCity": "Dallas",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 112,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 40979,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-13T05:36:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Austin",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 104,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 81907,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T16:49:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "San Jose"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 88,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 47175,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T20:37:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Dallas",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 100,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 45156,
+      "DepartureDate": "2021-03-28T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-14T23:37:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Charlotte",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 98,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        851
+      ],
+      "OriginId": 60987,
+      "DestinationId": 81727,
+      "DepartureDate": "2021-03-31T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T01:51:00",
+    "Carrier": "Alaska Airlines",
+    "OriginCity": "New York",
+    "DestinationCity": "San Francisco"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 131,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 81665,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-15T23:20:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Seattle"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 77,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 47118,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-15T22:38:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Denver",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 114,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 58436,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-15T22:40:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Washington",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 115,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 47009,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-15T22:40:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Washington",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 112,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        1467
+      ],
+      "OriginId": 60987,
+      "DestinationId": 43369,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-15T22:40:00",
+    "Carrier": "Spirit Airlines",
+    "OriginCity": "Washington",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 131,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 81665,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-15T23:20:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Seattle"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 69,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 42995,
+      "DepartureDate": "2021-03-23T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-14T07:11:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Boston",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 113,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 42929,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-14T08:43:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Nashville",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 106,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        1065
+      ],
+      "OriginId": 60987,
+      "DestinationId": 65363,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T00:02:00",
+    "Carrier": "Frontier Airlines",
+    "OriginCity": "New York",
+    "DestinationCity": "Las Vegas"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 138,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 74728,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-15T14:51:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Portland"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 77,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 40924,
+      "DepartureDate": "2021-03-23T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T19:03:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "Atlanta",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 112,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        1065
+      ],
+      "OriginId": 60987,
+      "DestinationId": 79333,
+      "DepartureDate": "2021-03-17T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-13T14:48:00",
+    "Carrier": "Frontier Airlines",
+    "OriginCity": "New York",
+    "DestinationCity": "Durham"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 59,
+    "Direct": true,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 68033,
+      "DepartureDate": "2021-03-22T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T20:53:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Miami"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 126,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 68528,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T18:43:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Minneapolis"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 120,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 84497,
+      "DepartureDate": "2021-03-31T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T20:58:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Tampa"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 107,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 68537,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T15:47:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "New Orleans"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 367,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        1169
+      ],
+      "OriginId": 60987,
+      "DestinationId": 56764,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T05:29:00",
+    "Carrier": "Hawaiian Airlines",
+    "OriginCity": "Honolulu",
+    "DestinationCity": "New York"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 110,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 82396,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-16T06:15:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "St Louis"
+  },
+  {
+    "QuoteId": 1,
+    "MinPrice": 81,
+    "Direct": false,
+    "OutboundLeg": {
+      "CarrierIds": [
+        870
+      ],
+      "OriginId": 60987,
+      "DestinationId": 67759,
+      "DepartureDate": "2021-03-29T00:00:00"
+    },
+    "QuoteDateTime": "2021-03-14T21:21:00",
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "DestinationCity": "Orlando"
+  }
+]
