@@ -1,0 +1,298 @@
+[
+  {
+    "PlaceId": "JFK-sky",
+    "PlaceName": "New York John F. Kennedy",
+    "CountryId": "US-sky",
+    "RegionId": "NY",
+    "CityId": "NYCA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "EWR-sky",
+    "PlaceName": "New York Newark",
+    "CountryId": "US-sky",
+    "RegionId": "NJ",
+    "CityId": "NYCA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "LGA-sky",
+    "PlaceName": "New York LaGuardia",
+    "CountryId": "US-sky",
+    "RegionId": "NY",
+    "CityId": "NYCA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "LAX-sky",
+    "PlaceName": "Los Angeles International",
+    "CountryId": "US-sky",
+    "RegionId": "CA",
+    "CityId": "LAXA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "ORD-sky",
+    "PlaceName": "Chicago O'Hare International",
+    "CountryId": "US-sky",
+    "RegionId": "IL",
+    "CityId": "CHIA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "MDW-sky",
+    "PlaceName": "Chicago Midway",
+    "CountryId": "US-sky",
+    "RegionId": "IL",
+    "CityId": "CHIA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "IAH-sky",
+    "PlaceName": "Houston George Bush Intercntl.",
+    "CountryId": "US-sky",
+    "RegionId": "TX",
+    "CityId": "HOUA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "HOU-sky",
+    "PlaceName": "Houston Hobby",
+    "CountryId": "US-sky",
+    "RegionId": "TX",
+    "CityId": "HOUA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "PHX-sky",
+    "PlaceName": "Phoenix Sky Harbor",
+    "CountryId": "US-sky",
+    "RegionId": "AZ",
+    "CityId": "PHXA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "PHL-sky",
+    "PlaceName": "Philadelphia International",
+    "CountryId": "US-sky",
+    "RegionId": "PA",
+    "CityId": "PHLA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "SAN-sky",
+    "PlaceName": "San Diego International",
+    "CountryId": "US-sky",
+    "RegionId": "CA",
+    "CityId": "SANA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "DFW-sky",
+    "PlaceName": "Dallas Fort Worth International",
+    "CountryId": "US-sky",
+    "RegionId": "TX",
+    "CityId": "DFWA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "DAL-sky",
+    "PlaceName": "Dallas Love Field",
+    "CountryId": "US-sky",
+    "RegionId": "TX",
+    "CityId": "DFWA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "AUS-sky",
+    "PlaceName": "Austin-Bergstrom",
+    "CountryId": "US-sky",
+    "RegionId": "TX",
+    "CityId": "AUSA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "SJC-sky",
+    "PlaceName": "San Jose International",
+    "CountryId": "US-sky",
+    "RegionId": "CA",
+    "CityId": "SJCA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "DFW-sky",
+    "PlaceName": "Dallas Fort Worth International",
+    "CountryId": "US-sky",
+    "RegionId": "TX",
+    "CityId": "DFWA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "CLT-sky",
+    "PlaceName": "Charlotte Douglas",
+    "CountryId": "US-sky",
+    "RegionId": "NC",
+    "CityId": "CLTA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "SFO-sky",
+    "PlaceName": "San Francisco International",
+    "CountryId": "US-sky",
+    "RegionId": "CA",
+    "CityId": "SFOA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "SEA-sky",
+    "PlaceName": "Seattle / Tacoma International",
+    "CountryId": "US-sky",
+    "RegionId": "WA",
+    "CityId": "SEAA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "DEN-sky",
+    "PlaceName": "Denver International",
+    "CountryId": "US-sky",
+    "RegionId": "CO",
+    "CityId": "DENA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "IAD-sky",
+    "PlaceName": "Washington Dulles",
+    "CountryId": "US-sky",
+    "RegionId": "VA",
+    "CityId": "WASA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "DCA-sky",
+    "PlaceName": "Washington Ronald Reagan",
+    "CountryId": "US-sky",
+    "RegionId": "VA",
+    "CityId": "WASA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "BWI-sky",
+    "PlaceName": "Baltimore Washington International",
+    "CountryId": "US-sky",
+    "RegionId": "MD",
+    "CityId": "WASA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "SEA-sky",
+    "PlaceName": "Seattle / Tacoma International",
+    "CountryId": "US-sky",
+    "RegionId": "WA",
+    "CityId": "SEAA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "BOS-sky",
+    "PlaceName": "Boston Logan International",
+    "CountryId": "US-sky",
+    "RegionId": "MA",
+    "CityId": "BOSA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "BNA-sky",
+    "PlaceName": "Nashville",
+    "CountryId": "US-sky",
+    "RegionId": "TN",
+    "CityId": "BNAA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "LAS-sky",
+    "PlaceName": "Las Vegas Mccarran",
+    "CountryId": "US-sky",
+    "RegionId": "NV",
+    "CityId": "LASA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "PDX-sky",
+    "PlaceName": "Portland",
+    "CountryId": "US-sky",
+    "RegionId": "OR",
+    "CityId": "PDXA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "ATL-sky",
+    "PlaceName": "Atlanta Hartsfield-Jackson",
+    "CountryId": "US-sky",
+    "RegionId": "GA",
+    "CityId": "ATLA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "RDU-sky",
+    "PlaceName": "Raleigh / Durham",
+    "CountryId": "US-sky",
+    "RegionId": "NC",
+    "CityId": "RDUA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "MIA-sky",
+    "PlaceName": "Miami International",
+    "CountryId": "US-sky",
+    "RegionId": "FL",
+    "CityId": "MIAA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "MSP-sky",
+    "PlaceName": "Minneapolis St Paul",
+    "CountryId": "US-sky",
+    "RegionId": "MN",
+    "CityId": "MSPA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "TPA-sky",
+    "PlaceName": "Tampa International",
+    "CountryId": "US-sky",
+    "RegionId": "FL",
+    "CityId": "TPAA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "MSY-sky",
+    "PlaceName": "New Orleans Louis Armstrong",
+    "CountryId": "US-sky",
+    "RegionId": "LA",
+    "CityId": "MSYA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "HNL-sky",
+    "PlaceName": "Honolulu International",
+    "CountryId": "US-sky",
+    "RegionId": "HI",
+    "CityId": "HNLA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "STL-sky",
+    "PlaceName": "St Louis",
+    "CountryId": "US-sky",
+    "RegionId": "MO",
+    "CityId": "STLA-sky",
+    "CountryName": "United States"
+  },
+  {
+    "PlaceId": "MCO-sky",
+    "PlaceName": "Orlando International",
+    "CountryId": "US-sky",
+    "RegionId": "FL",
+    "CityId": "ORLB-sky",
+    "CountryName": "United States"
+  }
+]

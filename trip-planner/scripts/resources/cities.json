@@ -1,0 +1,371 @@
+[
+  {
+    "rank": 1,
+    "name": "New York City",
+    "usps": "NY",
+    "pop2021": 8230290,
+    "pop2010": 8190210,
+    "density": "10579.0101",
+    "aland": 777983000
+  },
+  {
+    "rank": 2,
+    "name": "Los Angeles",
+    "usps": "CA",
+    "pop2021": 3983540,
+    "pop2010": 3795510,
+    "density": "3279.7405",
+    "aland": 1214590000
+  },
+  {
+    "rank": 3,
+    "name": "Chicago",
+    "usps": "IL",
+    "pop2021": 2679080,
+    "pop2010": 2697480,
+    "density": "4549.4344",
+    "aland": 588882000
+  },
+  {
+    "rank": 4,
+    "name": "Houston",
+    "usps": "TX",
+    "pop2021": 2323660,
+    "pop2010": 2100280,
+    "density": "1401.4076",
+    "aland": 1658090000
+  },
+  {
+    "rank": 5,
+    "name": "Phoenix",
+    "usps": "AZ",
+    "pop2021": 1733630,
+    "pop2010": 1449040,
+    "density": "1293.0107",
+    "aland": 1340770000
+  },
+  {
+    "rank": 6,
+    "name": "Philadelphia",
+    "usps": "PA",
+    "pop2021": 1585010,
+    "pop2010": 1528280,
+    "density": "4557.4814",
+    "aland": 347782000
+  },
+  {
+    "rank": 8,
+    "name": "San Diego",
+    "usps": "CA",
+    "pop2021": 1427720,
+    "pop2010": 1305910,
+    "density": "1691.5753",
+    "aland": 844018000
+  },
+  {
+    "rank": 9,
+    "name": "Dallas",
+    "usps": "TX",
+    "pop2021": 1347120,
+    "pop2010": 1200350,
+    "density": "1530.9730",
+    "aland": 879911000
+  },
+  {
+    "rank": 10,
+    "name": "Austin",
+    "usps": "TX",
+    "pop2021": 1011790,
+    "pop2010": 806164,
+    "density": "1221.0278",
+    "aland": 828638000
+  },
+  {
+    "rank": 11,
+    "name": "San Jose",
+    "usps": "CA",
+    "pop2021": 1009340,
+    "pop2010": 954940,
+    "density": "2191.7350",
+    "aland": 460521000
+  },
+  {
+    "rank": 12,
+    "name": "Fort Worth",
+    "usps": "TX",
+    "pop2021": 942323,
+    "pop2010": 748441,
+    "density": "1052.8055",
+    "aland": 895059000
+  },
+  {
+    "rank": 13,
+    "name": "Jacksonville",
+    "usps": "FL",
+    "pop2021": 929647,
+    "pop2010": 823114,
+    "density": "480.2069",
+    "aland": 1935930000
+  },
+  {
+    "rank": 15,
+    "name": "Charlotte",
+    "usps": "NC",
+    "pop2021": 912096,
+    "pop2010": 738444,
+    "density": "1146.2179",
+    "aland": 795744000
+  },
+  {
+    "rank": 17,
+    "name": "San Francisco",
+    "usps": "CA",
+    "pop2021": 883255,
+    "pop2010": 805505,
+    "density": "7270.9050",
+    "aland": 121478000
+  },
+  {
+    "rank": 18,
+    "name": "Seattle",
+    "usps": "WA",
+    "pop2021": 776555,
+    "pop2010": 610630,
+    "density": "3575.2828",
+    "aland": 217201000
+  },
+  {
+    "rank": 19,
+    "name": "Denver",
+    "usps": "CO",
+    "pop2021": 749103,
+    "pop2010": 603359,
+    "density": "1886.7905",
+    "aland": 397025000
+  },
+  {
+    "rank": 20,
+    "name": "Washington",
+    "usps": "DC",
+    "pop2021": 714153,
+    "pop2010": 605226,
+    "density": "4510.2501",
+    "aland": 158340000
+  },
+  {
+    "rank": 21,
+    "name": "Boston",
+    "usps": "MA",
+    "pop2021": 695506,
+    "pop2010": 621048,
+    "density": "5555.2929",
+    "aland": 125197000
+  },
+  {
+    "rank": 23,
+    "name": "Nashville",
+    "usps": "TN",
+    "pop2021": 678448,
+    "pop2010": 604589,
+    "density": "550.8448",
+    "aland": 1231650000
+  },
+  {
+    "rank": 25,
+    "name": "Las Vegas",
+    "usps": "NV",
+    "pop2021": 667501,
+    "pop2010": 584576,
+    "density": "1817.9370",
+    "aland": 367175000
+  },
+  {
+    "rank": 27,
+    "name": "Portland",
+    "usps": "OR",
+    "pop2021": 662549,
+    "pop2010": 585429,
+    "density": "1917.3308",
+    "aland": 345558000
+  },
+  {
+    "rank": 28,
+    "name": "Memphis",
+    "usps": "TN",
+    "pop2021": 651011,
+    "pop2010": 652326,
+    "density": "792.0324",
+    "aland": 821950000
+  },
+  {
+    "rank": 29,
+    "name": "Louisville",
+    "usps": "KY",
+    "pop2021": 615924,
+    "pop2010": 596482,
+    "density": "902.7292",
+    "aland": 682291000
+  },
+  {
+    "rank": 32,
+    "name": "Albuquerque",
+    "usps": "NM",
+    "pop2021": 562281,
+    "pop2010": 546755,
+    "density": "1159.6220",
+    "aland": 484883000
+  },
+  {
+    "rank": 37,
+    "name": "Atlanta",
+    "usps": "GA",
+    "pop2021": 524067,
+    "pop2010": 429410,
+    "density": "1490.7028",
+    "aland": 351557000
+  },
+  {
+    "rank": 38,
+    "name": "Kansas City",
+    "usps": "MO",
+    "pop2021": 501957,
+    "pop2010": 460697,
+    "density": "615.4820",
+    "aland": 815551000
+  },
+  {
+    "rank": 40,
+    "name": "Raleigh",
+    "usps": "NC",
+    "pop2021": 483579,
+    "pop2010": 406353,
+    "density": "1279.8377",
+    "aland": 377844000
+  },
+  {
+    "rank": 42,
+    "name": "Miami",
+    "usps": "FL",
+    "pop2021": 478251,
+    "pop2010": 400779,
+    "density": "5129.7698",
+    "aland": 93230500
+  },
+  {
+    "rank": 43,
+    "name": "Long Beach",
+    "usps": "CA",
+    "pop2021": 456154,
+    "pop2010": 462431,
+    "density": "3474.0826",
+    "aland": 131302000
+  },
+  {
+    "rank": 44,
+    "name": "Virginia Beach",
+    "usps": "VA",
+    "pop2021": 450224,
+    "pop2010": 438859,
+    "density": "710.3241",
+    "aland": 633829000
+  },
+  {
+    "rank": 45,
+    "name": "Oakland",
+    "usps": "CA",
+    "pop2021": 440981,
+    "pop2010": 391406,
+    "density": "3046.2273",
+    "aland": 144763000
+  },
+  {
+    "rank": 46,
+    "name": "Minneapolis",
+    "usps": "MN",
+    "pop2021": 439012,
+    "pop2010": 383067,
+    "density": "3138.9838",
+    "aland": 139858000
+  },
+  {
+    "rank": 47,
+    "name": "Tampa",
+    "usps": "FL",
+    "pop2021": 404636,
+    "pop2010": 337053,
+    "density": "1370.2447",
+    "aland": 295302000
+  },
+  {
+    "rank": 53,
+    "name": "New Orleans",
+    "usps": "LA",
+    "pop2021": 388424,
+    "pop2010": 347772,
+    "density": "885.1335",
+    "aland": 438831000
+  },
+  {
+    "rank": 54,
+    "name": "Cleveland",
+    "usps": "OH",
+    "pop2021": 376599,
+    "pop2010": 395926,
+    "density": "1871.5133",
+    "aland": 201227000
+  },
+  {
+    "rank": 57,
+    "name": "Honolulu",
+    "usps": "HI",
+    "pop2021": 341302,
+    "pop2010": 339121,
+    "density": "2176.5737",
+    "aland": 156807000
+  },
+  {
+    "rank": 60,
+    "name": "Corpus Christi",
+    "usps": "TX",
+    "pop2021": 327144,
+    "pop2010": 305272,
+    "density": "790.9098",
+    "aland": 413630000
+  },
+  {
+    "rank": 62,
+    "name": "San Juan",
+    "usps": "PR",
+    "pop2021": 323279,
+    "pop2010": 381931,
+    "density": "3157.2990",
+    "aland": 102391000
+  },
+  {
+    "rank": 67,
+    "name": "Pittsburgh",
+    "usps": "PA",
+    "pop2021": 299718,
+    "pop2010": 305283,
+    "density": "2089.7339",
+    "aland": 143424000
+  },
+  {
+    "rank": 69,
+    "name": "St. Louis",
+    "usps": "MO",
+    "pop2021": 294890,
+    "pop2010": 319336,
+    "density": "1844.0421",
+    "aland": 159915000
+  },
+  {
+    "rank": 71,
+    "name": "Orlando",
+    "usps": "FL",
+    "pop2021": 290520,
+    "pop2010": 239326,
+    "density": "1014.5768",
+    "aland": 286346000
+  }
+]
