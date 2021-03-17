@@ -170,7 +170,7 @@ function flightcron() {
                         res_arr.push(cheapest_quote);
                     });    
                     
-                    await new Promise(r => setTimeout(r, 1500)); // sleep 1.3 sec to avoid rate limit
+                    await new Promise(r => setTimeout(r, 1500)); // sleep 1.5 sec to avoid rate limit
                 }
                 break;
             }
