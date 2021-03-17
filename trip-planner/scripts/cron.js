@@ -54,6 +54,7 @@ function yelpcron() {
             };
         
             // Uploading files to the bucket
+            
             s3.upload(params, function(err, data) {
                 if (err) {
                     throw err;

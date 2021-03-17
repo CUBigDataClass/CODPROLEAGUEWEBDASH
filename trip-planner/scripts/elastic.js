@@ -14,6 +14,7 @@ var json = {
 
 indexDocument(json);
 
+<<<<<<< HEAD
 function indexDocument(document) {
     var endpoint = new AWS.Endpoint(domain);
     var request = new AWS.HttpRequest(endpoint, region);
