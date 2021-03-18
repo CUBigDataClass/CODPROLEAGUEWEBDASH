@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', require('./routes/api'));
 
 // refresh data in S3 bucket
-// cronJob.yelpcron();
-// cronJob.weathercron();
+cronJob.yelpcron();
+cronJob.weathercron();
 
 yelpPars.download();
 // yelpPars.parse();
