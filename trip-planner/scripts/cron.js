@@ -4,6 +4,8 @@ const AWS = require('aws-sdk');
 const fs = require('fs');
 const path = require('path');
 const airports = require('./resources/airports');
+const sts = require('./resources/states');
+const { STATUS_CODES } = require('http');
 require('dotenv').config();
 
 function addMonths(date, months) {
@@ -15,55 +17,104 @@ function addMonths(date, months) {
     return date;
 }
 
-function yelpcron() {
+
+async function yelpcron() {
     // const cron_qs = '0 0 0 15 * ?'; // fire 15th of every month
+
     const cron_qs = '0 * * * * *'; // fire once a min
     cron.schedule(cron_qs, function() {
         console.log('running a task every minute again');
-        const options = {
-            method: 'GET',
-            url: 'https://api.yelp.com/v3/businesses/search',
-            qs: {
-                location: 'Denver',
-                limit: '1',
-                sort_by: 'rating'
-            },
-            headers: {
-              'Authorization': 'Bearer ' + process.env.YELP_API_KEY
-            }
+
+        var responce_arr = []
+
+        for (const state of sts.AllStateCodes){
+            const states_origin = state
+            const options = {
+                method: 'GET',
+                url: 'https://api.yelp.com/v3/businesses/search',// + 'location=' + states_origin + 'limit=1',
+                qs: {
+                    location: states_origin,
+                    limit: '5',
+                    sort_by: 'rating'
+                },
+                headers: {
+                    'Authorization': 'Bearer ' + process.env.YELP_API_KEY
+                }
+            };
+
+                request(options, function(err, res, data) {
+                    if (err) throw new Error(err)
+                    
+                    else{
+                        var json_obj = JSON.parse(data);
+                        for (business of json_obj.businesses){
+
+                            delete (business.id)
+                            delete (business.alias)
+                            delete (business.image_url)
+                            delete (business.url)
+                            delete (business.is_closed)
+                            delete (business.review_count)
+                            delete (business.categories)
+                            delete (business.coordinates)
+                            delete (business.transactions)
+                            // delete (json_obj.businesses['0'].location.address1)
+                            // delete (json_obj.businesses['0'].location.address2)
+                            delete (business.location.address3)
+                            // delete (json_obj.businesses['0'].location.city)
+                            // delete (json_obj.businesses['0'].location.zip_code)
+                            // delete (json_obj.businesses['0'].location.country)
+                            delete (business.location.display_address)
+                            // delete (json_obj.businesses['0'].location.state)
+                            delete (business.display_phone)
+                            delete (business.distance)
+                            delete (business.total)
+                            delete (business.region)
+
+                            responce_arr.push(business)
+                        }
+                    }
+                });
+
+            await new Promise(r => setTimeout(r, 1500));   
+        }
+
+        // write to file add to s3 
+        if (responce_arr.length == 0) return;
+
+        const res_formatted = JSON.stringify(responce_arr,null,2);
+        console.log(res_formatted)
+        fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
+            if (err) throw err;
+            console.log("file success");
+        });
+
+        const s3 = new AWS.S3({
+            accessKeyId: process.env.AWS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET
+        });
+    
+        // Setting up S3 upload parameters
+        const params = {
+            Bucket: 'trip-plannerrr',
+            Key: 'yelp_api.json',
+            Body: res_formatted,
+            ContentType: 'application/json'
         };
     
-        // send request to API
-        request(options, function (error, response, body) {
-            if (error) throw new Error(error);
-            
-            console.log("HERE" + typeof(body));
-            console.log("!!!" + body);
-    
-            const s3 = new AWS.S3({
-                accessKeyId: process.env.AWS_KEY_ID,
-                secretAccessKey: process.env.AWS_SECRET
-            });
-        
-            // Setting up S3 upload parameters
-            const params = {
-                Bucket: 'trip-plannerrr',
-                Key: 'yelp_api.json',
-                Body: body,
-                ContentType: 'application/json'
-            };
-        
-            // Uploading files to the bucket
-            
-            s3.upload(params, function(err, data) {
-                if (err) {
-                    throw err;
-                }
-                console.log(`File uploaded successfully. ${data.Location}`);
-            });
+        // Uploading files to the bucket
+        s3.upload(params, function(err, data) {
+            if (err) {
+                throw err;
+            }
+            console.log(`File uploaded successfully. ${data.Location}`);
         });
+        
+        console.log("success");
     });
+
 }
+
 
 function weathercron() {
     const cron_qs = '0 * * * * *'; // fire once a min
@@ -212,4 +263,4 @@ function flightcron() {
     console.log("success");
 }
 
-module.exports = { yelpcron, weathercron, flightcron }
+module.exports  = { yelpcron, weathercron, flightcron }

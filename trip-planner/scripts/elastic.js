@@ -65,3 +65,6 @@ function indexDocument(document) {   // index yelp
         console.log('Error: ' + error);
     });
 }
+
+
+
