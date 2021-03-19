@@ -20,7 +20,7 @@ function indexFlightQuote(quote) {
     // Content-Length is only needed for DELETE requests that include a request
     // body, but including it for all requests doesn't seem to hurt anything.
     request.headers['Content-Length'] = Buffer.byteLength(request.body);
-    
+
     var credentials = new AWS.EnvironmentCredentials('AWS');
     credentials.accessKeyId = process.env.AWS_KEY_ID;
     credentials.secretAccessKey = process.env.AWS_SECRET;
