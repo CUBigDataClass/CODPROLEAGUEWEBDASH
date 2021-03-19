@@ -17,11 +17,16 @@ app.use('/api', require('./routes/api'));
 // cronJob.yelpcron();
 // cronJob.weathercron();
 // cronJob.flightcron();
+
 cronJob.yelpcron();
 // pullAirports.pull();
 
 
 // yelpPars.download();
+
+// pullAirports.pull();
+// yelpPars.download();
+// yelpPars.parse();
 
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

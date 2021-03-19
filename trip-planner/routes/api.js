@@ -1,5 +1,9 @@
 const router = require('express').Router();
 const request = require('request');
+const AWS = require('aws-sdk')
+const elasticsearch = require('elasticsearch')
+const connectionClass = require('http-aws-es');
+const awsHttpClient = require('http-aws-es')
 require('dotenv').config();
 
 router.get('/hello', (req, res) => {
@@ -53,6 +57,45 @@ router.get('/weather', (req, res) => {
         if (error) throw new Error(error);
         console.log(body);
         // res.render(path.join(__dirname, '../client/index.ejs'), {res_arr: res_arr});
+    });
+});
+
+//TEST ELASTIC
+router.get('/elastic', (req, res) => {
+    AWS.config.update({
+        secretAccessKey: process.env.AWS_SECRET,
+        accessKeyId: process.env.AWS_KEY_ID,
+        region: process.env.AWS_REGION
+    });
+
+    var elasticClient = new elasticsearch.Client({
+        host: "https://search-trip-planner-search-7ibogrjydq3fzylipyslejm3wi.us-west-1.es.amazonaws.com/",
+        log: 'error',
+        connectionClass: connectionClass,
+        amazonES: {
+            credentials: new AWS.EnvironmentCredentials('AWS'),
+        }
+    });
+    
+    elasticClient.search({
+        index: 'node-test',
+        type: '_doc',
+        body: {
+            query: {
+                match: {
+                    year: '2011'
+                }
+            }
+        }
+    })
+    .then(res => {
+        console.log("")
+        console.log(res)
+        console.log("below includes the response body for first element")
+        console.log(res.hits.hits[0])
+    })
+    .catch(err => {
+        console.log("err " + err);
     });
 });
 
