@@ -112,7 +112,7 @@ function weathercron() {
 }
 
 function flightcron() {
-    const cron_qs = '0 22 * * * *'; // fire once a min
+    const cron_qs = '0 44 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute');
         var res_arr = [];
@@ -120,8 +120,8 @@ function flightcron() {
         // get 6 months 
         var date = new Date();
 
-        for (let i=0; i<1; ++i) {
-            const month_formatted = addMonths(date, i).toISOString().split('T')[0].substring(0,7);
+        for (let month=0; month<1; ++month) {
+            const month_formatted = addMonths(date, month).toISOString().split('T')[0].substring(0,7);
 
             // prices vary both ways from airports, so getting all possible matches is required
             for (let j=0; j<airports.length; ++j) {
@@ -164,14 +164,17 @@ function flightcron() {
                             }
                         }
 
+                        cheapest_quote['QuoteId'] = k + (month * airports.length); // new id
                         cheapest_quote['OriginCity'] = body_obj.Places[0].CityName;
+                        cheapest_quote['OriginState'] = airports[j].RegionId;
                         cheapest_quote['DestinationCity'] = body_obj.Places[1].CityName;
+                        cheapest_quote['DestinationState'] = airports[k].RegionId;
                         
                         // format and push to response
                         res_arr.push(cheapest_quote);
                     });    
                     
-                    await new Promise(r => setTimeout(r, 1500)); // sleep 1.3 sec to avoid rate limit
+                    await new Promise(r => setTimeout(r, 1500)); // sleep 1.5 sec to avoid rate limit
                 }
                 break;
             }
@@ -181,12 +184,10 @@ function flightcron() {
 
         const res_formatted = JSON.stringify(res_arr,null,2);
 
-        // const result = JSON.stringify(res_arr,null,2);
-
-        fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
-            if (err) throw err;
-            console.log("file success");
-        });
+        // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
+        //     if (err) throw err;
+        //     console.log("file success");
+        // });
 
         const s3 = new AWS.S3({
             accessKeyId: process.env.AWS_KEY_ID,
