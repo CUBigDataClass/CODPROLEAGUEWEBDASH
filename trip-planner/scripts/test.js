@@ -1,19 +1,18 @@
-var AWS = require('aws-sdk');
+const quotes = require('./resources/quotes');
 require('dotenv').config();
-
+var AWS = require('aws-sdk');
 var region = process.env.AWS_REGION;
 var domain = process.env.AWS_ELASTIC_DOMAIN;
+var index = 'quotes';
+var type = '_doc';
+
 
 function indexFlightQuote(quote) {
     var endpoint = new AWS.Endpoint(domain);
     var request = new AWS.HttpRequest(endpoint, region);
 
-    var index = 'flight-quotes';
-    var type = '_doc';
-    var id = quote['QuoteId'];
-
     request.method = 'PUT';
-    request.path += index + '/' + type + '/' + id;
+    request.path += index + '/' + type + '/' + quote['QuoteId'];
     request.body = JSON.stringify(quote);
     request.headers['host'] = domain;
     request.headers['Content-Type'] = 'application/json';
