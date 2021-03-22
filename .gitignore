@@ -25,3 +25,5 @@ trip-planner/.env
 /trip-planner/client/yarn-debug.log*
 /trip-planner/client/yarn-error.log*
 
+#resources
+/trip-planner/scripts/resources/quotes.json

@@ -3,6 +3,18 @@ require('dotenv').config();
 
 var region = process.env.AWS_REGION;
 var domain = process.env.AWS_ELASTIC_DOMAIN;
+var json = {
+    "QuoteId": 5,
+    "MinPrice": 155,
+    "Direct": false,
+    "Carrier": "jetBlue",
+    "OriginCity": "New York",
+    "OriginState": "NY",
+    "DestinationCity": "Chicago",
+    "DestinationState": "IL"
+};
+
+indexFlightQuote(json);
 
 function indexFlightQuote(quote) {
     var endpoint = new AWS.Endpoint(domain);

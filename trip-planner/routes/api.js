@@ -61,7 +61,7 @@ router.get('/weather', (req, res) => {
 });
 
 //TEST ELASTIC
-router.get('/elastic', (req, res) => {
+router.get('/search', (req, res) => {
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET,
         accessKeyId: process.env.AWS_KEY_ID,
@@ -78,21 +78,27 @@ router.get('/elastic', (req, res) => {
     });
     
     elasticClient.search({
-        index: 'node-test',
+        index: 'flight-quotes',
         type: '_doc',
         body: {
             query: {
-                match: {
-                    year: '2011'
+                multi_match: {
+                    query: req.query.loc,
+                    fields: [ "OriginState", "OriginCity" ]
                 }
             }
         }
     })
-    .then(res => {
-        console.log("")
-        console.log(res)
-        console.log("below includes the response body for first element")
-        console.log(res.hits.hits[0])
+    .then(result => {
+        var options = [];
+        for (hit of result.hits.hits) {
+            var option = {};
+            option['value'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
+            option['label'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
+            options.push(option);
+        }
+
+        res.status(201).send(options);
     })
     .catch(err => {
         console.log("err " + err);
