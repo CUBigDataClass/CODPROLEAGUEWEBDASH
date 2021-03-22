@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import Search from './components/Search';
 
 import './App.css';
 
@@ -49,6 +50,7 @@ render() {
 
         <Jumbotron className="jumbo-style">
           <Container className="Intro">
+            <Search />
             <Card className="card">
               <Card.Header as="h5" className="d-flex justify-content-center flex-wrap">
                 <Card.Body className="d-flex justify-content-center flex-column">
