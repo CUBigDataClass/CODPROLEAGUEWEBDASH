@@ -28,6 +28,8 @@ function download(){ // fethcing data from s3 bucket
       else {
 
          const json_obj = JSON.parse(data.Body.toString('utf-8'))
+
+         console.log(json_obj)
          
          delete (json_obj.businesses['0'].id)
          delete (json_obj.businesses['0'].alias)
@@ -38,23 +40,22 @@ function download(){ // fethcing data from s3 bucket
          delete (json_obj.businesses['0'].categories)
          delete (json_obj.businesses['0'].coordinates)
          delete (json_obj.businesses['0'].transactions)
-         delete (json_obj.businesses['0'].location.address1)
-         delete (json_obj.businesses['0'].location.address2)
+         // delete (json_obj.businesses['0'].location.address1)
+         // delete (json_obj.businesses['0'].location.address2)
          delete (json_obj.businesses['0'].location.address3)
-         delete (json_obj.businesses['0'].location.city)
-         delete (json_obj.businesses['0'].location.zip_code)
-         delete (json_obj.businesses['0'].location.country)
-         // delete (json_obj.businesses['0'].location.display_address)
-         delete (json_obj.businesses['0'].location.state)
+         // delete (json_obj.businesses['0'].location.city)
+         // delete (json_obj.businesses['0'].location.zip_code)
+         // delete (json_obj.businesses['0'].location.country)
+         delete (json_obj.businesses['0'].location.display_address)
+         // delete (json_obj.businesses['0'].location.state)
          delete (json_obj.businesses['0'].display_phone)
          delete (json_obj.businesses['0'].distance)
          delete (json_obj.total)
          delete (json_obj.region)
 
-         console.log(JSON.stringify(json_obj))
+         console.log(JSON.stringify(json_obj,null,2))
 
       }
-     
   })
 };
 
