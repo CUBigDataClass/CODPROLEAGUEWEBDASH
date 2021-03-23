@@ -5,7 +5,7 @@ var cors = require('cors')
 const port = process.env.PORT || 5000;
 const cronJob = require('./scripts/cron');
 const pullAirports = require('./scripts/airports');
-const yelpPars = require('./scripts/yelp_parser')
+
 
 app.use(cors())
 
@@ -17,11 +17,11 @@ app.use('/api', require('./routes/api'));
 
 // refresh data in S3 bucket
 
-// cronJob.yelpcron();
+cronJob.yelpcron();
 // cronJob.weathercron();
 // cronJob.flightcron();
 
-cronJob.yelpcron();
+// cronJob.yelpcron();
 // pullAirports.pull();
 
 

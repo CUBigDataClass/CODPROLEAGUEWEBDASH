@@ -18,15 +18,15 @@ function addMonths(date, months) {
 }
 
 
-async function yelpcron() {
+function yelpcron() {
     // const cron_qs = '0 0 0 15 * ?'; // fire 15th of every month
 
     const cron_qs = '0 * * * * *'; // fire once a min
-    cron.schedule(cron_qs, function() {
+    cron.schedule(cron_qs, async function() {
         console.log('running a task every minute again');
 
         var responce_arr = []
-
+        count = 0
         for (const state of sts.AllStateCodes){
             const states_origin = state
             const options = {
@@ -41,15 +41,17 @@ async function yelpcron() {
                     'Authorization': 'Bearer ' + process.env.YELP_API_KEY
                 }
             };
-
+                
                 request(options, function(err, res, data) {
                     if (err) throw new Error(err)
                     
                     else{
                         var json_obj = JSON.parse(data);
+                        
                         for (business of json_obj.businesses){
+                            count = count + 1 
 
-                            delete (business.id)
+                            business.id = count 
                             delete (business.alias)
                             delete (business.image_url)
                             delete (business.url)
@@ -72,6 +74,7 @@ async function yelpcron() {
                             delete (business.region)
 
                             responce_arr.push(business)
+                            
                         }
                     }
                 });
@@ -84,10 +87,10 @@ async function yelpcron() {
 
         const res_formatted = JSON.stringify(responce_arr,null,2);
         console.log(res_formatted)
-        fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
-            if (err) throw err;
-            console.log("file success");
-        });
+        // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
+        //     if (err) throw err;
+        //     console.log("file success");
+        // });
 
         const s3 = new AWS.S3({
             accessKeyId: process.env.AWS_KEY_ID,

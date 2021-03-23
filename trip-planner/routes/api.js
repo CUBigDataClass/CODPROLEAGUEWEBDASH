@@ -77,14 +77,34 @@ router.get('/search', (req, res) => {
         }
     });
     
+    // elasticClient.search({
+    //     index: 'flight-quotes',
+    //     type: '_doc',
+    //     body: {
+    //         query: {
+    //             multi_match: {
+    //                 query: req.query.loc,
+    //                 fields: [ "OriginState", "OriginCity" ]
+    //             }
+    //         }
+    //     }
+    // })
+    // .then(result => {
+    //     var options = [];
+    //     for (hit of result.hits.hits) {
+    //         var option = {};
+    //         option['value'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
+    //         option['label'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
+    //         options.push(option);
+    //     }
     elasticClient.search({
-        index: 'flight-quotes',
+        index: 'yelp-places',
         type: '_doc',
         body: {
             query: {
                 multi_match: {
                     query: req.query.loc,
-                    fields: [ "OriginState", "OriginCity" ]
+                    fields: [ "id", "state" ]
                 }
             }
         }
@@ -93,8 +113,8 @@ router.get('/search', (req, res) => {
         var options = [];
         for (hit of result.hits.hits) {
             var option = {};
-            option['value'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
-            option['label'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
+            option['value'] = hit._source['id'];
+            option['label'] = hit._source['name'];
             options.push(option);
         }
 
