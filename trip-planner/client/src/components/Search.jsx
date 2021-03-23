@@ -8,17 +8,11 @@ class Search extends Component {
 
         this.state = {
             inputValue: '',
-            defaultOptions: [],
             options: []
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.loadOptions = this.loadOptions.bind(this);
-    }
-
-    componentDidMount() {
-        const { inputValue } = this.state;
-        this.loadDefaultOptions(inputValue);
     }
 
     loadOptions = async (inputValue) => {
@@ -30,27 +24,15 @@ class Search extends Component {
         this.setState({ options: opts });
     }
 
-    loadDefaultOptions = inputValue => {
-        this.loadOptions(inputValue).then(defaultOptions =>
-            this.setState({ defaultOptions })
-        );
-    };
-
-    handleInputChange = (inputValue, { action }) => {
-        console.log("action", action);
-        if (action === "input-change") {
-          this.setState({ inputValue });
-          this.loadOptions(inputValue);
-        }
-        if (action === "menu-close") {
-          this.loadDefaultOptions(this.state.inputValue);
-        }
+    handleInputChange = (inputValue) => {
+        this.setState({ inputValue });
+        this.loadOptions(inputValue);
     };
 
     render() {
-        const { inputValue, defaultOptions, options } = this.state;
+        const { inputValue, options } = this.state;
         const customStyles = {
-            option: (provided, state) => ({
+            option: (_, state) => ({
                 color: state.isSelected ? 'white' : 'black',
                 backgroundColor: state.isSelected ? 'black' : 'white'
             })
@@ -61,9 +43,9 @@ class Search extends Component {
                     styles={customStyles}
                     cacheOptions
                     options={options}
-                    loadOptions={this.loadOptions}
+                    // loadOptions={this.loadOptions}
                     placeholder={"Search Origin"}
-                    defaultOptions={defaultOptions}
+                    // defaultOptions={defaultOptions}
                     inputValue={inputValue}
                     onInputChange={this.handleInputChange}
                 />

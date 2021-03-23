@@ -18,11 +18,11 @@ function addMonths(date, months) {
 }
 
 
-async function yelpcron() {
+function yelpcron() {
     // const cron_qs = '0 0 0 15 * ?'; // fire 15th of every month
 
     const cron_qs = '0 * * * * *'; // fire once a min
-    cron.schedule(cron_qs, function() {
+    cron.schedule(cron_qs, async function() {
         console.log('running a task every minute again');
 
         var responce_arr = []

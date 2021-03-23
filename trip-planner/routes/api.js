@@ -68,7 +68,7 @@ router.get('/search', (req, res) => {
         region: process.env.AWS_REGION
     });
 
-    var elasticClient = new elasticsearch.Client({
+    let elasticClient = new elasticsearch.Client({
         host: "https://search-trip-planner-search-7ibogrjydq3fzylipyslejm3wi.us-west-1.es.amazonaws.com/",
         log: 'error',
         connectionClass: connectionClass,
@@ -84,21 +84,29 @@ router.get('/search', (req, res) => {
             query: {
                 multi_match: {
                     query: req.query.loc,
-                    fields: [ "OriginState", "OriginCity" ]
+                    fields: [ "OriginState", "OriginCity" ],
+                    fuzziness: "AUTO"
                 }
             }
         }
     })
     .then(result => {
-        var options = [];
-        for (hit of result.hits.hits) {
-            var option = {};
-            option['value'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
-            option['label'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
-            options.push(option);
-        }
+        // builds options array for react-select, ensures unique entries using set
+        let options_set = new Set();
+        let options_arr = [];
 
-        res.status(201).send(options);
+        for (hit of result.hits.hits) {
+            let loc = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
+
+            if (!options_set.has(loc)) {
+                let option = {};
+                option['value'] = loc;
+                option['label'] = loc;
+                options_arr.push(option);
+                options_set.add(loc);
+            }
+        }
+        res.status(201).send(options_arr);
     })
     .catch(err => {
         console.log("err " + err);
