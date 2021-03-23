@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 import AsyncSelect from 'react-select'
-import '../styles/Search.css'
+import searchStyles from '../styles/Search.module.css'
 
 class Search extends Component {
-    constructor () {
-        super()
+    constructor (props) {
+        super(props)
 
         this.state = {
             inputValue: '',
-            options: []
+            options: [],
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.loadOptions = this.loadOptions.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     loadOptions = async (inputValue) => {
@@ -29,36 +30,31 @@ class Search extends Component {
         this.loadOptions(inputValue);
     };
 
+    handleChange = (selectedOption) => { 
+        this.props.update(selectedOption, this.props.place); 
+    }
+
     render() {
         const { inputValue, options } = this.state;
         const customStyles = {
             option: (_, state) => ({
-                color: state.isSelected ? 'white' : 'black',
-                backgroundColor: state.isSelected ? 'black' : 'white'
+                color: state.isSelected ? 'white' : 'purple',
+                backgroundColor: state.isSelected ? 'purple' : 'white'
             })
         }
+
         return (
-            <div>
+            <div className={searchStyles.mainContainer}>
                 <AsyncSelect 
-                    styles={customStyles}
                     cacheOptions
+                    filterOption={options => options}
                     options={options}
-                    // loadOptions={this.loadOptions}
-                    placeholder={"Search Origin"}
-                    // defaultOptions={defaultOptions}
+                    styles={customStyles}
+                    placeholder={'Search ' + this.props.place}
                     inputValue={inputValue}
                     onInputChange={this.handleInputChange}
+                    onChange={this.handleChange}
                 />
-                {/* <AsyncSelect 
-                    styles={customStyles}
-                    cacheOptions
-                    options={options}
-                    loadOptions={this.loadOptions}
-                    placeholder={"Search Destination"}
-                    defaultOptions={defaultOptions}
-                    inputValue={inputValue}
-                    onInputChange={this.handleInputChange}
-                /> */}
             </div>
         )
     }

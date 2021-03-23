@@ -106,6 +106,7 @@ router.get('/search', (req, res) => {
                 options_set.add(loc);
             }
         }
+
         res.status(201).send(options_arr);
     })
     .catch(err => {

@@ -39,4 +39,9 @@
 
 .jumbo-style {
   background-image: radial-gradient(circle, #93959d, #737a83, #586065, #35393a, #282c34);
- }
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
