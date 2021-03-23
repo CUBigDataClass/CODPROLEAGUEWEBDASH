@@ -60,7 +60,7 @@ router.get('/weather', (req, res) => {
     });
 });
 
-//TEST ELASTIC
+//TEST ELASTIC 
 router.get('/search', (req, res) => {
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET,
@@ -68,7 +68,7 @@ router.get('/search', (req, res) => {
         region: process.env.AWS_REGION
     });
 
-    var elasticClient = new elasticsearch.Client({
+    let elasticClient = new elasticsearch.Client({
         host: "https://search-trip-planner-search-7ibogrjydq3fzylipyslejm3wi.us-west-1.es.amazonaws.com/",
         log: 'error',
         connectionClass: connectionClass,
@@ -77,48 +77,37 @@ router.get('/search', (req, res) => {
         }
     });
     
-    // elasticClient.search({
-    //     index: 'flight-quotes',
-    //     type: '_doc',
-    //     body: {
-    //         query: {
-    //             multi_match: {
-    //                 query: req.query.loc,
-    //                 fields: [ "OriginState", "OriginCity" ]
-    //             }
-    //         }
-    //     }
-    // })
-    // .then(result => {
-    //     var options = [];
-    //     for (hit of result.hits.hits) {
-    //         var option = {};
-    //         option['value'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
-    //         option['label'] = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
-    //         options.push(option);
-    //     }
-    elasticClient.search({
-        index: 'yelp-places',
-        type: '_doc',
-        body: {
-            query: {
-                multi_match: {
-                    query: req.query.loc,
-                    fields: [ "id", "state" ]
-                }
+      elasticClient.search({
+          index: 'flight-quotes',
+          type: '_doc',
+          body: {
+              query: {
+                  multi_match: {
+                      query: req.query.loc,
+                      fields: [ "OriginState", "OriginCity" ]
+                      fuzziness: "AUTO"
+                  }
+              }
+          }
+      })
+      .then(result => {
+          let options_arr = [];
+          let options_set = new Set();
+          for (hit of result.hits.hits){
+
+            let loc = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
+
+            if (!options_set.has(loc)) { 
+                let option = {};
+                option['value'] = loc;
+                option['label'] = loc;
+                options_arr.push(option);
+                options_set.add(loc);
             }
-        }
-    })
-    .then(result => {
-        var options = [];
-        for (hit of result.hits.hits) {
-            var option = {};
-            option['value'] = hit._source['id'];
-            option['label'] = hit._source['name'];
-            options.push(option);
+
         }
 
-        res.status(201).send(options);
+        res.status(201).send(options_arr);
     })
     .catch(err => {
         console.log("err " + err);
