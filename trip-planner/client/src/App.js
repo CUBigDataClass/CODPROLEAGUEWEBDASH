@@ -2,17 +2,25 @@ import React, { Component } from 'react';
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
-// import logo from './logo.svg';
 import Search from './components/Search';
 
 import './App.css';
+// import { Discovery } from 'aws-sdk';
 
 class App extends Component {
-  state = {
-    response: '',
-    post: '',
-    responseToPost: '',
-  };
+  constructor() {
+    super()
+
+    this.state = {
+      response: '',
+      post: '',
+      responseToPost: '',
+      originValue: '',
+      destValue: '',
+    };
+
+    this.updateSelection = this.updateSelection.bind(this);
+  }
   
   componentDidMount() {
     this.callApi()
@@ -41,8 +49,19 @@ class App extends Component {
     
     this.setState({ responseToPost: body });
   };
+
+  updateSelection = async (input, place) => {
+    if (place === 'Origin') {
+      this.setState({ originValue: input });
+    } else {
+      this.setState({ destValue: input });
+    }
+  }
   
 render() {
+    const { response, post, responseToPost } = this.state;
+
+    console.log(originValue);
     return (
       <div className="App">
         <header className="App-header">
@@ -50,7 +69,19 @@ render() {
 
         <Jumbotron className="jumbo-style">
           <Container className="Intro">
-            <Search />
+            <section className="search-container">
+              <Search 
+                place='Origin' 
+                update={ this.updateSelection }
+              />
+
+              {/* Put switch button component here */}
+
+              <Search 
+                place='Destination' 
+                update={ this.updateSelection }
+              />
+            </section>
             <Card className="card">
               <Card.Header as="h5" className="d-flex justify-content-center flex-wrap">
                 <Card.Body className="d-flex justify-content-center flex-column">
@@ -66,19 +97,19 @@ render() {
 
         </header>
         {/* Testing quck GET POST requests */}
-        <p>{this.state.response}</p>
+        <p>{ response }</p>
         <form onSubmit={this.handleSubmit}>
           <p>
             <strong>Post to Server:</strong>
           </p>
           <input
             type="text"
-            value={this.state.post}
+            value={ post }
             onChange={e => this.setState({ post: e.target.value })}
           />
           <button type="submit">Submit</button>
         </form>
-        <p>{this.state.responseToPost}</p>
+        <p>{ responseToPost }</p>
       </div>
     );
   }

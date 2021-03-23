@@ -21,7 +21,7 @@ app.use('/api', require('./routes/api'));
 // cronJob.weathercron();
 // cronJob.flightcron();
 
-cronJob.yelpcron();
+// cronJob.yelpcron();
 // pullAirports.pull();
 
 

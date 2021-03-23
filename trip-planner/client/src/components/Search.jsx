@@ -1,24 +1,19 @@
 import React, { Component } from 'react'
 import AsyncSelect from 'react-select'
-import '../styles/Search.css'
+import searchStyles from '../styles/Search.module.css'
 
 class Search extends Component {
-    constructor () {
-        super()
+    constructor (props) {
+        super(props)
 
         this.state = {
             inputValue: '',
-            defaultOptions: [],
-            options: []
+            options: [],
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.loadOptions = this.loadOptions.bind(this);
-    }
-
-    componentDidMount() {
-        const { inputValue } = this.state;
-        this.loadDefaultOptions(inputValue);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     loadOptions = async (inputValue) => {
@@ -30,53 +25,36 @@ class Search extends Component {
         this.setState({ options: opts });
     }
 
-    loadDefaultOptions = inputValue => {
-        this.loadOptions(inputValue).then(defaultOptions =>
-            this.setState({ defaultOptions })
-        );
+    handleInputChange = (inputValue) => {
+        this.setState({ inputValue });
+        this.loadOptions(inputValue);
     };
 
-    handleInputChange = (inputValue, { action }) => {
-        console.log("action", action);
-        if (action === "input-change") {
-          this.setState({ inputValue });
-          this.loadOptions(inputValue);
-        }
-        if (action === "menu-close") {
-          this.loadDefaultOptions(this.state.inputValue);
-        }
-    };
+    handleChange = (selectedOption) => { 
+        this.props.update(selectedOption, this.props.place); 
+    }
 
     render() {
-        const { inputValue, defaultOptions, options } = this.state;
+        const { inputValue, options } = this.state;
         const customStyles = {
-            option: (provided, state) => ({
-                color: state.isSelected ? 'white' : 'black',
-                backgroundColor: state.isSelected ? 'black' : 'white'
+            option: (_, state) => ({
+                color: state.isSelected ? 'white' : 'purple',
+                backgroundColor: state.isSelected ? 'purple' : 'white'
             })
         }
+
         return (
-            <div>
+            <div className={searchStyles.mainContainer}>
                 <AsyncSelect 
-                    styles={customStyles}
                     cacheOptions
+                    filterOption={options => options}
                     options={options}
-                    loadOptions={this.loadOptions}
-                    placeholder={"Search Origin"}
-                    defaultOptions={defaultOptions}
+                    styles={customStyles}
+                    placeholder={'Search ' + this.props.place}
                     inputValue={inputValue}
                     onInputChange={this.handleInputChange}
+                    onChange={this.handleChange}
                 />
-                {/* <AsyncSelect 
-                    styles={customStyles}
-                    cacheOptions
-                    options={options}
-                    loadOptions={this.loadOptions}
-                    placeholder={"Search Destination"}
-                    defaultOptions={defaultOptions}
-                    inputValue={inputValue}
-                    onInputChange={this.handleInputChange}
-                /> */}
             </div>
         )
     }
