@@ -13,4 +13,7 @@ exports.handler = async (event, context) => {
         // console.log("Raw text:\n" + data.Body.toString('ascii'));
         elastic_client.indexFlightQuote(data.Body);
     }
+    else if (Key == "yelp_api.json") {
+        elastic_client.indexYelpPlaces(data.Body);
+    }
 };

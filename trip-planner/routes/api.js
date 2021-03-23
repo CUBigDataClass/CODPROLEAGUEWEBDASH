@@ -60,7 +60,7 @@ router.get('/weather', (req, res) => {
     });
 });
 
-//TEST ELASTIC
+//TEST ELASTIC 
 router.get('/search', (req, res) => {
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET,
@@ -77,34 +77,34 @@ router.get('/search', (req, res) => {
         }
     });
     
-    elasticClient.search({
-        index: 'flight-quotes',
-        type: '_doc',
-        body: {
-            query: {
-                multi_match: {
-                    query: req.query.loc,
-                    fields: [ "OriginState", "OriginCity" ],
-                    fuzziness: "AUTO"
-                }
-            }
-        }
-    })
-    .then(result => {
-        // builds options array for react-select, ensures unique entries using set
-        let options_set = new Set();
-        let options_arr = [];
+      elasticClient.search({
+          index: 'flight-quotes',
+          type: '_doc',
+          body: {
+              query: {
+                  multi_match: {
+                      query: req.query.loc,
+                      fields: [ "OriginState", "OriginCity" ]
+                      fuzziness: "AUTO"
+                  }
+              }
+          }
+      })
+      .then(result => {
+          let options_arr = [];
+          let options_set = new Set();
+          for (hit of result.hits.hits){
 
-        for (hit of result.hits.hits) {
             let loc = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
 
-            if (!options_set.has(loc)) {
+            if (!options_set.has(loc)) { 
                 let option = {};
                 option['value'] = loc;
                 option['label'] = loc;
                 options_arr.push(option);
                 options_set.add(loc);
             }
+
         }
 
         res.status(201).send(options_arr);
