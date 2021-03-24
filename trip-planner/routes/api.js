@@ -77,24 +77,24 @@ router.get('/search', (req, res) => {
         }
     });
     
-      elasticClient.search({
-          index: 'flight-quotes',
-          type: '_doc',
-          body: {
-              query: {
-                  multi_match: {
-                      query: req.query.loc,
-                      fields: [ "OriginState", "OriginCity" ]
-                      fuzziness: "AUTO"
-                  }
-              }
-          }
-      })
-      .then(result => {
-          let options_arr = [];
-          let options_set = new Set();
-          for (hit of result.hits.hits){
-
+    elasticClient.search({
+        index: 'flight-quotes',
+        type: '_doc',
+        body: {
+            query: {
+                multi_match: {
+                    query: req.query.loc,
+                    fields: [ "OriginState", "OriginCity" ],
+                    fuzziness: "AUTO"
+                }
+            }
+        }
+    })
+    .then(result => {
+        let options_arr = [];
+        let options_set = new Set();
+        console.log(result.hits);
+        for (hit of result.hits.hits){
             let loc = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
 
             if (!options_set.has(loc)) { 

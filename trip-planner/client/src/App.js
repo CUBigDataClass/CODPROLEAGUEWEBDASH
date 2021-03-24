@@ -59,9 +59,6 @@ class App extends Component {
   }
   
 render() {
-    const { response, post, responseToPost } = this.state;
-
-    console.log(originValue);
     return (
       <div className="App">
         <header className="App-header">
@@ -97,19 +94,19 @@ render() {
 
         </header>
         {/* Testing quck GET POST requests */}
-        <p>{ response }</p>
+        <p>{ this.state.response }</p>
         <form onSubmit={this.handleSubmit}>
           <p>
             <strong>Post to Server:</strong>
           </p>
           <input
             type="text"
-            value={ post }
+            value={ this.state.post }
             onChange={e => this.setState({ post: e.target.value })}
           />
           <button type="submit">Submit</button>
         </form>
-        <p>{ responseToPost }</p>
+        <p>{ this.state.responseToPost }</p>
       </div>
     );
   }
