@@ -29,12 +29,6 @@ class Search extends Component {
         // this.loadOptions = this.loadOptions.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
-
-    // loadOptions = async (inputValue) => {
-    //     // perform a request
-    //     const opts = await fetch(`http://localhost:5000/api/search?loc=${encodeURIComponent(inputValue)}`)
-    //                             .then(res => res.json())
-    //                             .catch(err => console.log("err: " + err));
         
     //     this.setState({ options: opts });
     // }
