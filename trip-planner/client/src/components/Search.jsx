@@ -1,6 +1,20 @@
 import React, { Component } from 'react'
-import AsyncSelect from 'react-select'
+import Select from 'react-select'
 import searchStyles from '../styles/Search.module.css'
+
+import states from '../resources/states'
+
+function cleanOptions() {
+    let options = [];
+    for (const state of states) {
+        for (const city of state.cities) {
+            state['selected'] = city;
+            let option = { value: state, label: city + ', ' + state.name }
+            options.push(option);
+        }
+    }
+    return options;
+}
 
 class Search extends Component {
     constructor (props) {
@@ -8,26 +22,20 @@ class Search extends Component {
 
         this.state = {
             inputValue: '',
-            options: [],
+            options: cleanOptions(),
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.loadOptions = this.loadOptions.bind(this);
+        // this.loadOptions = this.loadOptions.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
-
-    loadOptions = async (inputValue) => {
-        // perform a request
-        const opts = await fetch(`http://localhost:5000/api/search/flight?loc=${encodeURIComponent(inputValue)}`)
-                                .then(res => res.json())
-                                .catch(err => console.log("err: " + err));
         
-        this.setState({ options: opts });
-    }
+    //     this.setState({ options: opts });
+    // }
 
     handleInputChange = (inputValue) => {
         this.setState({ inputValue });
-        this.loadOptions(inputValue);
+        // this.loadOptions(inputValue);
     };
 
     handleChange = (selectedOption) => { 
@@ -45,9 +53,8 @@ class Search extends Component {
 
         return (
             <div className={searchStyles.mainContainer}>
-                <AsyncSelect 
+                <Select 
                     cacheOptions
-                    filterOption={options => options}
                     options={options}
                     styles={customStyles}
                     placeholder={'Search ' + this.props.place}

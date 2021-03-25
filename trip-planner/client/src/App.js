@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Search from './components/Search';
+import Flight from './components/Flight';
 import Yelp from './components/Yelp';
 
 import './App.css';
@@ -16,8 +17,9 @@ class App extends Component {
       response: '',
       post: '',
       responseToPost: '',
-      originValue: '',
-      destValue: '',
+      originValue: null,
+      destValue: null,
+      flightRes: {message: ""}
       json: {
         "name": "Falafel cafe",
         "rating": 5,
@@ -37,19 +39,19 @@ class App extends Component {
     this.updateSelection = this.updateSelection.bind(this);
   }
   
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
+//   componentDidMount() {
+//     this.callApi()
+//       .then(res => this.setState({ response: res.express }))
+//       .catch(err => console.log(err));
+//   }
   
-  callApi = async () => {
-    const response = await fetch('/api/hello');
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
+//   callApi = async () => {
+//     const response = await fetch('/api/hello');
+//     const body = await response.json();
+//     if (response.status !== 200) throw Error(body.message);
     
-    return body;
-  };
+//     return body;
+//   };
   
   handleSubmit = async e => {
     e.preventDefault();
@@ -65,30 +67,42 @@ class App extends Component {
     this.setState({ responseToPost: body });
   };
 
-  updateSelection = async (input, place) => {
-    if (place === 'Origin') {
-      this.setState({ originValue: input });
-    } 
-    else {
-      this.setState({ destValue: input });
-      // call yelp endpoint search/yelp with destValue 
-      const opts = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(input)}`)
-                                .then(res => res.json())
-                                .catch(err => console.log("err: " + err));
+    updateSelection = async (input, place) => {
+        if (place === 'Origin') {
+            await this.setState({ originValue: input.value });
+        } else {
+            await this.setState({ destValue: input.value });
+            
+            // call yelp endpoint search/yelp with destValue 
+            const opts = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(input.value.destValue.abbreviation)}`)
+                                      .then(res => res.json())
+                                      .catch(err => console.log("err: " + err));
 
-      // const opts = await fetch('http://localhost:5000/api/search/yelp?location=NY')
-      //         .then(res => res.json())
-      //         .catch(err => console.log("err: " + err));
+            console.log(opts)
+            this.setState({ options: opts });
+        }
 
-      console.log(opts)
-      this.setState({ options: opts });
+        if (this.state.originValue && this.state.destValue &&
+            this.state.originValue.cities.length && this.state.destValue.cities.length) {
+                const from_state = this.state.originValue.abbreviation;
+                const from_city = this.state.originValue.selected;
+                const to_state = this.state.destValue.abbreviation;
+                const to_city = this.state.destValue.selected;
+
+                // perform a request
+                const res = await fetch(`http://localhost:5000/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
+                                        .then(res => res.json())
+                                        .catch(err => console.log("err: " + err));
+                
+                if (typeof(res) === 'undefined') {
+                    this.setState({ flightRes: { message: "No flights found" } })
+                } else {
+                    this.setState({ flightRes: res });
+                }
+        }
     }
-  }
   
 render() {
-    const { response, post, responseToPost } = this.state;
-
-    // console.log(originValue);
     return (
       <div className="App">
         <header className="App-header">
@@ -128,19 +142,23 @@ render() {
 
         </header>
         {/* Testing quck GET POST requests */}
-        <p>{ response }</p>
+        <p>{ this.state.response }</p>
         <form onSubmit={this.handleSubmit}>
           <p>
             <strong>Post to Server:</strong>
           </p>
           <input
             type="text"
-            value={ post }
+            value={ this.state.post }
             onChange={e => this.setState({ post: e.target.value })}
           />
           <button type="submit">Submit</button>
         </form>
-        <p>{ responseToPost }</p>
+        <p>{ this.state.responseToPost }</p>
+        <br/>
+        <Flight
+          quotes={this.state.flightRes}
+        />
       </div>
     );
   }

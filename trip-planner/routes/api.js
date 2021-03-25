@@ -76,38 +76,67 @@ router.get('/search/flight', (req, res) => {
             credentials: new AWS.EnvironmentCredentials('AWS'),
         }
     });
-    
-      elasticClient.search({
-          index: 'flight-quotes',
-          type: '_doc',
-          body: {
-              query: {
-                  multi_match: {
-                      query: req.query.loc,
-                      fields: [ "OriginState", "OriginCity" ],
-                      fuzziness: "AUTO"
-                  }
-              }
-          }
-      })
-      .then(result => {
-          let options_arr = [];
-          let options_set = new Set();
-          for (hit of result.hits.hits){
-            
-            let loc = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
-            
-            if (!options_set.has(loc)) { 
-                let option = {};
-                option['value'] = loc;
-                option['label'] = loc;
-                options_arr.push(option);
-                options_set.add(loc);
+
+    const sep_from = req.query.from.split(',');
+    const sep_to = req.query.to.split(',');
+
+    const from_city = sep_from[0];
+    const from_state = sep_from[1];
+    const to_city = sep_to[0];
+    const to_state = sep_to[1];
+
+    // match to specific price quotes based on origin/destination
+    elasticClient.search({
+        index: 'flight-quotes',
+        type: '_doc',
+        body: {
+            query: {
+                bool: {
+                    must: [
+                        {
+                            match: {
+                                OriginCity: {
+                                    query: from_city,
+                                    fuzziness: "AUTO"
+                                }
+                            }
+                        },
+                        {
+                            match: {
+                                OriginState: {
+                                    query: from_state,
+                                    fuzziness: "AUTO"
+                                }
+                            }
+                        },
+                        {
+                            match: {
+                                DestinationCity: {
+                                    query: to_city,
+                                    fuzziness: "AUTO"
+                                }
+                            }
+                        },
+                        {
+                            match: {
+                                DestinationState: {
+                                    query: to_state,
+                                    fuzziness: "AUTO"
+                                }
+                            }
+                        }
+                    ]
+                }
             }
-
         }
-
-        res.status(201).send(options_arr);
+    })
+    .then(result => {
+        if (result.hits.hits.length === 0) {
+            res.sendStatus(404);
+        } else {
+            let hits = Array.from(result.hits.hits, h => h._source);
+            res.status(201).send(hits);
+        }
     })
     .catch(err => {
         console.log("err " + err);
@@ -149,37 +178,11 @@ router.get('/search/yelp', (req, res) => {
         }
       })
       .then(result => {
-        //   let options_arr = [];
-        //   let options_set = new Set();
-        //   for (hit of result.hits.hits){
-        
-        //     let loc = hit._source['name'] + ', ' + hit._source.location['state'];
-            
-        //     if (!options_set.has(loc)) { 
-        //         let option = {};
-        //         option['value'] = loc;
-        //         option['label'] = loc;
-        //         options_arr.push(option);
-        //         options_set.add(loc);
-        //     }
         res.status(201).send(result.hits.hits);
-
-        
-        // console.log(result.hits.hits)
-        // // console.log(body)
-        // // console.log(options_arr)
-        // res.status(201).send(result.hits.hits);
     })
     .catch(err => {
         console.log("err " + err);
     });
 });
-
-// router.post('/test', (req, res) => {
-//     // console.log(req.body);
-//     res.send(
-//         "HEllo it is working"
-//     );
-// });
 
 module.exports = router;
