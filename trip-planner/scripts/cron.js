@@ -31,7 +31,7 @@ function yelpcron() {
             const states_origin = state
             const options = {
                 method: 'GET',
-                url: 'https://api.yelp.com/v3/businesses/search',// + 'location=' + states_origin + 'limit=1',
+                url: 'https://api.yelp.com/v3/businesses/search/',// + 'location=' + states_origin + 'limit=1',
                 qs: {
                     location: states_origin,
                     limit: '5',
@@ -47,7 +47,7 @@ function yelpcron() {
                     
                     else{
                         var json_obj = JSON.parse(data);
-                        
+
                         for (business of json_obj.businesses){
                             count = count + 1 
 
@@ -79,14 +79,14 @@ function yelpcron() {
                     }
                 });
 
-            await new Promise(r => setTimeout(r, 1500));   
+            await new Promise(r => setTimeout(r, 1500)); // sleeps for 1.5 sec
         }
 
         // write to file add to s3 
         if (responce_arr.length == 0) return;
 
         const res_formatted = JSON.stringify(responce_arr,null,2);
-        console.log(res_formatted)
+
         // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
         //     if (err) throw err;
         //     console.log("file success");
@@ -167,15 +167,14 @@ function weathercron() {
 
 // Pull flight price quotes from Skyscanner API
 function flightcron() {
-    const cron_qs = '0 43 * * * *'; // fire once a min
+    const cron_qs = '0 39 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute');
         var res_arr = [];
 
         // get 6 months 
-        var date = new Date();
-
-        for (let month=0; month<1; ++month) {
+        for (let month=1; month<=2; ++month) {
+            var date = new Date();
             const month_formatted = addMonths(date, month).toISOString().split('T')[0].substring(0,7);
 
             // prices vary both ways from airports, so getting all possible matches is required
@@ -221,10 +220,17 @@ function flightcron() {
                         delete (cheapest_quote['QuoteDateTime']);
 
                         cheapest_quote['QuoteId'] = k + (month * airports.length); // new unique identifier
+                        cheapest_quote['Month'] = month_formatted.substring(5,7);
                         cheapest_quote['OriginCity'] = body_obj.Places[0].CityName;
-                        cheapest_quote['OriginState'] = airports[j].RegionId;
                         cheapest_quote['DestinationCity'] = body_obj.Places[1].CityName;
-                        cheapest_quote['DestinationState'] = airports[k].RegionId;
+
+                        if (body_obj.Places[0].Name === airports[j].PlaceName) {
+                            cheapest_quote['OriginState'] = airports[j].RegionId;
+                            cheapest_quote['DestinationState'] = airports[k].RegionId;
+                        } else {
+                            cheapest_quote['OriginState'] = airports[k].RegionId;
+                            cheapest_quote['DestinationState'] = airports[j].RegionId;
+                        }
                         
                         // format and push to response
                         res_arr.push(cheapest_quote);
@@ -245,26 +251,26 @@ function flightcron() {
             console.log("file success");
         });
 
-        const s3 = new AWS.S3({
-            accessKeyId: process.env.AWS_KEY_ID,
-            secretAccessKey: process.env.AWS_SECRET
-        });
+        // const s3 = new AWS.S3({
+        //     accessKeyId: process.env.AWS_KEY_ID,
+        //     secretAccessKey: process.env.AWS_SECRET
+        // });
     
-        // Setting up S3 upload parameters
-        const params = {
-            Bucket: 'trip-plannerrr',
-            Key: 'flight_api.json',
-            Body: res_formatted,
-            ContentType: 'application/json'
-        };
+        // // Setting up S3 upload parameters
+        // const params = {
+        //     Bucket: 'trip-plannerrr',
+        //     Key: 'flight_api.json',
+        //     Body: res_formatted,
+        //     ContentType: 'application/json'
+        // };
     
-        // Uploading files to the bucket
-        s3.upload(params, function(err, data) {
-            if (err) {
-                throw err;
-            }
-            console.log(`File uploaded successfully. ${data.Location}`);
-        });
+        // // Uploading files to the bucket
+        // s3.upload(params, function(err, data) {
+        //     if (err) {
+        //         throw err;
+        //     }
+        //     console.log(`File uploaded successfully. ${data.Location}`);
+        // });
     });
     console.log("success");
 }
