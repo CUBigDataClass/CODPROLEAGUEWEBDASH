@@ -18,7 +18,7 @@ class Search extends Component {
 
     loadOptions = async (inputValue) => {
         // perform a request
-        const opts = await fetch(`http://localhost:5000/api/search?loc=${encodeURIComponent(inputValue)}`)
+        const opts = await fetch(`http://localhost:5000/api/search/flight?loc=${encodeURIComponent(inputValue)}`)
                                 .then(res => res.json())
                                 .catch(err => console.log("err: " + err));
         
