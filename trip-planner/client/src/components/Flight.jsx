@@ -1,16 +1,6 @@
 import React, { Fragment } from 'react'
 import Styles from '../styles/Flight.module.css'
 
-// {
-//     "QuoteId": 3,
-//     "MinPrice": 96,
-//     "Direct": false,
-//     "Carrier": "jetBlue",
-//     "OriginCity": "New York",
-//     "OriginState": "NY",
-//     "DestinationCity": "Los Angeles",
-//     "DestinationState": "CA"
-// }
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 const airlines = [
