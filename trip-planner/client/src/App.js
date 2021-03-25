@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Search from './components/Search';
+import Yelp from './components/Yelp';
 
 import './App.css';
 // import { Discovery } from 'aws-sdk';
@@ -17,6 +18,20 @@ class App extends Component {
       responseToPost: '',
       originValue: '',
       destValue: '',
+      json: {
+        "name": "Falafel cafe",
+        "rating": 5,
+        "price": "$",
+        "location": {
+          "address1": "401 19th St S",
+          "address2": "Ste 100",
+          "city": "Birmingham",
+          "zip_code": "35233",
+          "country": "US",
+          "state": "AL"
+        },
+        "phone": "+12058683999"
+      },
     };
 
     this.updateSelection = this.updateSelection.bind(this);
@@ -53,15 +68,27 @@ class App extends Component {
   updateSelection = async (input, place) => {
     if (place === 'Origin') {
       this.setState({ originValue: input });
-    } else {
+    } 
+    else {
       this.setState({ destValue: input });
+      // call yelp endpoint search/yelp with destValue 
+      const opts = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(input)}`)
+                                .then(res => res.json())
+                                .catch(err => console.log("err: " + err));
+
+      // const opts = await fetch('http://localhost:5000/api/search/yelp?location=NY')
+      //         .then(res => res.json())
+      //         .catch(err => console.log("err: " + err));
+
+      console.log(opts)
+      this.setState({ options: opts });
     }
   }
   
 render() {
     const { response, post, responseToPost } = this.state;
 
-    console.log(originValue);
+    // console.log(originValue);
     return (
       <div className="App">
         <header className="App-header">
@@ -69,19 +96,6 @@ render() {
 
         <Jumbotron className="jumbo-style">
           <Container className="Intro">
-            <section className="search-container">
-              <Search 
-                place='Origin' 
-                update={ this.updateSelection }
-              />
-
-              {/* Put switch button component here */}
-
-              <Search 
-                place='Destination' 
-                update={ this.updateSelection }
-              />
-            </section>
             <Card className="card">
               <Card.Header as="h5" className="d-flex justify-content-center flex-wrap">
                 <Card.Body className="d-flex justify-content-center flex-column">
@@ -92,6 +106,23 @@ render() {
                 </Card.Body>
               </Card.Header>
             </Card>
+
+            <section className="search-container">
+              <Search 
+                place='Origin' 
+                update={ this.updateSelection }
+              
+              />
+
+              {/* Put switch button component here */}
+
+              <Search 
+                place='Destination' 
+                update={ this.updateSelection }
+              />
+            </section>
+
+            <Yelp />
           </Container>
         </Jumbotron>
 

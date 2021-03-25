@@ -15,18 +15,19 @@ var json = {
 };
 
 var json2 = {
-    "name": "Falafel cafe",
-    "rating": 5,
+    "id": 200,
+    "name": "Mysttik Masaala",
+    "rating": 4.5,
     "price": "$",
     "location": {
-      "address1": "401 19th St S",
-      "address2": "Ste 100",
-      "city": "Birmingham",
-      "zip_code": "35233",
-      "country": "US",
-      "state": "AL"
+        "address1": "399 Park Ave",
+        "address2": "Corner of 54th street",
+        "city": "New York",
+        "zip_code": "10022",
+        "country": "US",
+        "state": "NY"
     },
-    "phone": "+12058683999"
+    "phone": "+19173063128"
 };
 
 indexFlightQuote(json);
@@ -80,7 +81,6 @@ function indexYelpPlaces(place) {
     var type = '_doc';
     var id = place['id'];
 
-    console.log(place)
 
     request.method = 'PUT';
     request.path += index + '/' + type + '/' + id;

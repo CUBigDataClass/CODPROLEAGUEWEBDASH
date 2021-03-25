@@ -11,7 +11,7 @@ router.get('/hello', (req, res) => {
 });
 
 router.post('/world', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     res.send(
         `I received your POST request. This is what you sent me: ${req.body.post}`,
     );
@@ -60,8 +60,8 @@ router.get('/weather', (req, res) => {
     });
 });
 
-//TEST ELASTIC 
-router.get('/search', (req, res) => {
+//TEST ELASTIC flight 
+router.get('/search/flight', (req, res) => {
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET,
         accessKeyId: process.env.AWS_KEY_ID,
@@ -84,7 +84,7 @@ router.get('/search', (req, res) => {
               query: {
                   multi_match: {
                       query: req.query.loc,
-                      fields: [ "OriginState", "OriginCity" ]
+                      fields: [ "OriginState", "OriginCity" ],
                       fuzziness: "AUTO"
                   }
               }
@@ -94,9 +94,9 @@ router.get('/search', (req, res) => {
           let options_arr = [];
           let options_set = new Set();
           for (hit of result.hits.hits){
-
+            
             let loc = hit._source['OriginCity'] + ', ' + hit._source['OriginState'];
-
+            
             if (!options_set.has(loc)) { 
                 let option = {};
                 option['value'] = loc;
@@ -113,5 +113,73 @@ router.get('/search', (req, res) => {
         console.log("err " + err);
     });
 });
+
+
+router.get('/search/yelp', (req, res) => {
+    AWS.config.update({
+        secretAccessKey: process.env.AWS_SECRET,
+        accessKeyId: process.env.AWS_KEY_ID,
+        region: process.env.AWS_REGION
+    });
+
+    let elasticClient = new elasticsearch.Client({
+        host: "https://search-trip-planner-search-7ibogrjydq3fzylipyslejm3wi.us-west-1.es.amazonaws.com/",
+        log: 'error',
+        connectionClass: connectionClass,
+        amazonES: {
+            credentials: new AWS.EnvironmentCredentials('AWS'),
+        }
+    });
+
+    // res.status(201).send("YEEEE");
+        // console.log("YEEEEEEE")
+        // console.log(JSON.stringify(req.query.location,null,2))
+      elasticClient.search({
+          index: 'yelp-places',
+          type: '_doc',
+          body: {
+            query: {
+                match: {
+                  "location.state": {
+                    query: req.query.location,
+                    fuzziness: "AUTO"
+                  }
+                }
+            }
+        }
+      })
+      .then(result => {
+        //   let options_arr = [];
+        //   let options_set = new Set();
+        //   for (hit of result.hits.hits){
+        
+        //     let loc = hit._source['name'] + ', ' + hit._source.location['state'];
+            
+        //     if (!options_set.has(loc)) { 
+        //         let option = {};
+        //         option['value'] = loc;
+        //         option['label'] = loc;
+        //         options_arr.push(option);
+        //         options_set.add(loc);
+        //     }
+        res.status(201).send(result.hits.hits);
+
+        
+        // console.log(result.hits.hits)
+        // // console.log(body)
+        // // console.log(options_arr)
+        // res.status(201).send(result.hits.hits);
+    })
+    .catch(err => {
+        console.log("err " + err);
+    });
+});
+
+// router.post('/test', (req, res) => {
+//     // console.log(req.body);
+//     res.send(
+//         "HEllo it is working"
+//     );
+// });
 
 module.exports = router;

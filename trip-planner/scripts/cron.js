@@ -86,7 +86,7 @@ function yelpcron() {
         if (responce_arr.length == 0) return;
 
         const res_formatted = JSON.stringify(responce_arr,null,2);
-        console.log(res_formatted)
+        // console.log(res_formatted)
         // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
         //     if (err) throw err;
         //     console.log("file success");
