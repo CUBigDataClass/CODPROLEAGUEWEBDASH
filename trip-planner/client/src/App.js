@@ -19,21 +19,9 @@ class App extends Component {
       responseToPost: '',
       originValue: null,
       destValue: null,
-      flightRes: {message: ""}
-      json: {
-        "name": "Falafel cafe",
-        "rating": 5,
-        "price": "$",
-        "location": {
-          "address1": "401 19th St S",
-          "address2": "Ste 100",
-          "city": "Birmingham",
-          "zip_code": "35233",
-          "country": "US",
-          "state": "AL"
-        },
-        "phone": "+12058683999"
-      },
+      flightRes: {message: ""},
+      placeRes: {message: ""}
+      
     };
 
     this.updateSelection = this.updateSelection.bind(this);
@@ -72,14 +60,15 @@ class App extends Component {
             await this.setState({ originValue: input.value });
         } else {
             await this.setState({ destValue: input.value });
-            
-            // call yelp endpoint search/yelp with destValue 
-            const opts = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(input.value.destValue.abbreviation)}`)
+            const respon = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
                                       .then(res => res.json())
                                       .catch(err => console.log("err: " + err));
 
-            console.log(opts)
-            this.setState({ options: opts });
+            if (typeof(respon) === 'undefined') {
+              this.setState({ flightRes: { message: "No places to visit" } })
+            } else {
+              this.setState({ placeRes: respon['0']._source });
+          }
         }
 
         if (this.state.originValue && this.state.destValue &&
@@ -136,7 +125,7 @@ render() {
               />
             </section>
 
-            <Yelp />
+            
           </Container>
         </Jumbotron>
 
@@ -156,9 +145,15 @@ render() {
         </form>
         <p>{ this.state.responseToPost }</p>
         <br/>
-        <Flight
-          quotes={this.state.flightRes}
-        />
+          <div className="rowC">
+          <Yelp
+            places={this.state.placeRes}
+          />
+          <br/>
+          <Flight
+            quotes={this.state.flightRes}
+          />
+          </div>
       </div>
     );
   }
