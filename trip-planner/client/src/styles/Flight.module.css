@@ -3,6 +3,7 @@
     flex-direction: column;
     background-color: purple;
     width: 350px;
+    display: inline-block;
 }
 
 .innerContainer {

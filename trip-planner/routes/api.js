@@ -160,9 +160,6 @@ router.get('/search/yelp', (req, res) => {
         }
     });
 
-    // res.status(201).send("YEEEE");
-        // console.log("YEEEEEEE")
-        // console.log(JSON.stringify(req.query.location,null,2))
       elasticClient.search({
           index: 'yelp-places',
           type: '_doc',
@@ -183,6 +180,8 @@ router.get('/search/yelp', (req, res) => {
     .catch(err => {
         console.log("err " + err);
     });
+
+    
 });
 
 module.exports = router;

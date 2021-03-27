@@ -1,0 +1,32 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   background-color: purple;
+   width: 350px;
+   display: inline-block;
+}
+
+.p {
+   color: black;
+  font-family: courier;
+  font-size: 120%;
+
+}
+
+.innerContainer {
+   background-color: goldenrod;
+   font-family: Georgia, serif;
+   font-size: 20px;
+   width: 300px;
+   height: auto;
+}
+
+img {
+   /* display: inline; */
+   vertical-align: middle;
+}
+
+sub {
+   color: gray;
+}
+
