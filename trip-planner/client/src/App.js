@@ -19,7 +19,7 @@ class App extends Component {
       responseToPost: '',
       originValue: null,
       destValue: null,
-      flightRes: {message: ""}
+      flightRes: {message: ""},
       json: {
         "name": "Falafel cafe",
         "rating": 5,
