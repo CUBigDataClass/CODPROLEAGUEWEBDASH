@@ -153,7 +153,10 @@ function indexFlightQuote(quote) {
     });
 }
 
-// indexYelpPlaces(json2);
+for (const state of states) {
+    indexYelpPlaces(state);
+}
+
 
 function indexYelpPlaces(place) {
     let endpoint = new AWS.Endpoint(domain);
