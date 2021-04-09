@@ -2,20 +2,11 @@ const AWS = require('aws-sdk');
 const elasticsearch = require('elasticsearch');
 require('dotenv').config();
 const states = require('../resources/states.json');
-const quotes = require('../resources/quotes.json');
+// const quotes = require('../resources/quotes.json');
+const quotes = {}
 
 let region = process.env.AWS_REGION;
 let domain = process.env.AWS_ELASTIC_DOMAIN;
-let json = {
-    "QuoteId": 5,
-    "MinPrice": 155,
-    "Direct": false,
-    "Carrier": "jetBlue",
-    "OriginCity": "New York",
-    "OriginState": "NY",
-    "DestinationCity": "Chicago",
-    "DestinationState": "IL"
-};
 
 var json2 = {
     "id": 200,
@@ -78,11 +69,11 @@ function indexState(doc) {
 }
 
 
-deleteIndex('flight-quotes');
+// deleteIndex('flight-quotes');
 
-for (const quote of quotes) {
-    indexFlightQuote(quote);
-}
+// for (const quote of quotes) {
+//     indexFlightQuote(quote);
+// }
 
 function deleteIndex(index) {
     let endpoint = new AWS.Endpoint(domain);
@@ -153,9 +144,9 @@ function indexFlightQuote(quote) {
     });
 }
 
-for (const state of states) {
-    indexYelpPlaces(state);
-}
+// for (const state of states) {
+//     indexYelpPlaces(state);
+// }
 
 
 function indexYelpPlaces(place) {

@@ -20,64 +20,59 @@ function addMonths(date, months) {
 
 function yelpcron() {
     // const cron_qs = '0 0 0 15 * ?'; // fire 15th of every month
-
-    const cron_qs = '0 * * * * *'; // fire once a min
+    const cron_qs = '0 43 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute again');
 
         var responce_arr = []
         count = 0
-        for (const state of sts.AllStateCodes){
-            const states_origin = state
+        for (const state of sts){
             const options = {
                 method: 'GET',
-                url: 'https://api.yelp.com/v3/businesses/search/',// + 'location=' + states_origin + 'limit=1',
+                url: 'https://api.yelp.com/v3/businesses/search',
                 qs: {
-                    location: states_origin,
-                    limit: '5',
-                    sort_by: 'rating'
+                    location: state.abbreviation,
+                    limit: '5'
                 },
                 headers: {
                     'Authorization': 'Bearer ' + process.env.YELP_API_KEY
                 }
             };
-                
-                request(options, function(err, res, data) {
-                    if (err) throw new Error(err)
+
+            request(options, function(err, res, data) {
+                if (err) throw new Error(err)
+
+                let json_obj = JSON.parse(data);
+
+                for (business of json_obj.businesses){
+                    count = count + 1 
                     
-                    else{
-                        var json_obj = JSON.parse(data);
-
-                        for (business of json_obj.businesses){
-                            count = count + 1 
-
-                            business.id = count 
-                            delete (business.alias)
-                            delete (business.image_url)
-                            delete (business.url)
-                            delete (business.is_closed)
-                            delete (business.review_count)
-                            delete (business.categories)
-                            delete (business.coordinates)
-                            delete (business.transactions)
-                            // delete (json_obj.businesses['0'].location.address1)
-                            // delete (json_obj.businesses['0'].location.address2)
-                            delete (business.location.address3)
-                            // delete (json_obj.businesses['0'].location.city)
-                            // delete (json_obj.businesses['0'].location.zip_code)
-                            // delete (json_obj.businesses['0'].location.country)
-                            delete (business.location.display_address)
-                            // delete (json_obj.businesses['0'].location.state)
-                            delete (business.display_phone)
-                            delete (business.distance)
-                            delete (business.total)
-                            delete (business.region)
-
-                            responce_arr.push(business)
-                            
-                        }
-                    }
-                });
+                    business.id = count 
+                    delete (business.alias)
+                    delete (business.image_url)
+                    delete (business.url)
+                    delete (business.is_closed)
+                    delete (business.review_count)
+                    delete (business.categories)
+                    delete (business.coordinates)
+                    delete (business.transactions)
+                    // delete (json_obj.businesses['0'].location.address1)
+                    // delete (json_obj.businesses['0'].location.address2)
+                    delete (business.location.address3)
+                    // delete (json_obj.businesses['0'].location.city)
+                    // delete (json_obj.businesses['0'].location.zip_code)
+                    // delete (json_obj.businesses['0'].location.country)
+                    delete (business.location.display_address)
+                    // delete (json_obj.businesses['0'].location.state)
+                    delete (business.display_phone)
+                    delete (business.distance)
+                    delete (business.total)
+                    delete (business.region)
+                    
+                    responce_arr.push(business)
+                    
+                }
+            });
 
             await new Promise(r => setTimeout(r, 1500)); // sleeps for 1.5 sec
         }
@@ -87,10 +82,10 @@ function yelpcron() {
 
         const res_formatted = JSON.stringify(responce_arr,null,2);
       
-        // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
-        //     if (err) throw err;
-        //     console.log("file success");
-        // });
+        fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
+            if (err) throw err;
+            console.log("file success");
+        });
 
         const s3 = new AWS.S3({
             accessKeyId: process.env.AWS_KEY_ID,
@@ -106,12 +101,12 @@ function yelpcron() {
         };
     
         // Uploading files to the bucket
-        s3.upload(params, function(err, data) {
-            if (err) {
-                throw err;
-            }
-            console.log(`File uploaded successfully. ${data.Location}`);
-        });
+        // s3.upload(params, function(err, data) {
+        //     if (err) {
+        //         throw err;
+        //     }
+        //     console.log(`File uploaded successfully. ${data.Location}`);
+        // });
         
         console.log("success");
     });
@@ -167,21 +162,29 @@ function weathercron() {
 
 // Pull flight price quotes from Skyscanner API
 function flightcron() {
-    const cron_qs = '0 39 * * * *'; // fire once a min
+    const cron_qs = '0 12 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute');
-        var res_arr = [];
+        let res_arr = [];
+        let visited_airports = new Set();
 
         // get 6 months 
-        for (let month=1; month<=2; ++month) {
-            var date = new Date();
+        for (let month=1; month<=1; ++month) {
+            let date = new Date();
             const month_formatted = addMonths(date, month).toISOString().split('T')[0].substring(0,7);
 
             // prices vary both ways from airports, so getting all possible matches is required
             for (let j=0; j<airports.length; ++j) {
                 for (let k=0; k<airports.length; ++k) {
 
+                    await new Promise(r => setTimeout(r, 1500)); // sleep 1.5 sec to avoid api rate limit
+
                     if (airports[j].RegionId == airports[k].RegionId) continue; // ignore interstate travel quotes
+                    if (visited_airports.has(airports[j].RegionId+airports[k].RegionId)) {
+                        continue;
+                    } else {
+                        visited_airports.add(airports[j].RegionId+airports[k].RegionId);
+                    }
 
                     const airport_origin = airports[j].PlaceId;
                     const airport_destination = airports[k].PlaceId;
@@ -196,17 +199,20 @@ function flightcron() {
                             'x-rapidapi-host': process.env.AIRLINE_HOST,
                         }
                     };
-        
+
                     // send request to API
                     request(options, function (error, response, body) {
                         if (error) throw new Error(error);
 
                         // cheapest flight is always at beginning
-                        var body_obj = JSON.parse(body);
+                        let body_obj = JSON.parse(body);
 
                         if (body_obj.errors || body_obj.Quotes.length == 0) return; // ignore when no quote is found
 
-                        var cheapest_quote = body_obj.Quotes[0];
+                        // let cheapest_quote = body_obj.Quotes[0];
+                        let cheapest_quote = body_obj.Quotes.find(q => q.Direct);
+
+                        if (typeof(cheapest_quote) === 'undefined') cheapest_quote = body_obj.Quotes[0];
 
                         // add airline name, i.e. 'Southwest Airlines'
                         for (const carrier of body_obj.Carriers) {
@@ -216,27 +222,26 @@ function flightcron() {
                         }
 
                         // clean/build response object
+                        cheapest_quote['QuoteId'] = k + (month * airports.length); // new unique identifier
+                        cheapest_quote['Month'] = month_formatted.substring(5,7);
+                        cheapest_quote['OriginState'] = airports[j].RegionId;
+                        cheapest_quote['DestinationState'] = airports[k].RegionId;
+                        cheapest_quote['DepartureDate'] = cheapest_quote.OutboundLeg.DepartureDate;
+                        
+                        if (body_obj.Places[0].PlaceId === cheapest_quote.OutboundLeg.OriginId) {
+                            cheapest_quote['OriginCity'] = body_obj.Places[0].CityName;
+                            cheapest_quote['DestinationCity'] = body_obj.Places[1].CityName;
+                        } else {
+                            cheapest_quote['OriginCity'] = body_obj.Places[1].CityName;
+                            cheapest_quote['DestinationCity'] = body_obj.Places[0].CityName;
+                        }
+
                         delete (cheapest_quote['OutboundLeg']);
                         delete (cheapest_quote['QuoteDateTime']);
 
-                        cheapest_quote['QuoteId'] = k + (month * airports.length); // new unique identifier
-                        cheapest_quote['Month'] = month_formatted.substring(5,7);
-                        cheapest_quote['OriginCity'] = body_obj.Places[0].CityName;
-                        cheapest_quote['DestinationCity'] = body_obj.Places[1].CityName;
-
-                        if (body_obj.Places[0].Name === airports[j].PlaceName) {
-                            cheapest_quote['OriginState'] = airports[j].RegionId;
-                            cheapest_quote['DestinationState'] = airports[k].RegionId;
-                        } else {
-                            cheapest_quote['OriginState'] = airports[k].RegionId;
-                            cheapest_quote['DestinationState'] = airports[j].RegionId;
-                        }
-                        
                         // format and push to response
                         res_arr.push(cheapest_quote);
                     });    
-                    
-                    await new Promise(r => setTimeout(r, 1500)); // sleep 1.5 sec to avoid api rate limit
                 }
                 break;
             }
@@ -246,33 +251,33 @@ function flightcron() {
 
         const res_formatted = JSON.stringify(res_arr,null,2);
 
-        fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
-            if (err) throw err;
-            console.log("file success");
-        });
+        // write to local file for testing purposes
+        // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
+        //     if (err) throw err;
+        //     console.log("file success");
+        // });
 
-        // const s3 = new AWS.S3({
-        //     accessKeyId: process.env.AWS_KEY_ID,
-        //     secretAccessKey: process.env.AWS_SECRET
-        // });
+        const s3 = new AWS.S3({
+            accessKeyId: process.env.AWS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET
+        });
     
-        // // Setting up S3 upload parameters
-        // const params = {
-        //     Bucket: 'trip-plannerrr',
-        //     Key: 'flight_api.json',
-        //     Body: res_formatted,
-        //     ContentType: 'application/json'
-        // };
+        // Setting up S3 upload parameters
+        const params = {
+            Bucket: 'trip-plannerrr',
+            Key: 'flight_api.json',
+            Body: res_formatted,
+            ContentType: 'application/json'
+        };
     
-        // // Uploading files to the bucket
-        // s3.upload(params, function(err, data) {
-        //     if (err) {
-        //         throw err;
-        //     }
-        //     console.log(`File uploaded successfully. ${data.Location}`);
-        // });
+        // Uploading files to the bucket
+        s3.upload(params, function(err, data) {
+            if (err) {
+                throw err;
+            }
+            console.log(`File uploaded successfully. ${data.Location}`);
+        });
     });
-    console.log("success");
 }
 
 module.exports  = { yelpcron, weathercron, flightcron }

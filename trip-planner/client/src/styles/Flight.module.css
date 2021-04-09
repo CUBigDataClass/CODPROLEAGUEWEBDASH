@@ -1,24 +1,68 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    background-color: purple;
-    width: 350px;
+    background-color: white;
+    border-radius: 5px;
+    width: 1050px;
     display: inline-block;
 }
 
 .innerContainer {
-    background-color: goldenrod;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
     font-family: Georgia, serif;
     font-size: 20px;
-    width: 300px;
-    height: auto;
+    width: auto;
+    margin: 5px 0px 10px 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-img {
-    /* display: inline; */
-    vertical-align: middle;
+.headerContainer {
+    margin: 10px 0px 0px 10px;
+}
+
+.headerContainer > * {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+.imgContainer {
+    margin: auto 10px auto 10px;
+}
+
+.cardImg {
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.topContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.topContainer p {
+    margin: 0;
+}
+
+.bottomContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 900px;
+    margin: 5px 0px 0px 0px;
+    color: grey;
+}
+
+.bottomContainer p {
+    margin: 0;
 }
 
 sub {
-    color: gray;
+    vertical-align: top;
 }
