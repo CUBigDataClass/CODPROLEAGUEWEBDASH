@@ -1,23 +1,7 @@
 import React, { Fragment } from 'react'
+import Card from 'react-bootstrap/Card'
 import Styles from '../styles/Flight.module.css'
-
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-const airlines = [
-    {
-        "id": "AS",
-        "lcc": "0",
-        "name": "Alaska Airlines",
-        "logo": "https://images.kiwi.com/airlines/64/AS.png"
-    },
-    {
-        "id": "B6",
-        "lcc": "1",
-        "name": "jetBlue",
-        "logo": "https://images.kiwi.com/airlines/64/B6.png"
-    },
-
-]
+import Airlines from '../resources/airlines.json'
 
 const Flight = (props) => {
     if (props.quotes.hasOwnProperty('message')) {
@@ -27,18 +11,30 @@ const Flight = (props) => {
         let container = [];
     
         for (const quote of quotes_sorted) {
-            const img_src = airlines.find(obj => {
-                return obj.name === quote.Carrier;
-            }).logo;
+            let date = new Date(quote.DepartureDate).toLocaleDateString('en-US')
+            const airline = Airlines.find(obj => {
+                return obj.name.toLowerCase() === quote.Carrier.toLowerCase();
+            });
+
+            const img_src = typeof(airline) !== 'undefined' ? airline.logo : '';
+
             let component = (
                 <Fragment>
-                    <div>
+                    <div className={Styles.container}>
                         <div className={Styles.innerContainer}>
-                            <p>* ${quote.MinPrice}</p>
-                            <p>* <img src={img_src}/> <sub>{quote.Carrier}</sub></p>
-                            <p>* month: {months[parseInt(quote.Month)]}</p>
-                            <p>* from: {quote.OriginCity}, {quote.OriginState}</p>
-                            <p>* to: {quote.DestinationCity}, {quote.DestinationState}</p>
+                            <div className={Styles.imgContainer}>
+                                <img className={Styles.cardImg} src={img_src}/>
+                            </div>
+                            <div className={Styles.infoContainer}>
+                                <div className={Styles.topContainer}>
+                                    <p>{quote.OriginCity}, {quote.OriginState}&nbsp;&nbsp;&nbsp;<sub>to</sub>&nbsp;&nbsp;&nbsp;{quote.DestinationCity}, {quote.DestinationState}</p>
+                                    <p>${quote.MinPrice}</p>
+                                </div>
+                                <div className={Styles.bottomContainer}>
+                                    <p>{quote.Carrier}</p>
+                                    <p>{date}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <br/>
@@ -50,6 +46,14 @@ const Flight = (props) => {
 
         return (
             <div className={Styles.container}>
+                <div className={Styles.headerContainer}>
+                    <div>
+                        <h4 style={{margin: '0'}}>Cheapest flight</h4>
+                    </div>
+                    <div>
+                        <sub>Cheapest direct flight one-way, stops may be included</sub>
+                    </div>
+                </div>
                 {container}
             </div>
         )

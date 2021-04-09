@@ -129,28 +129,14 @@ render() {
         </Jumbotron>
 
         </header>
-        {/* Testing quck GET POST requests */}
-        <p>{ this.state.response }</p>
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <strong>Post to Server:</strong>
-          </p>
-          <input
-            type="text"
-            value={ this.state.post }
-            onChange={e => this.setState({ post: e.target.value })}
+        <Flight
+            quotes={this.state.flightRes}
           />
-          <button type="submit">Submit</button>
-        </form>
         <p>{ this.state.responseToPost }</p>
         <br/>
           <div className="rowC">
           <Yelp
             places={this.state.placeRes}
-          />
-          <br/>
-          <Flight
-            quotes={this.state.flightRes}
           />
           </div>
       </div>
