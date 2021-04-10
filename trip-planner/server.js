@@ -15,6 +15,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', require('./routes/api'));
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/public/index.html'));
+});
+
 // refresh data in S3 bucket
 
 // cronJob.yelpcron();
