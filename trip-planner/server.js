@@ -14,23 +14,17 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/", express.static(path.join(__dirname + '/client/build')));
 app.use('/api', require('./routes/api'));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/client/public/eh.html'));
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 // refresh data in S3 bucket
-
 // cronJob.yelpcron();
 // cronJob.weathercron();
 // cronJob.flightcron();
-
-// cronJob.yelpcron();
-// pullAirports.pull();
-// 
-
-// yelpPars.download();
 
 // pullAirports.pull();
 // yelpPars.download();
