@@ -34,7 +34,6 @@ function yelpcron() {
                 url: 'https://api.yelp.com/v3/businesses/search',// + 'location=' + states_origin + 'limit=1',
                 qs: {
                     location: states_origin,
-                    // sort_by: 'rating', 
                     limit: '5'
                 },
                 headers: {
@@ -79,12 +78,12 @@ function yelpcron() {
             });
             await new Promise(r => setTimeout(r, 1500)); // sleeps for 1.5 sec
         }
-
         // write to file add to s3 
         if (responce_arr.length == 0) return;
 
         const res_formatted = JSON.stringify(responce_arr,null,2);
       
+
         fs.writeFile(path.join(__dirname, 'resources/yelpPlaces.json'), res_formatted, 'utf8', function(err) {
             if (err) throw err;
             console.log("file success");
@@ -104,12 +103,12 @@ function yelpcron() {
         };
     
         // Uploading files to the bucket
-        s3.upload(params, function(err, data) {
-            if (err) {
-                throw err;
-            }
-            console.log(`File uploaded successfully. ${data.Location}`);
-        });
+        // s3.upload(params, function(err, data) {
+        //     if (err) {
+        //         throw err;
+        //     }
+        //     console.log(`File uploaded successfully. ${data.Location}`);
+        // });
         
         console.log("success");
     });
@@ -165,21 +164,29 @@ function weathercron() {
 
 // Pull flight price quotes from Skyscanner API
 function flightcron() {
-    const cron_qs = '0 39 * * * *'; // fire once a min
+    const cron_qs = '0 12 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute');
-        var res_arr = [];
+        let res_arr = [];
+        let visited_airports = new Set();
 
         // get 6 months 
-        for (let month=1; month<=2; ++month) {
-            var date = new Date();
+        for (let month=1; month<=1; ++month) {
+            let date = new Date();
             const month_formatted = addMonths(date, month).toISOString().split('T')[0].substring(0,7);
 
             // prices vary both ways from airports, so getting all possible matches is required
             for (let j=0; j<airports.length; ++j) {
                 for (let k=0; k<airports.length; ++k) {
 
+                    await new Promise(r => setTimeout(r, 1500)); // sleep 1.5 sec to avoid api rate limit
+
                     if (airports[j].RegionId == airports[k].RegionId) continue; // ignore interstate travel quotes
+                    if (visited_airports.has(airports[j].RegionId+airports[k].RegionId)) {
+                        continue;
+                    } else {
+                        visited_airports.add(airports[j].RegionId+airports[k].RegionId);
+                    }
 
                     const airport_origin = airports[j].PlaceId;
                     const airport_destination = airports[k].PlaceId;
@@ -194,17 +201,20 @@ function flightcron() {
                             'x-rapidapi-host': process.env.AIRLINE_HOST,
                         }
                     };
-        
+
                     // send request to API
                     request(options, function (error, response, body) {
                         if (error) throw new Error(error);
 
                         // cheapest flight is always at beginning
-                        var body_obj = JSON.parse(body);
+                        let body_obj = JSON.parse(body);
 
                         if (body_obj.errors || body_obj.Quotes.length == 0) return; // ignore when no quote is found
 
-                        var cheapest_quote = body_obj.Quotes[0];
+                        // let cheapest_quote = body_obj.Quotes[0];
+                        let cheapest_quote = body_obj.Quotes.find(q => q.Direct);
+
+                        if (typeof(cheapest_quote) === 'undefined') cheapest_quote = body_obj.Quotes[0];
 
                         // add airline name, i.e. 'Southwest Airlines'
                         for (const carrier of body_obj.Carriers) {
@@ -214,27 +224,26 @@ function flightcron() {
                         }
 
                         // clean/build response object
+                        cheapest_quote['QuoteId'] = k + (month * airports.length); // new unique identifier
+                        cheapest_quote['Month'] = month_formatted.substring(5,7);
+                        cheapest_quote['OriginState'] = airports[j].RegionId;
+                        cheapest_quote['DestinationState'] = airports[k].RegionId;
+                        cheapest_quote['DepartureDate'] = cheapest_quote.OutboundLeg.DepartureDate;
+                        
+                        if (body_obj.Places[0].PlaceId === cheapest_quote.OutboundLeg.OriginId) {
+                            cheapest_quote['OriginCity'] = body_obj.Places[0].CityName;
+                            cheapest_quote['DestinationCity'] = body_obj.Places[1].CityName;
+                        } else {
+                            cheapest_quote['OriginCity'] = body_obj.Places[1].CityName;
+                            cheapest_quote['DestinationCity'] = body_obj.Places[0].CityName;
+                        }
+
                         delete (cheapest_quote['OutboundLeg']);
                         delete (cheapest_quote['QuoteDateTime']);
 
-                        cheapest_quote['QuoteId'] = k + (month * airports.length); // new unique identifier
-                        cheapest_quote['Month'] = month_formatted.substring(5,7);
-                        cheapest_quote['OriginCity'] = body_obj.Places[0].CityName;
-                        cheapest_quote['DestinationCity'] = body_obj.Places[1].CityName;
-
-                        if (body_obj.Places[0].Name === airports[j].PlaceName) {
-                            cheapest_quote['OriginState'] = airports[j].RegionId;
-                            cheapest_quote['DestinationState'] = airports[k].RegionId;
-                        } else {
-                            cheapest_quote['OriginState'] = airports[k].RegionId;
-                            cheapest_quote['DestinationState'] = airports[j].RegionId;
-                        }
-                        
                         // format and push to response
                         res_arr.push(cheapest_quote);
                     });    
-                    
-                    await new Promise(r => setTimeout(r, 1500)); // sleep 1.5 sec to avoid api rate limit
                 }
                 break;
             }
@@ -244,33 +253,33 @@ function flightcron() {
 
         const res_formatted = JSON.stringify(res_arr,null,2);
 
-        fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
-            if (err) throw err;
-            console.log("file success");
-        });
+        // write to local file for testing purposes
+        // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
+        //     if (err) throw err;
+        //     console.log("file success");
+        // });
 
-        // const s3 = new AWS.S3({
-        //     accessKeyId: process.env.AWS_KEY_ID,
-        //     secretAccessKey: process.env.AWS_SECRET
-        // });
+        const s3 = new AWS.S3({
+            accessKeyId: process.env.AWS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET
+        });
     
-        // // Setting up S3 upload parameters
-        // const params = {
-        //     Bucket: 'trip-plannerrr',
-        //     Key: 'flight_api.json',
-        //     Body: res_formatted,
-        //     ContentType: 'application/json'
-        // };
+        // Setting up S3 upload parameters
+        const params = {
+            Bucket: 'trip-plannerrr',
+            Key: 'flight_api.json',
+            Body: res_formatted,
+            ContentType: 'application/json'
+        };
     
-        // // Uploading files to the bucket
-        // s3.upload(params, function(err, data) {
-        //     if (err) {
-        //         throw err;
-        //     }
-        //     console.log(`File uploaded successfully. ${data.Location}`);
-        // });
+        // Uploading files to the bucket
+        s3.upload(params, function(err, data) {
+            if (err) {
+                throw err;
+            }
+            console.log(`File uploaded successfully. ${data.Location}`);
+        });
     });
-    console.log("success");
 }
 
 module.exports  = { yelpcron, weathercron, flightcron }

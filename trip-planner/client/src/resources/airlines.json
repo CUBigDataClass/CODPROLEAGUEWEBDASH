@@ -1,0 +1,177 @@
+[
+    {
+      "id": "UA",
+      "lcc": "0",
+      "name": "United Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/UA.png"
+    },
+    {
+      "id": "AS",
+      "lcc": "0",
+      "name": "Alaska Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/AS.png"
+    },
+    {
+      "id": "VX",
+      "lcc": "1",
+      "name": "Virgin America",
+      "logo": "https://images.kiwi.com/airlines/64/VX.png"
+    },
+    {
+      "id": "US",
+      "lcc": "0",
+      "name": "US Airways",
+      "logo": "https://images.kiwi.com/airlines/64/US.png"
+    },
+    {
+      "id": "4H",
+      "lcc": "0",
+      "name": "United Airways",
+      "logo": "https://images.kiwi.com/airlines/64/4H.png"
+    },
+    {
+      "id": "AA",
+      "lcc": "0",
+      "name": "American Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/AA.png"
+    },
+    {
+      "id": "WN",
+      "lcc": "1",
+      "name": "Southwest Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/WN.png"
+    },
+    {
+      "id": "NK",
+      "lcc": "1",
+      "name": "Spirit Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/NK.png"
+    },
+    {
+      "id": "SALTLAKEEX",
+      "lcc": "None",
+      "name": "Salt Lake Express",
+      "logo": "https://images.kiwi.com/airlines/64/SALTLAKEEX.png"
+    },
+    {
+      "id": "VIRGINIABR",
+      "lcc": "None",
+      "name": "Virginia Breeze",
+      "logo": "https://images.kiwi.com/airlines/64/VIRGINIABR.png"
+    },
+    {
+      "id": "HP",
+      "lcc": "0",
+      "name": "America West Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/HP.png"
+    },
+    {
+      "id": "9W",
+      "lcc": "0",
+      "name": "Jet Airways",
+      "logo": "https://images.kiwi.com/airlines/64/9W.png"
+    },
+    {
+      "id": "B6",
+      "lcc": "1",
+      "name": "JetBlue Airways",
+      "logo": "https://images.kiwi.com/airlines/64/B6.png"
+    },
+    {
+      "id": "Q7",
+      "lcc": "0",
+      "name": "Sky Bahamas",
+      "logo": "https://images.kiwi.com/airlines/64/Q7.png"
+    },
+    {
+      "id": "CP",
+      "lcc": "0",
+      "name": "Compass Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/CP.png"
+    },
+    {
+      "id": "7H",
+      "lcc": "1",
+      "name": "Ravn Alaska",
+      "logo": "https://images.kiwi.com/airlines/64/7H.png"
+    },
+    {
+      "id": "BURLINGTON",
+      "lcc": "None",
+      "name": "Burlington Trailways",
+      "logo": "https://images.kiwi.com/airlines/64/BURLINGTON.png"
+    },
+    {
+      "id": "CN",
+      "lcc": "0",
+      "name": "Canadian National Airways",
+      "logo": "https://images.kiwi.com/airlines/64/CN.png"
+    },
+    {
+      "id": "F9",
+      "lcc": "1",
+      "name": "Frontier Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/F9.png"
+    },
+    {
+      "id": "VTTRANSLIN",
+      "lcc": "None",
+      "name": "Vermont Translines",
+      "logo": "https://images.kiwi.com/airlines/64/VTTRANSLIN.png"
+    },
+    {
+      "id": "DL",
+      "lcc": "0",
+      "name": "Delta Air Lines",
+      "logo": "https://images.kiwi.com/airlines/64/DL.png"
+    },
+    {
+      "id": "HA",
+      "lcc": "0",
+      "name": "Hawaiian Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/HA.png"
+    },
+    {
+      "id": "PL",
+      "lcc": "0",
+      "name": "Southern Air Charter",
+      "logo": "https://images.kiwi.com/airlines/64/PL.png"
+    },
+    {
+      "id": "AT",
+      "lcc": "0",
+      "name": "Royal Air Maroc",
+      "logo": "https://images.kiwi.com/airlines/64/AT.png"
+    },
+    {
+      "id": "BR",
+      "lcc": "1",
+      "name": "EVA Air",
+      "logo": "https://images.kiwi.com/airlines/64/BR.png"
+    },
+    {
+      "id": "VS",
+      "lcc": "0",
+      "name": "Virgin Atlantic Airways",
+      "logo": "https://images.kiwi.com/airlines/64/VS.png"
+    },
+    {
+      "id": "GQ",
+      "lcc": "0",
+      "name": "Sky Express",
+      "logo": "https://images.kiwi.com/airlines/64/GQ.png"
+    },
+    {
+      "id": "P4",
+      "lcc": "0",
+      "name": "Air Peace Limited",
+      "logo": "https://images.kiwi.com/airlines/64/P4.png"
+    },
+    {
+        "id": "B6",
+        "lcc": "1",
+        "name": "JetBlue",
+        "logo": "https://images.kiwi.com/airlines/64/B6.png"
+    }
+  ]
+  

@@ -22,7 +22,6 @@ class App extends Component {
       destValue: null,
       flightRes: {message: ""},
       placeRes: {message: ""}
-      
     };
 
     this.updateSelection = this.updateSelection.bind(this);
