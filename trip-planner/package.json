@@ -1,11 +1,13 @@
 {
   "name": "trip-planner",
   "version": "1.0.0",
-  "scripts": {
-    "client": "cd client && npm run start",
+  "scripts": {    
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"node server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"  
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.11.0",
