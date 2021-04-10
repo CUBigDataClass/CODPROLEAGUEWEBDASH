@@ -1,1 +1,1 @@
-nodemon server
+npm run server
