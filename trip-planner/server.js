@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const cors = require('cors')
-const port = process.env.PORT || 5000;
-const host = '0.0.0.0';
 
 const cronJob = require('./scripts/cron');
 const pullAirports = require('./scripts/airports');
@@ -32,6 +30,6 @@ app.get('*', (req, res) => {
 // yelpPars.download();
 // yelpPars.parse();
 
-app.listen(port, host, function() {
+app.listen(process.env.PORT || 5000, function() {
     console.log('listening on port: ' + port);
 });
