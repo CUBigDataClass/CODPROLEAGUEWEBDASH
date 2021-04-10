@@ -20,36 +20,39 @@ function addMonths(date, months) {
 
 function yelpcron() {
     // const cron_qs = '0 0 0 15 * ?'; // fire 15th of every month
-    const cron_qs = '0 43 * * * *'; // fire once a min
+
+    const cron_qs = '0 17 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute again');
 
         var responce_arr = []
         count = 0
         for (const state of sts){
+            const states_origin = state.abbreviation
             const options = {
                 method: 'GET',
-                url: 'https://api.yelp.com/v3/businesses/search',
+                url: 'https://api.yelp.com/v3/businesses/search',// + 'location=' + states_origin + 'limit=1',
                 qs: {
-                    location: state.abbreviation,
+                    location: states_origin,
                     limit: '5'
                 },
                 headers: {
                     'Authorization': 'Bearer ' + process.env.YELP_API_KEY
                 }
-            };
-
-            request(options, function(err, res, data) {
+            }
+            // console.log(options)
+            request(options, function(err, res, body) {
                 if (err) throw new Error(err)
 
-                let json_obj = JSON.parse(data);
-
+                var json_obj = JSON.parse(body);
+            
                 for (business of json_obj.businesses){
-                    count = count + 1 
                     
+                    count = count + 1 
+
                     business.id = count 
                     delete (business.alias)
-                    delete (business.image_url)
+                    // delete (business.image_url)
                     delete (business.url)
                     delete (business.is_closed)
                     delete (business.review_count)
@@ -68,21 +71,20 @@ function yelpcron() {
                     delete (business.distance)
                     delete (business.total)
                     delete (business.region)
-                    
+
                     responce_arr.push(business)
-                    
+                        
                 }
             });
-
             await new Promise(r => setTimeout(r, 1500)); // sleeps for 1.5 sec
         }
-
         // write to file add to s3 
         if (responce_arr.length == 0) return;
 
         const res_formatted = JSON.stringify(responce_arr,null,2);
       
-        fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
+
+        fs.writeFile(path.join(__dirname, 'resources/yelpPlaces.json'), res_formatted, 'utf8', function(err) {
             if (err) throw err;
             console.log("file success");
         });

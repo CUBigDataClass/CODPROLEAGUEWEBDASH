@@ -175,7 +175,12 @@ router.get('/search/yelp', (req, res) => {
         }
       })
       .then(result => {
-        res.status(201).send(result.hits.hits);
+        if (result.hits.hits.length === 0) {
+            res.sendStatus(404);
+        } else {
+            // let hits = Array.from(result.hits.hits, h => h._source);
+            res.status(201).send(result.hits.hits);
+        }
     })
     .catch(err => {
         console.log("err " + err);
