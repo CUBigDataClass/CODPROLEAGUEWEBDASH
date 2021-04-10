@@ -57,7 +57,7 @@ class Search extends Component {
                     cacheOptions
                     options={options}
                     styles={customStyles}
-                    placeholder={'Search ' + this.props.place}
+                    placeholder={this.props.place}
                     inputValue={inputValue}
                     onInputChange={this.handleInputChange}
                     onChange={this.handleChange}

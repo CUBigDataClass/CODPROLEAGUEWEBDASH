@@ -108,13 +108,14 @@ render() {
               <Search place='Destination' update={ this.updateSelection }/>
             </section>
         </div>
-          <div className="InformationSection">
-            <div className="rowC">
-              <Yelp className="Introoo" places={this.state.placeRes}/>
-              <br/>
-              <Flight quotes={this.state.flightRes}/>
+        <div className="InformationSection">
+            <div>
+                <Flight quotes={this.state.flightRes}/>
             </div>
-          </div>
+            <div className="rowC">
+                <Yelp className="Introoo" places={this.state.placeRes}/>
+            </div>
+        </div>
       </div>
     );
   }
