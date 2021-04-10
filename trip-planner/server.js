@@ -31,5 +31,5 @@ app.get('*', (req, res) => {
 // yelpPars.parse();
 
 app.listen(process.env.PORT || 5000, function() {
-    console.log('listening on port: ' + port);
+    console.log('Successfully connected...');
 });
