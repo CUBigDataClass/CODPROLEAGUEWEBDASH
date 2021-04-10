@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && npm run start",
+    "client-build": "cd client && npm run build",
     "server": "node server.js",
     "dev": "concurrently --kill-others-on-fail \"node server\" \"npm run client\"",
     "client-install": "cd client && npm install --only=dev && npm install && npm run build",
-    "start": "npm run client-install && npm run server"
+    "start": "npm run client-install && npm run server",
+    "start-local": "npm run client-build && npm run server"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.11.0",
