@@ -21,64 +21,62 @@ function addMonths(date, months) {
 function yelpcron() {
     // const cron_qs = '0 0 0 15 * ?'; // fire 15th of every month
 
-    const cron_qs = '0 * * * * *'; // fire once a min
+    const cron_qs = '0 17 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute again');
 
         var responce_arr = []
         count = 0
-        for (const state of sts.AllStateCodes){
-            const states_origin = state
+        for (const state of sts){
+            const states_origin = state.abbreviation
             const options = {
                 method: 'GET',
-                url: 'https://api.yelp.com/v3/businesses/search/',// + 'location=' + states_origin + 'limit=1',
+                url: 'https://api.yelp.com/v3/businesses/search',// + 'location=' + states_origin + 'limit=1',
                 qs: {
                     location: states_origin,
-                    limit: '5',
-                    sort_by: 'rating'
+                    // sort_by: 'rating', 
+                    limit: '5'
                 },
                 headers: {
                     'Authorization': 'Bearer ' + process.env.YELP_API_KEY
                 }
-            };
-                
-                request(options, function(err, res, data) {
-                    if (err) throw new Error(err)
+            }
+            // console.log(options)
+            request(options, function(err, res, body) {
+                if (err) throw new Error(err)
+
+                var json_obj = JSON.parse(body);
+            
+                for (business of json_obj.businesses){
                     
-                    else{
-                        var json_obj = JSON.parse(data);
+                    count = count + 1 
 
-                        for (business of json_obj.businesses){
-                            count = count + 1 
+                    business.id = count 
+                    delete (business.alias)
+                    // delete (business.image_url)
+                    delete (business.url)
+                    delete (business.is_closed)
+                    delete (business.review_count)
+                    delete (business.categories)
+                    delete (business.coordinates)
+                    delete (business.transactions)
+                    // delete (json_obj.businesses['0'].location.address1)
+                    // delete (json_obj.businesses['0'].location.address2)
+                    delete (business.location.address3)
+                    // delete (json_obj.businesses['0'].location.city)
+                    // delete (json_obj.businesses['0'].location.zip_code)
+                    // delete (json_obj.businesses['0'].location.country)
+                    delete (business.location.display_address)
+                    // delete (json_obj.businesses['0'].location.state)
+                    delete (business.display_phone)
+                    delete (business.distance)
+                    delete (business.total)
+                    delete (business.region)
 
-                            business.id = count 
-                            delete (business.alias)
-                            delete (business.image_url)
-                            delete (business.url)
-                            delete (business.is_closed)
-                            delete (business.review_count)
-                            delete (business.categories)
-                            delete (business.coordinates)
-                            delete (business.transactions)
-                            // delete (json_obj.businesses['0'].location.address1)
-                            // delete (json_obj.businesses['0'].location.address2)
-                            delete (business.location.address3)
-                            // delete (json_obj.businesses['0'].location.city)
-                            // delete (json_obj.businesses['0'].location.zip_code)
-                            // delete (json_obj.businesses['0'].location.country)
-                            delete (business.location.display_address)
-                            // delete (json_obj.businesses['0'].location.state)
-                            delete (business.display_phone)
-                            delete (business.distance)
-                            delete (business.total)
-                            delete (business.region)
-
-                            responce_arr.push(business)
-                            
-                        }
-                    }
-                });
-
+                    responce_arr.push(business)
+                        
+                }
+            });
             await new Promise(r => setTimeout(r, 1500)); // sleeps for 1.5 sec
         }
 
@@ -87,10 +85,10 @@ function yelpcron() {
 
         const res_formatted = JSON.stringify(responce_arr,null,2);
       
-        // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
-        //     if (err) throw err;
-        //     console.log("file success");
-        // });
+        fs.writeFile(path.join(__dirname, 'resources/yelpPlaces.json'), res_formatted, 'utf8', function(err) {
+            if (err) throw err;
+            console.log("file success");
+        });
 
         const s3 = new AWS.S3({
             accessKeyId: process.env.AWS_KEY_ID,

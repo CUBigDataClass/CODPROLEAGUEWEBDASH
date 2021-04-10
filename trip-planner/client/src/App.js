@@ -5,6 +5,7 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Search from './components/Search';
 import Flight from './components/Flight';
 import Yelp from './components/Yelp';
+import Intro from './components/Intro';
 
 import './App.css';
 // import { Discovery } from 'aws-sdk';
@@ -67,7 +68,9 @@ class App extends Component {
             if (typeof(respon) === 'undefined') {
               this.setState({ flightRes: { message: "No places to visit" } })
             } else {
-              this.setState({ placeRes: respon['0']._source });
+              // console.log(respon['0']._source)
+              let hits = Array.from(respon, h => h._source);
+              this.setState({ placeRes: hits });
           }
         }
 
@@ -93,66 +96,25 @@ class App extends Component {
   
 render() {
     return (
-      <div className="App">
-        <header className="App-header">
-         <h1>Welcome to Trip Planner</h1>
-
-        <Jumbotron className="jumbo-style">
-          <Container className="Intro">
-            <Card className="card">
-              <Card.Header as="h5" className="d-flex justify-content-center flex-wrap">
-                <Card.Body className="d-flex justify-content-center flex-column">
-                  <Card.Text>Trip Planner is the web based application that allows users to plan their trip accordigly to their destination.</Card.Text>
-                  <Card.Text>All you have to do is enter the desired location into the search bar and we will take care of the rest.</Card.Text>
-                  <Card.Text>Trip Planner is connected to multiple APIs to help us provide you with the best information.</Card.Text>
-                  <Card.Text>You enter destination and we will provide with cheapest fligh tickets, weather report, things to do and spots to visit.</Card.Text>
-                </Card.Body>
-              </Card.Header>
-            </Card>
-
+      <div className="App" style={{ position: "relative" }}>
+        <div className="Intro">
+          <header className="App-header">
+              <Intro />
+          </header>
+        </div>
+        <div className="Search_bar">
+          <Card.Text>Please select your From and To:</Card.Text>
             <section className="search-container">
-              <Search 
-                place='Origin' 
-                update={ this.updateSelection }
-              
-              />
-
-              {/* Put switch button component here */}
-
-              <Search 
-                place='Destination' 
-                update={ this.updateSelection }
-              />
+              <Search place='Origin' update={ this.updateSelection }/>
+              <Search place='Destination' update={ this.updateSelection }/>
             </section>
-
-            
-          </Container>
-        </Jumbotron>
-
-        </header>
-        {/* Testing quck GET POST requests */}
-        <p>{ this.state.response }</p>
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <strong>Post to Server:</strong>
-          </p>
-          <input
-            type="text"
-            value={ this.state.post }
-            onChange={e => this.setState({ post: e.target.value })}
-          />
-          <button type="submit">Submit</button>
-        </form>
-        <p>{ this.state.responseToPost }</p>
-        <br/>
-          <div className="rowC">
-          <Yelp
-            places={this.state.placeRes}
-          />
-          <br/>
-          <Flight
-            quotes={this.state.flightRes}
-          />
+        </div>
+          <div className="InformationSection">
+            <div className="rowC">
+              <Yelp className="Introoo" places={this.state.placeRes}/>
+              <br/>
+              <Flight quotes={this.state.flightRes}/>
+            </div>
           </div>
       </div>
     );
