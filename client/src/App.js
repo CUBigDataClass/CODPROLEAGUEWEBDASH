@@ -73,14 +73,13 @@ render() {
               <Intro />
           </header>
         </div>
-        <div className="Search_bar">
+        <div className="searchAreaContainer">
             <section className="searchContainer">
               <div>
                 <Search 
                   place='Origin' 
                   inputValue={this.state.originInput}
                   updateSelection={this.updateSelection}
-                  updateInput={this.updateInput}
                 />
               </div>
               <div>
@@ -88,7 +87,6 @@ render() {
                   place='Destination' 
                   inputValue={this.state.destInput}
                   updateSelection={this.updateSelection}
-                  updateInput={this.updateInput}
                 />
               </div>
             </section>
