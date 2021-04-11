@@ -30,7 +30,7 @@ app.get('*', (req, res) => {
 // yelpPars.download();
 // yelpPars.parse();
 
-console.log("PORT: " + process.env.PORT);
+console.log("PORT: " + process.env.PORT || 5000);
 
 app.listen(process.env.PORT || 5000, function() {
     console.log('Successfully connected...');
