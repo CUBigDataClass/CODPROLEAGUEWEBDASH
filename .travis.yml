@@ -3,6 +3,5 @@ node_js:
   - 10.15.2
 before_script:
   - npm install -g opencollective-postinstall
-  - npm run build
 script:
-  - npm run start
+  - npm run build
