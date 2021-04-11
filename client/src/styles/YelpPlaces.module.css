@@ -1,55 +1,55 @@
-.container {
+.outerContainer {
    display: flex;
    flex-direction: row;
-   background-color: rgb(85, 81, 81);
-   width: 260px;
-   /* margin-left: 10px; */
-   /* display: inline-block; */
+   width: auto;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   margin: 0px 0px 0px 0px;
+   background-color: white;
 }
 .innerContainer {
    background-color: white;
    display: flex;
    flex-direction: column;
-   font-family: Georgia, serif;
    font-size: 14px;
-   width: 750px;
-   height: 450px;
-   overflow: hidden;
-   margin-left: 10px;
-   margin-right: 10px;
-   margin-top: 30px;
+   width: 300px;
+   height: auto;
+   margin: 30px 10px 20px 10px;
    border-radius: 35px;
+   overflow: hidden;
    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-/* .imgContainer {
-   height: 200px;
-   overflow: hidden;
-} */
-.Introoo {
+
+.innerContainer > sub {
+   margin: 3px 0px  6px 0px;
+}
+
+.Intro {
    color: black;
-   
    display: flex;
    background-color: rgb(85, 81, 81);
    font-family: courier;
    font-size: 150%;
    font-family: Georgia, serif;
-   justify-content: center;
-
 }
 
 .imgContainer {
-   height: 200px;
+   height: 150px;
+   width: 300px;
+   background-color: white;
    overflow: hidden;
-   /* display: inline; */
-   vertical-align: middle;
 }
 
 .cardImg {
    height: auto;
-   width: 450px;
+   width: 350px;
 }
 
-sub {
-   color: gray;
+.infoContainer {
+   display:flex;
+   flex-direction: column;
+   margin: 0px 0px 15px 0px;
 }
-

@@ -9,7 +9,7 @@ const Intro = () => {
    return(
       <div>
          <h1>Welcome to Trip Planner</h1>
-               <Jumbotron className="jumbo-style">
+               {/* <Jumbotron className="jumbo-style">
                   <Container className="Intro">
                   <Card className="card">
                      <Card.Header as="h5" className="d-flex justify-content-center flex-wrap">
@@ -22,7 +22,7 @@ const Intro = () => {
                      </Card.Header>
                   </Card>
                </Container>
-            </Jumbotron>
+            </Jumbotron> */}
       </div>
    )
 }

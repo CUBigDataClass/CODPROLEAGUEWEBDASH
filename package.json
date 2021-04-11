@@ -6,7 +6,8 @@
     "server": "nodemon server.js",
     "build": "cd client && npm install && npm run build",
     "start": "node server.js",
-    "start-local": "npm run build && nodemon server"
+    "start-local": "cd client && npm run build && cd .. && nodemon server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.11.0",
