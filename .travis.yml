@@ -1,4 +1,6 @@
 language: node_js
+install:
+  - npm install opencollective-postinstall
 before_script:
   - npm run build
 script:
