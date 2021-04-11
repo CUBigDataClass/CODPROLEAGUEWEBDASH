@@ -1,29 +1,29 @@
-trip-planner/node_modules
-trip-planner/client/node_modules
-trip-planner/scripts/lambda/node_modules
-trip-planner/.env
+/node_modules
+/client/node_modules
+/scripts/lambda/node_modules
+/.env
 
 # dependencies
 
-/trip-planner/client/.pnp
-/trip-planner/client/.pnp.js
+/client/.pnp
+/client/.pnp.js
 
 # testing
-/trip-planner/client/coverage
+/client/coverage
 
 # production
-/trip-planner/client/build
+/client/build
 
 # misc
-/trip-planner/client/.DS_Store
-/trip-planner/client/.env.local
-/trip-planner/client/.env.development.local
-/trip-planner/client/.env.test.local
-/trip-planner/client/.env.production.local
+/client/.DS_Store
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
 
-/trip-planner/client/npm-debug.log*
-/trip-planner/client/yarn-debug.log*
-/trip-planner/client/yarn-error.log*
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*
 
 #resources
-/trip-planner/scripts/resources/quotes.json
+/scripts/resources/quotes.json
