@@ -22,6 +22,7 @@
     "express": "^4.17.1",
     "http-aws-es": "^6.0.0",
     "missing": "0.0.1",
+    "opencollective-postinstall": "^2.0.0",
     "node-cron": "^2.0.3",
     "react-bootstrap": "^1.5.1",
     "request": "^2.88.2",
