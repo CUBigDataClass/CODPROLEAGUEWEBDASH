@@ -38,7 +38,6 @@ class Search extends Component {
     }
 
     render() {
-        const { _, options } = this.state;
         const customStyles = {
             option: (_, state) => ({
                 color: 'black',
@@ -50,7 +49,7 @@ class Search extends Component {
             <div className={searchStyles.mainContainer}>
                 <Select 
                     cacheOptions
-                    options={options}
+                    options={this.state.options}
                     styles={customStyles}
                     placeholder={this.props.place}
                     inputValue={this.state.inputValue}
