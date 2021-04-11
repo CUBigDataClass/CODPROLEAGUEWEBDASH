@@ -38,7 +38,7 @@ class Search extends Component {
     }
 
     render() {
-        const { inputValue, options } = this.state;
+        const { _, options } = this.state;
         const customStyles = {
             option: (_, state) => ({
                 color: 'black',

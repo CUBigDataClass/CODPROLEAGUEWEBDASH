@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import Search from './components/Search';
 import Flight from './components/Flight';
 import Yelp from './components/Yelp';
