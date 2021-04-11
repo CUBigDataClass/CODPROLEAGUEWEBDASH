@@ -1,4 +1,5 @@
 language: node_js
-script:
+before_script:
   - npm run build
+script:
   - npm run start
