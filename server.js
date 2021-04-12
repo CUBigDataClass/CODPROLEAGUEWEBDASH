@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const cors = require('cors')
@@ -26,11 +25,10 @@ app.get('*', (req, res) => {
 // cronJob.weathercron();
 // cronJob.flightcron();
 
+// scripts to get ready for data pulls
 // pullAirports.pull();
 // yelpPars.download();
 // yelpPars.parse();
-
-console.log("PORT: " + process.env.PORT || 5000);
 
 app.listen(process.env.PORT || 5000, function() {
     console.log('Successfully connected...');
