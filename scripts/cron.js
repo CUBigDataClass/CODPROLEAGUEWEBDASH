@@ -164,7 +164,7 @@ function weathercron() {
 
 // Pull flight price quotes from Skyscanner API
 function flightcron() {
-    const cron_qs = '0 12 * * * *'; // fire once a min
+    const cron_qs = '40 27 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute');
         let res_arr = [];
@@ -174,6 +174,7 @@ function flightcron() {
         for (let month=1; month<=1; ++month) {
             let date = new Date();
             const month_formatted = addMonths(date, month).toISOString().split('T')[0].substring(0,7);
+            let id = 1;
 
             // prices vary both ways from airports, so getting all possible matches is required
             for (let j=0; j<airports.length; ++j) {
@@ -224,7 +225,7 @@ function flightcron() {
                         }
 
                         // clean/build response object
-                        cheapest_quote['QuoteId'] = k + (month * airports.length); // new unique identifier
+                        cheapest_quote['QuoteId'] = id;
                         cheapest_quote['Month'] = month_formatted.substring(5,7);
                         cheapest_quote['OriginState'] = airports[j].RegionId;
                         cheapest_quote['DestinationState'] = airports[k].RegionId;
@@ -243,13 +244,15 @@ function flightcron() {
 
                         // format and push to response
                         res_arr.push(cheapest_quote);
+                        id+=1;
                     });    
                 }
-                break;
             }
         }
 
         if (res_arr.length == 0) return;
+        console.log("!!!!!!!!")
+        console.log(res_arr.length);
 
         const res_formatted = JSON.stringify(res_arr,null,2);
 

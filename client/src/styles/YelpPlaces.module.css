@@ -54,3 +54,11 @@
    flex-direction: column;
    margin: 0px 0px 15px 0px;
 }
+
+@media all and (max-width:800px)
+{
+    .outerContainer {
+       display: flex;
+       flex-direction: column;
+    }
+}

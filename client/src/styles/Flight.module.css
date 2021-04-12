@@ -9,7 +9,7 @@
     background-color: white;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: Georgia, serif;
     font-size: 20px;
     width: auto;
@@ -65,4 +65,32 @@
 
 sub {
     vertical-align: top;
+}
+
+@media all and (max-width:800px)
+{
+    .container {
+       width: 300px;
+    }
+
+    .innerContainer {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .infoContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .topContainer {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .bottomContainer {
+        width: 300px;
+    }
 }

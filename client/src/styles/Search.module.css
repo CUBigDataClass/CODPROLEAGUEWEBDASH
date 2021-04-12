@@ -1,3 +1,11 @@
 .mainContainer {
     width: 400px;
 }
+
+@media all and (max-width:800px)
+{
+    .mainContainer
+    {
+      width: 250px;
+    }
+}
