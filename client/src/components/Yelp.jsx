@@ -43,7 +43,7 @@ const Yelp = (props) => {
 
       return (
          <div>
-            <p className="Intro">Restaurants in {state}</p>
+            <h2 className={Styles.places}>Places in {state} to visit</h2>
             <div className={Styles.outerContainer}>
                   {arr}
             </div>

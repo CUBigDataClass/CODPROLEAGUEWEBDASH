@@ -7,7 +7,12 @@ import Flight from './components/Flight';
 import Yelp from './components/Yelp';
 import Intro from './components/Intro';
 
+import Footer from './components/Footer';
+
 import './App.css';
+
+
+import Pic from './images/picture.jpg';
 
 class App extends Component {
   constructor() {
@@ -68,31 +73,29 @@ class App extends Component {
 render() {
     return (
       <div className="App" style={{ position: "relative" }}>
-        <div className="Intro">
-          <header className="App-header">
-              <Intro />
-          </header>
-        </div>
-        <div className="Search_bar">
-            <section className="searchContainer">
-              <div>
-                <Search 
-                  place='Origin' 
-                  inputValue={this.state.originInput}
-                  updateSelection={this.updateSelection}
-                  updateInput={this.updateInput}
-                />
-              </div>
-              <div>
-                <Search 
-                  place='Destination' 
-                  inputValue={this.state.destInput}
-                  updateSelection={this.updateSelection}
-                  updateInput={this.updateInput}
-                />
-              </div>
-            </section>
-        </div>
+        {/* <div> */}
+          {/* <div className="Intro" style={{backgroundImage: 'url(' + require('./images/picture.jpg') + ')'}}> */}
+          <div className="Intro">
+            <h1 className="Welcome">Welcome to Trip Planner</h1>
+              <section className="searchContainer">
+                <div className="Search">
+                  <Search 
+                    place='Origin' 
+                    inputValue={this.state.originInput}
+                    updateSelection={this.updateSelection}
+                    updateInput={this.updateInput}
+                  />
+                </div>
+                <div className="Search">
+                  <Search 
+                    place='Destination' 
+                    inputValue={this.state.destInput}
+                    updateSelection={this.updateSelection}
+                    updateInput={this.updateInput}
+                  />
+                </div>
+              </section>
+          </div> 
         <div className="infoContainer">
             <div>
                 <Flight quotes={this.state.flightRes}/>
@@ -101,6 +104,7 @@ render() {
                 <Yelp places={this.state.placeRes}/>
             </div>
         </div>
+        <Footer />
       </div>
     );
   }

@@ -1,11 +1,11 @@
 .App {
   text-align: center;
 }
-
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,16 +13,15 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+/* .App-header {
+  background-color: #8d4176;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -49,18 +48,40 @@
   align-items: center;
 }
 
+.Welcome{
+  padding-top: 30px;
+  font-size: calc(40px + 3vmin);
+  font-style:oblique;
+}
+
+.Intro{
+  justify-content: center;
+  margin-top: -42px;
+  align-items: center;
+  background-image: url('images/picture.jpg'); 
+  background-size: 100% 100%;
+  font-size: calc(10px + 2vmin);
+  font-family: 'New Tegomin', serif;
+  /* background-position: 100px 5px; */
+  height: 385px;
+}
+
 .searchContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('images/chi_skyline.jpg');
-  background-position: center;
-  height: 400px;
+  height: 150px;
 }
 
-.searchContainer > div + div {
+.Search {
   margin-left: 30px;
 }
+.searchContainer Search:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+
 
 .yelpRow{
   display:flex; 
@@ -68,3 +89,4 @@
   justify-content: center;
   align-items: center;
 }
+
