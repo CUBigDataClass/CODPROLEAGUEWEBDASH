@@ -1,5 +1,5 @@
 
-import React, { Fragment, Linking } from 'react'
+import React, { Fragment } from 'react'
 
 
 import StarRatings from 'react-star-ratings'
