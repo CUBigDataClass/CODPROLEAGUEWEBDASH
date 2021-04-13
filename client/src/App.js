@@ -72,9 +72,7 @@ class App extends Component {
   
 render() {
     return (
-      <div className="App" style={{ position: "relative" }}>
-        {/* <div> */}
-          {/* <div className="Intro" style={{backgroundImage: 'url(' + require('./images/picture.jpg') + ')'}}> */}
+      <div className="App">
           <div className="Intro">
             <h1 className="Welcome">Welcome to Trip Planner</h1>
               <section className="searchContainer">
@@ -104,7 +102,9 @@ render() {
                 <Yelp places={this.state.placeRes}/>
             </div>
         </div>
-        <Footer />
+        <div>
+          <Footer/>
+        </div>
       </div>
     );
   }

@@ -16,6 +16,7 @@
    flex-direction: column;
    margin: 0px 0px 0px 0px;
    background-color:rgb(141, 189, 251);
+   opacity: 0.95;
 }
 .innerContainer {
    background-color: rgb(216, 221, 231);
@@ -43,7 +44,7 @@
 }
 
 .imgContainer {
-   height: auto;
+   height: 150px;
    width: 100%;
    background-color: white;
    overflow: hidden;
