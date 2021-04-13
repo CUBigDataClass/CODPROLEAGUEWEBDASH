@@ -2,7 +2,7 @@
     {
       "id": "UA",
       "lcc": "0",
-      "name": "United Airlines",
+      "name": "United",
       "logo": "https://images.kiwi.com/airlines/64/UA.png"
     },
     {
@@ -172,6 +172,24 @@
         "lcc": "1",
         "name": "JetBlue",
         "logo": "https://images.kiwi.com/airlines/64/B6.png"
+    },
+    {
+      "id": "HA",
+      "lcc": "0",
+      "name": "Hawaiian Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/HA.png"
+    },
+    {
+      "id": "SY",
+      "lcc": "1",
+      "name": "Sun Country Airlines",
+      "logo": "https://images.kiwi.com/airlines/64/SY.png"
+    },
+    {
+      "id": "O2",
+      "lcc": "0",
+      "name": "Linear Air",
+      "logo": "https://images.kiwi.com/airlines/64/O2.png"
     }
   ]
   

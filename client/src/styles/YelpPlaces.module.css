@@ -63,6 +63,13 @@
    width: 100%;
 }
 
+@media all and (max-width:1440px)
+{
+    .outerContainer {
+       width: 1000px;
+    }
+}
+
 @media all and (max-width:800px)
 {
     .outerContainer {

@@ -6,7 +6,10 @@ const path = require('path');
 const airports = require('./resources/airports');
 const sts = require('./resources/states');
 const { STATUS_CODES } = require('http');
-require('dotenv').config();
+
+if (process.env.ENVIRONMENT === 'development') {  
+    require('dotenv').config();  
+}  
 
 function addMonths(date, months) {
     var d = date.getDate();

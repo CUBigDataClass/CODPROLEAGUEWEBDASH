@@ -1,70 +1,52 @@
 const router = require('express').Router();
 const request = require('request');
-const AWS = require('aws-sdk')
-const elasticsearch = require('elasticsearch')
+const AWS = require('aws-sdk');
+const elasticsearch = require('elasticsearch');
 const connectionClass = require('http-aws-es');
-const awsHttpClient = require('http-aws-es')
-require('dotenv').config();
+const awsHttpClient = require('http-aws-es');
+const redis = require("redis");
+const util = require('util');
 
+//production redis url
+let redis_url = process.env.REDIS_URL;
+
+if (process.env.ENVIRONMENT === 'development') {  
+    require('dotenv').config();  
+    redis_url = "redis://127.0.0.1"; 
+}  
+
+const redisClient = redis.createClient(redis_url);
+
+redisClient.on("error", function(error) {
+    console.error("REDIS [ERROR] " + error);
+});
+
+// Test server viability
 router.get('/hello', (req, res) => {
     res.send({ express: 'Hello From Express' });
 });
 
-router.post('/world', (req, res) => {
-    // console.log(req.body);
-    res.send(
-        `I received your POST request. This is what you sent me: ${req.body.post}`,
-    );
-});
-//TEST YELP
-router.get('/yelp', (req, res) => {
-    const options = {
-        method: 'GET',
-        url: 'https://api.yelp.com/v3/businesses/search',
-        qs: {
-            location: 'Denver',
-            limit: '1',
-            sort_by: 'rating'
-        },
-        headers: {
-          'Authorization': 'Bearer ' + process.env.YELP_API_KEY
-        }
-    };
-
-    // send request to API
-    request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-
-        console.log(body);
-        // res.render(path.join(__dirname, '../client/index.ejs'), {res_arr: res_arr});
+//TEST ELASTIC FLIGHT SEARCH 
+router.get('/search/flight', async (req, res) => {
+    // Check redis cache before making request to elasticsearch service
+    redisClient.on('error', function(error) {
+        console.error('Redis err: ' + error);
+        res.status(500);
+        return;
     });
-});
 
-//TEST WEATHER
-router.get('/weather', (req, res) => {
-    const options = {
-        method: 'GET',
-        url: 'http://api.openweathermap.org/data/2.5/weather',
-        qs: {
-            q: 'Moscow',
-            type: 'hour',
-            APPID: process.env.WEATHER_API_KEY
-        }
-    };
+    redisClient.get = util.promisify(redisClient.get).bind(redisClient);
+    const reply = await redisClient.get('flight_key_' + req.query.from + '_' + req.query.to);
 
-    // send request to API
-    request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-        console.log(body);
-        // res.render(path.join(__dirname, '../client/index.ejs'), {res_arr: res_arr});
-    });
-});
+    if (reply) {
+        res.status(201).json(JSON.parse(reply));
+        return;
+    }
 
-//TEST ELASTIC flight 
-router.get('/search/flight', (req, res) => {
+    // Begin request to elasticsearch service
     AWS.config.update({
-        secretAccessKey: process.env.AWS_SECRET,
-        accessKeyId: process.env.AWS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
         region: process.env.AWS_REGION
     });
 
@@ -77,6 +59,7 @@ router.get('/search/flight', (req, res) => {
         }
     });
 
+    // Parse attributes for searching
     const sep_from = req.query.from.split(',');
     const sep_to = req.query.to.split(',');
 
@@ -85,7 +68,7 @@ router.get('/search/flight', (req, res) => {
     const to_city = sep_to[0];
     const to_state = sep_to[1];
 
-    // match to specific price quotes based on origin/destination
+    // Match query to specific price quotes based on origin/destination
     elasticClient.search({
         index: 'flight-quotes',
         type: '_doc',
@@ -135,6 +118,8 @@ router.get('/search/flight', (req, res) => {
             res.sendStatus(404);
         } else {
             let hits = Array.from(result.hits.hits, h => h._source);
+            redisClient.set('flight_key_' + req.query.from + '_' + req.query.to, JSON.stringify(hits));
+
             res.status(201).send(hits);
         }
     })
@@ -146,8 +131,8 @@ router.get('/search/flight', (req, res) => {
 
 router.get('/search/yelp', (req, res) => {
     AWS.config.update({
-        secretAccessKey: process.env.AWS_SECRET,
-        accessKeyId: process.env.AWS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
         region: process.env.AWS_REGION
     });
 

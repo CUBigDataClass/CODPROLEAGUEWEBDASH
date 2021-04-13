@@ -1,7 +1,4 @@
-
 import React, { Fragment } from 'react'
-
-
 import StarRatings from 'react-star-ratings'
 import Styles from '../styles/YelpPlaces.module.css'
 
