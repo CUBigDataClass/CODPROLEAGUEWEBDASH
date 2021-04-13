@@ -6,6 +6,7 @@
 .mainContainer :hover{
     color: rgb(25, 0, 255);
     cursor: pointer;
+}
 
 @media all and (max-width:800px)
 {
