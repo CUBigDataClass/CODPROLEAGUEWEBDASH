@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import Card from 'react-bootstrap/Card'
 import Styles from '../styles/Flight.module.css'
 import Airlines from '../resources/airlines.json'
 
@@ -23,7 +22,7 @@ const Flight = (props) => {
                     <div className={Styles.container}>
                         <div className={Styles.innerContainer}>
                             <div className={Styles.imgContainer}>
-                                <img className={Styles.cardImg} src={img_src}/>
+                                <img className={Styles.cardImg} src={img_src} alt=''/>
                             </div>
                             <div className={Styles.infoContainer}>
                                 <div className={Styles.topContainer}>

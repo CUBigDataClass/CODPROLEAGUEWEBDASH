@@ -18,6 +18,7 @@
    background-color:rgb(141, 189, 251);
    opacity: 0.95;
 }
+
 .innerContainer {
    background-color: rgb(216, 221, 231);
    display: flex;
@@ -60,4 +61,12 @@
    flex-direction: column;
    margin: 0px 0px 0px 0px;
    width: 100%;
+}
+
+@media all and (max-width:800px)
+{
+    .outerContainer {
+       display: flex;
+       flex-direction: column;
+    }
 }

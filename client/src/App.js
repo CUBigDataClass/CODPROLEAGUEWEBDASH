@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import Search from './components/Search';
 import Flight from './components/Flight';
 import Yelp from './components/Yelp';
@@ -75,8 +72,9 @@ render() {
       <div className="App">
           <div className="Intro">
             <h1 className="Welcome">Welcome to Trip Planner</h1>
+             <div className="searchAreaContainer">
               <section className="searchContainer">
-                <div className="Search">
+                <div className="Search>
                   <Search 
                     place='Origin' 
                     inputValue={this.state.originInput}
@@ -91,9 +89,12 @@ render() {
                     updateSelection={this.updateSelection}
                     updateInput={this.updateInput}
                   />
-                </div>
-              </section>
+                 </div>
+                </section>
+              </div>
           </div> 
+      </div>
+
         <div className="infoContainer">
             <div>
                 <Flight quotes={this.state.flightRes}/>
