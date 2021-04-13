@@ -74,7 +74,7 @@ render() {
             <h1 className="Welcome">Welcome to Trip Planner</h1>
              <div className="searchAreaContainer">
               <section className="searchContainer">
-                <div className="Search>
+                <div className="Search">
                   <Search 
                     place='Origin' 
                     inputValue={this.state.originInput}
