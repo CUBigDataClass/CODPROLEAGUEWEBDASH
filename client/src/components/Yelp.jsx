@@ -22,7 +22,7 @@ const Yelp = (props) => {
                      <div className={Styles.imgContainer}>
                         <img className={Styles.cardImg} src={place.image_url} alt=''></img>
                      </div>
-                     <a href={place.url} target="_blank" style={{margin: '10px 0px 5px 0px', fontWeight: 'bold',color: 'black' }}>{place.name} </a>
+                     <a href={place.url} target="_blank" rel="noreferrer" style={{margin: '10px 0px 5px 0px', fontWeight: 'bold',color: 'black' }}>{place.name} </a>
                      <StarRatings
                         rating={place.rating}
                         starRatedColor="tomato"
