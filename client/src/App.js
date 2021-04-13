@@ -2,14 +2,11 @@ import React, { Component } from 'react';
 import Search from './components/Search';
 import Flight from './components/Flight';
 import Yelp from './components/Yelp';
-import Intro from './components/Intro';
 
 import Footer from './components/Footer';
 
 import './App.css';
 
-
-import Pic from './images/picture.jpg';
 
 class App extends Component {
   constructor() {
