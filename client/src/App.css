@@ -1,45 +1,14 @@
 .App {
   text-align: center;
+  background-image: url('images/picture.jpg'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.jumbo-style {
-  background-image: radial-gradient(circle, #93959d, #737a83, #586065, #35393a, #282c34);
-}
 
 .infoContainer {
   display: flex;
@@ -48,18 +17,45 @@
   align-items: center;
 }
 
+.Welcome{
+  padding-top: 30px;
+  font-size: calc(40px + 3vmin);
+  font-style:oblique;
+}
+
+.Intro{
+  justify-content: center;
+  margin-top: -42px;
+  align-items: center;
+  /* background-image: url('images/picture.jpg'); 
+  background-size: 100% 100%; */
+  font-size: calc(10px + 2vmin);
+  font-family: 'New Tegomin', serif;
+  /* background-position: 100px 5px; */
+  /* height: 585px; */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  
+}
+
 .searchContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('images/chi_skyline.jpg');
-  background-position: center;
-  height: 400px;
+  height: 150px;
 }
 
-.searchContainer > div + div {
+.Search {
   margin-left: 30px;
 }
+.searchContainer Search:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+
 
 .yelpRow{
   display:flex; 
@@ -67,6 +63,7 @@
   justify-content: center;
   align-items: center;
 }
+
 
 @media all and (max-width:800px)
 {
@@ -86,3 +83,4 @@
       flex-direction: column;
     }
 }
+

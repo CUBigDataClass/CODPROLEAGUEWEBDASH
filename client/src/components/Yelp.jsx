@@ -1,4 +1,7 @@
+
 import React, { Fragment } from 'react'
+
+
 import StarRatings from 'react-star-ratings'
 import Styles from '../styles/YelpPlaces.module.css'
 
@@ -19,7 +22,7 @@ const Yelp = (props) => {
                      <div className={Styles.imgContainer}>
                         <img className={Styles.cardImg} src={place.image_url} alt=''></img>
                      </div>
-                     <h3 style={{margin: '10px 0px 5px 0px'}}>{place.name}</h3>
+                     <a href={place.url} target="_blank" rel="noreferrer" style={{margin: '10px 0px 5px 0px', fontWeight: 'bold',color: 'black' }}>{place.name} </a>
                      <StarRatings
                         rating={place.rating}
                         starRatedColor="tomato"
@@ -43,7 +46,7 @@ const Yelp = (props) => {
 
       return (
          <div>
-            <p className="Intro">Restaurants in {state}</p>
+            <h2 className={Styles.places}>Places in {state} to visit</h2>
             <div className={Styles.outerContainer}>
                   {arr}
             </div>

@@ -3,6 +3,7 @@
     "id": 1,
     "name": "El Barrio",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Zxln9GTOxxV-uXaf38cP0A/o.jpg",
+    "url": "https://www.yelp.com/biz/el-barrio-birmingham?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -19,6 +20,7 @@
     "id": 2,
     "name": "Saw's Soul Kitchen",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/sHD_n0MoFypP5HXwrPFuKg/o.jpg",
+    "url": "https://www.yelp.com/biz/saws-soul-kitchen-birmingham-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -35,6 +37,7 @@
     "id": 3,
     "name": "Yo' Mama's",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/EZEShwRxnwUPi0iH40hkHw/o.jpg",
+    "url": "https://www.yelp.com/biz/yo-mamas-birmingham-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -51,6 +54,7 @@
     "id": 4,
     "name": "Carrigan's - Downtown",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/2VCUVwuOhMdRSeg3U4Zb8Q/o.jpg",
+    "url": "https://www.yelp.com/biz/carrigans-downtown-birmingham?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -67,6 +71,7 @@
     "id": 5,
     "name": "Hattie B's Hot Chicken - Bham",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Ej0sPisD1Q1O2rWK9avdkQ/o.jpg",
+    "url": "https://www.yelp.com/biz/hattie-bs-hot-chicken-bham-birmingham?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -83,6 +88,7 @@
     "id": 6,
     "name": "Moose's Tooth",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/aKnYwUXTcUOTCPCclkzJng/o.jpg",
+    "url": "https://www.yelp.com/biz/mooses-tooth-anchorage?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -99,6 +105,7 @@
     "id": 7,
     "name": "Snow City Cafe",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/JdxCYAtnBYdqZZRxYaym3w/o.jpg",
+    "url": "https://www.yelp.com/biz/snow-city-cafe-anchorage?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -115,6 +122,7 @@
     "id": 8,
     "name": "Glacier BrewHouse",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/bqWnHQqHc4LzH8jKDTkRFg/o.jpg",
+    "url": "https://www.yelp.com/biz/glacier-brewhouse-anchorage?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -131,6 +139,7 @@
     "id": 9,
     "name": "International House Of Hotdogs",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/91jL1-b5jJ_0Cqd35XF-1A/o.jpg",
+    "url": "https://www.yelp.com/biz/international-house-of-hotdogs-anchorage?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$$",
     "location": {
@@ -147,6 +156,7 @@
     "id": 10,
     "name": "49th State Brewing Co - Anchorage",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/52VofBqOBFITtTPV43cTvA/o.jpg",
+    "url": "https://www.yelp.com/biz/49th-state-brewing-co-anchorage-anchorage?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -163,6 +173,7 @@
     "id": 11,
     "name": "Little Miss BBQ-University",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Z0boK4Z3P5aN16joGkdoBw/o.jpg",
+    "url": "https://www.yelp.com/biz/little-miss-bbq-university-phoenix?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$$",
     "location": {
@@ -179,6 +190,7 @@
     "id": 12,
     "name": "Cocina Madrigal",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/R3vRt6z3GCHBmRB2jC_9xg/o.jpg",
+    "url": "https://www.yelp.com/biz/cocina-madrigal-phoenix?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$$",
     "location": {
@@ -195,6 +207,7 @@
     "id": 13,
     "name": "Novel Ice Cream",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/GYMaCKDcXBQaOcRlb_PDhw/o.jpg",
+    "url": "https://www.yelp.com/biz/novel-ice-cream-phoenix?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$",
     "location": {
@@ -211,6 +224,7 @@
     "id": 14,
     "name": "Harumi Sushi & Sake",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/RGzWKj70FOLzl0wlFTshgA/o.jpg",
+    "url": "https://www.yelp.com/biz/harumi-sushi-and-sake-phoenix?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -227,6 +241,7 @@
     "id": 15,
     "name": "Cibo",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/i9CYGsamdHvwOWtoMUEo8w/o.jpg",
+    "url": "https://www.yelp.com/biz/cibo-phoenix?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -243,6 +258,7 @@
     "id": 16,
     "name": "Andolini's Pizza - Tulsa",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/3LF9tAM5gTZmiHxRxSTdTw/o.jpg",
+    "url": "https://www.yelp.com/biz/andolinis-pizza-tulsa-tulsa?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -259,6 +275,7 @@
     "id": 17,
     "name": "Kilkenny's Irish Pub",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/xdC6PfjV66Hw3W5sXpFCIQ/o.jpg",
+    "url": "https://www.yelp.com/biz/kilkennys-irish-pub-tulsa?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -275,6 +292,7 @@
     "id": 18,
     "name": "Sisserou's",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/4I8WEjruaRo-3etYk5-FNA/o.jpg",
+    "url": "https://www.yelp.com/biz/sisserous-tulsa?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -291,6 +309,7 @@
     "id": 19,
     "name": "Chimera",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/rtDhh5qjC6CtwUaMDndiTg/o.jpg",
+    "url": "https://www.yelp.com/biz/chimera-tulsa?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -307,6 +326,7 @@
     "id": 20,
     "name": "Smoke on Cherry Street",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/JYjCsnzxHF5iv40wSUR8LA/o.jpg",
+    "url": "https://www.yelp.com/biz/smoke-on-cherry-street-tulsa?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -323,6 +343,7 @@
     "id": 21,
     "name": "South Gate Brewing Company",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Po-Q8jwK0-W5HyKDsYd4tg/o.jpg",
+    "url": "https://www.yelp.com/biz/south-gate-brewing-company-oakhurst-4?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -339,6 +360,7 @@
     "id": 22,
     "name": "The Cool Bean Cafe",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/LegdHa-goov360bsoASYug/o.jpg",
+    "url": "https://www.yelp.com/biz/the-cool-bean-cafe-oakhurst?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -355,6 +377,7 @@
     "id": 23,
     "name": "Smokehouse 41",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/7g1UzP5t7h-6bQ3j2DsWFg/o.jpg",
+    "url": "https://www.yelp.com/biz/smokehouse-41-oakhurst?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -371,6 +394,7 @@
     "id": 24,
     "name": "Plazuelas Mexican Restaurant & Taqueria",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Y2c0WqhmYhPy2zxzBAT09A/o.jpg",
+    "url": "https://www.yelp.com/biz/plazuelas-mexican-restaurant-and-taqueria-oakhurst?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -387,6 +411,7 @@
     "id": 25,
     "name": "Miller's Landing Resort",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/XCisChUR5HQLgJNYT2yt2Q/o.jpg",
+    "url": "https://www.yelp.com/biz/millers-landing-resort-bass-lake?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -402,7 +427,8 @@
   {
     "id": 26,
     "name": "Denver Biscuit Co.",
-    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/sFG5Wuj_g-Msszto9dndmA/o.jpg",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/bxPN9shgJEtwvT3Hrf_pCg/o.jpg",
+    "url": "https://www.yelp.com/biz/denver-biscuit-co-denver-17?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -419,6 +445,7 @@
     "id": 27,
     "name": "Snooze, an A.M. Eatery",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/cniSi66T4iS6nqCdML6HUQ/o.jpg",
+    "url": "https://www.yelp.com/biz/snooze-an-a-m-eatery-denver-12?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -435,6 +462,7 @@
     "id": 28,
     "name": "Root Down",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/AJaPA61PEFXsH1EPx58bjw/o.jpg",
+    "url": "https://www.yelp.com/biz/root-down-denver?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -451,6 +479,7 @@
     "id": 29,
     "name": "Little Man Ice Cream",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/M9JjCgC5u_zoH2_1vG1jTQ/o.jpg",
+    "url": "https://www.yelp.com/biz/little-man-ice-cream-denver?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -467,6 +496,7 @@
     "id": 30,
     "name": "Rioja",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/jgpMbsvuoQKycQe8IvKDAg/o.jpg",
+    "url": "https://www.yelp.com/biz/rioja-denver?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -483,6 +513,7 @@
     "id": 31,
     "name": "Eat Noodle",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/oiC8gbrJrrM96Kulr0vAZg/o.jpg",
+    "url": "https://www.yelp.com/biz/eat-noodle-bridgeport?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -499,6 +530,7 @@
     "id": 32,
     "name": "Pho Hong Thom",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/_O_O-aqxTDZnIacRua-KNg/o.jpg",
+    "url": "https://www.yelp.com/biz/pho-hong-thom-bridgeport?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -515,6 +547,7 @@
     "id": 33,
     "name": "Shandal's Vegetarian Cafe",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/QqmrCtm7h5YVG9TUeIf3Xw/o.jpg",
+    "url": "https://www.yelp.com/biz/shandals-vegetarian-cafe-bridgeport?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -531,6 +564,7 @@
     "id": 34,
     "name": "Ruuthai's Kitchen",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/yXhU8BX-TQXEZr82v3ZCQA/o.jpg",
+    "url": "https://www.yelp.com/biz/ruuthais-kitchen-bridgeport?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -547,6 +581,7 @@
     "id": 35,
     "name": "Bereket Turkish Restaurant",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/9udPp1M2LVmcCjiRYoptTQ/o.jpg",
+    "url": "https://www.yelp.com/biz/bereket-turkish-restaurant-bridgeport-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -563,6 +598,7 @@
     "id": 36,
     "name": "Downtown Grill",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tK9IHq7sOgVIBq4yGiJBWQ/o.jpg",
+    "url": "https://www.yelp.com/biz/downtown-grill-fredonia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$",
     "location": {
@@ -579,6 +615,7 @@
     "id": 37,
     "name": "The Kitchen Table",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/TwnCNPe7ST-o2QvYT-AhYA/o.jpg",
+    "url": "https://www.yelp.com/biz/the-kitchen-table-fredonia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "location": {
       "address1": "114 South 3rd St",
@@ -594,6 +631,7 @@
     "id": 38,
     "name": "Grain Bin",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ObMi2_tMEBeyws2POKu9JA/o.jpg",
+    "url": "https://www.yelp.com/biz/grain-bin-chanute?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "location": {
       "address1": "314 E Main St",
@@ -609,6 +647,7 @@
     "id": 39,
     "name": "Prairie Nut Hut",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/dg5AC5acD9FsJI4HhkFR0Q/o.jpg",
+    "url": "https://www.yelp.com/biz/prairie-nut-hut-altoona?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$",
     "location": {
@@ -625,6 +664,7 @@
     "id": 40,
     "name": "Stockyard Restaurant",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/5oPVCsG8tFCOQX-NQexIiA/o.jpg",
+    "url": "https://www.yelp.com/biz/stockyard-restaurant-fredonia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "location": {
       "address1": "360 Madison St",
@@ -640,6 +680,7 @@
     "id": 41,
     "name": "CVI.CHE 105",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/bVeqElzKPyU68ltRRGM98A/o.jpg",
+    "url": "https://www.yelp.com/biz/cvi-che-105-miami?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -656,6 +697,7 @@
     "id": 42,
     "name": "Versailles Restaurant",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/zHwVcq_vHFt6430AC3ei6w/o.jpg",
+    "url": "https://www.yelp.com/biz/versailles-restaurant-miami?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -672,6 +714,7 @@
     "id": 43,
     "name": "The Salty Donut",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Z14GLdIxNJ1XsuQdYUdOuA/o.jpg",
+    "url": "https://www.yelp.com/biz/the-salty-donut-miami-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -688,6 +731,7 @@
     "id": 44,
     "name": "Kush",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/-M1zxlMTl5nGfukcvcW6JA/o.jpg",
+    "url": "https://www.yelp.com/biz/kush-miami-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -704,6 +748,7 @@
     "id": 45,
     "name": "CRUST",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/c3hiRUXVBVQURzbCPCMpqQ/o.jpg",
+    "url": "https://www.yelp.com/biz/crust-miami?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -720,6 +765,7 @@
     "id": 46,
     "name": "Atlanta Breakfast Club",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/GDwQcQn8NgLBZmLPXdFRxg/o.jpg",
+    "url": "https://www.yelp.com/biz/atlanta-breakfast-club-atlanta?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -736,6 +782,7 @@
     "id": 47,
     "name": "Poor Calvin's",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/8enJfAaR9hUUU2XSDpyDUQ/o.jpg",
+    "url": "https://www.yelp.com/biz/poor-calvins-atlanta-15?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -752,6 +799,7 @@
     "id": 48,
     "name": "Aviva by Kameel",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/_x61pM4WZiji4d2jq1GnYw/o.jpg",
+    "url": "https://www.yelp.com/biz/aviva-by-kameel-atlanta-4?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$$",
     "location": {
@@ -768,6 +816,7 @@
     "id": 49,
     "name": "Fox Bros. Bar-B-Q",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/zJlMOLRM7t4peB4snrFdug/o.jpg",
+    "url": "https://www.yelp.com/biz/fox-bros-bar-b-q-atlanta?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -784,6 +833,7 @@
     "id": 50,
     "name": "South City Kitchen Midtown",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/L1qX2ttHqvNMqgsw_JQNLQ/o.jpg",
+    "url": "https://www.yelp.com/biz/south-city-kitchen-midtown-atlanta-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -800,6 +850,7 @@
     "id": 51,
     "name": "Marugame Udon",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/iTBFTGVIB9nV9tg1LeK9AQ/o.jpg",
+    "url": "https://www.yelp.com/biz/marugame-udon-honolulu-4?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -816,6 +867,7 @@
     "id": 52,
     "name": "Leonard's Bakery",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/GuPJhMjerDiz2fZLJNN-rA/o.jpg",
+    "url": "https://www.yelp.com/biz/leonards-bakery-honolulu?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -832,6 +884,7 @@
     "id": 53,
     "name": "Ono Seafood",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/9wZzG0Xr4144y4VxGK_q3w/o.jpg",
+    "url": "https://www.yelp.com/biz/ono-seafood-honolulu?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -848,6 +901,7 @@
     "id": 54,
     "name": "Musubi Cafe Iyasume",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/VFnMV77i8lffjJcm84j_9Q/o.jpg",
+    "url": "https://www.yelp.com/biz/musubi-cafe-iyasume-honolulu?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -864,6 +918,7 @@
     "id": 55,
     "name": "Helena's Hawaiian Food",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/31R4TMAelLpIaQbf_g0xpQ/o.jpg",
+    "url": "https://www.yelp.com/biz/helenas-hawaiian-food-honolulu?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -880,6 +935,7 @@
     "id": 56,
     "name": "Fork",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/X1kfToNydJ6NUt1XQFAWlQ/o.jpg",
+    "url": "https://www.yelp.com/biz/fork-boise?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -894,24 +950,9 @@
   },
   {
     "id": 57,
-    "name": "Tango's Subs and Empanadas",
-    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/BusU5juzttx86F-ApwfnfQ/o.jpg",
-    "rating": 4.5,
-    "price": "$",
-    "location": {
-      "address1": "701 N Orchard St",
-      "address2": null,
-      "city": "Boise",
-      "zip_code": "83706",
-      "country": "US",
-      "state": "ID"
-    },
-    "phone": "+12083223090"
-  },
-  {
-    "id": 58,
     "name": "Bittercreek Alehouse",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Ibqi4jitjksUAXWuNTDgXA/o.jpg",
+    "url": "https://www.yelp.com/biz/bittercreek-alehouse-boise-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -925,9 +966,27 @@
     "phone": "+12083451813"
   },
   {
+    "id": 58,
+    "name": "Tango's Subs and Empanadas",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/BusU5juzttx86F-ApwfnfQ/o.jpg",
+    "url": "https://www.yelp.com/biz/tangos-subs-and-empanadas-boise-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
+    "rating": 4.5,
+    "price": "$",
+    "location": {
+      "address1": "701 N Orchard St",
+      "address2": null,
+      "city": "Boise",
+      "zip_code": "83706",
+      "country": "US",
+      "state": "ID"
+    },
+    "phone": "+12083223090"
+  },
+  {
     "id": 59,
     "name": "Goldy's Breakfast Bistro",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/-LcuIVV4yLMg4Tr86e0uYw/o.jpg",
+    "url": "https://www.yelp.com/biz/goldys-breakfast-bistro-boise?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -944,6 +1003,7 @@
     "id": 60,
     "name": "Barbacoa Grill",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/CXbRUTKnRPtUd0XZZ9O_KQ/o.jpg",
+    "url": "https://www.yelp.com/biz/barbacoa-grill-boise?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$$",
     "location": {
@@ -960,6 +1020,7 @@
     "id": 61,
     "name": "Girl & The Goat",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/yfuzM9PAqTYIYTusIg8U2A/o.jpg",
+    "url": "https://www.yelp.com/biz/girl-and-the-goat-chicago?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -976,6 +1037,7 @@
     "id": 62,
     "name": "Wildberry Pancakes and Cafe",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/or0SLpOk3UasVtln_AabHw/o.jpg",
+    "url": "https://www.yelp.com/biz/wildberry-pancakes-and-cafe-chicago-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -992,6 +1054,7 @@
     "id": 63,
     "name": "Au Cheval",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/a0yhvSJX_6i28iwS9egDFg/o.jpg",
+    "url": "https://www.yelp.com/biz/au-cheval-chicago?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1008,6 +1071,7 @@
     "id": 64,
     "name": "The Purple Pig",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/4KTBLARnKjocTTsVL77l9w/o.jpg",
+    "url": "https://www.yelp.com/biz/the-purple-pig-chicago?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1024,6 +1088,7 @@
     "id": 65,
     "name": "Lou Malnati's Pizzeria",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/rUg2qmNEK2kLmmZ5hcc6mg/o.jpg",
+    "url": "https://www.yelp.com/biz/lou-malnatis-pizzeria-chicago?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1040,6 +1105,7 @@
     "id": 66,
     "name": "The Eagle",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/7_hO_VnUy9K4V45zzsWr4g/o.jpg",
+    "url": "https://www.yelp.com/biz/the-eagle-indianapolis-13?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1056,6 +1122,7 @@
     "id": 67,
     "name": "Nada",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/GZurQrLZawzw8-oNYzLNRA/o.jpg",
+    "url": "https://www.yelp.com/biz/nada-indianapolis?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1072,6 +1139,7 @@
     "id": 68,
     "name": "St. Elmo Steak House",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/_8mPpTo5-kx-PZge7Gnc0w/o.jpg",
+    "url": "https://www.yelp.com/biz/st-elmo-steak-house-indianapolis-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$$",
     "location": {
@@ -1088,6 +1156,7 @@
     "id": 69,
     "name": "Bakersfield",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/dJSj1mAHTUUK4lSGPR9KlA/o.jpg",
+    "url": "https://www.yelp.com/biz/bakersfield-indianapolis?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1104,6 +1173,7 @@
     "id": 70,
     "name": "Bru Burger Bar - Indianapolis",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/g43RqWDDRO9TuJkKOimlLA/o.jpg",
+    "url": "https://www.yelp.com/biz/bru-burger-bar-indianapolis-indianapolis?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1120,6 +1190,7 @@
     "id": 71,
     "name": "Zombie Burger + Drink Lab",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/IDDoNhNaQi5DDD27vriV5Q/o.jpg",
+    "url": "https://www.yelp.com/biz/zombie-burger-drink-lab-des-moines?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1136,6 +1207,7 @@
     "id": 72,
     "name": "St. Kilda Cafe & Bakery",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/zCoOplSD1OwrmITPI_jErg/o.jpg",
+    "url": "https://www.yelp.com/biz/st-kilda-cafe-and-bakery-des-moines-5?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1152,6 +1224,7 @@
     "id": 73,
     "name": "Fong's Pizza - Des Moines",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/3fClcvd6wvmus1x4GWVsDw/o.jpg",
+    "url": "https://www.yelp.com/biz/fongs-pizza-des-moines-des-moines?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1168,6 +1241,7 @@
     "id": 74,
     "name": "W-Tao Sushi",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/YB9g9v0qx9uznXOa4RWUVg/o.jpg",
+    "url": "https://www.yelp.com/biz/w-tao-sushi-des-moines?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1184,6 +1258,7 @@
     "id": 75,
     "name": "Centro",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/rjixaaVJYznhiOfIh08Y9A/o.jpg",
+    "url": "https://www.yelp.com/biz/centro-des-moines?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1200,6 +1275,7 @@
     "id": 76,
     "name": "Doo-Dah Diner",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/eva0ZcpLJ3GxqzzkvFfJDg/o.jpg",
+    "url": "https://www.yelp.com/biz/doo-dah-diner-wichita?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1216,6 +1292,7 @@
     "id": 77,
     "name": "Gabby's Peruvian Restaurant",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/dvEV9KAkBu-bWcxaNJnsuw/o.jpg",
+    "url": "https://www.yelp.com/biz/gabbys-peruvian-restaurant-wichita-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$$",
     "location": {
@@ -1232,6 +1309,7 @@
     "id": 78,
     "name": "Beautiful Day Cafe",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/ydXzqJlT6IHYZ_gVkSRwsw/o.jpg",
+    "url": "https://www.yelp.com/biz/beautiful-day-cafe-wichita?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1248,6 +1326,7 @@
     "id": 79,
     "name": "Sabor Latin Bar & Grill",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/he3z5tLFYDZVZBNcsb57aw/o.jpg",
+    "url": "https://www.yelp.com/biz/sabor-latin-bar-and-grill-wichita?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1264,6 +1343,7 @@
     "id": 80,
     "name": "Tanya's Soup Kitchen",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/fABdEkvKitpXVju-8l8BUg/o.jpg",
+    "url": "https://www.yelp.com/biz/tanyas-soup-kitchen-wichita-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1280,6 +1360,7 @@
     "id": 81,
     "name": "Hammerheads",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Ir6a4mu_tqHP7-LHc4Hc1Q/o.jpg",
+    "url": "https://www.yelp.com/biz/hammerheads-louisville?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1296,6 +1377,7 @@
     "id": 82,
     "name": "The Eagle",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/IFHe131DInKJMyjBLG9Vug/o.jpg",
+    "url": "https://www.yelp.com/biz/the-eagle-louisville-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1310,24 +1392,9 @@
   },
   {
     "id": 83,
-    "name": "Con Huevos",
-    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/DJqVCSkAt-itKRgA2BOd1Q/o.jpg",
-    "rating": 4.5,
-    "price": "$$",
-    "location": {
-      "address1": "2339 Frankfort Ave",
-      "address2": "",
-      "city": "Louisville",
-      "zip_code": "40206",
-      "country": "US",
-      "state": "KY"
-    },
-    "phone": "+15023843027"
-  },
-  {
-    "id": 84,
     "name": "Mayan Cafe",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/jhoJuOc6oXS-YbdBwaiT9w/o.jpg",
+    "url": "https://www.yelp.com/biz/mayan-cafe-louisville?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1341,9 +1408,27 @@
     "phone": "+15025660651"
   },
   {
+    "id": 84,
+    "name": "Con Huevos",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/DJqVCSkAt-itKRgA2BOd1Q/o.jpg",
+    "url": "https://www.yelp.com/biz/con-huevos-louisville-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
+    "rating": 4.5,
+    "price": "$$",
+    "location": {
+      "address1": "2339 Frankfort Ave",
+      "address2": "",
+      "city": "Louisville",
+      "zip_code": "40206",
+      "country": "US",
+      "state": "KY"
+    },
+    "phone": "+15023843027"
+  },
+  {
     "id": 85,
     "name": "Taco Luchador",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/N56-SEpN_IZC4NRl-BhJOQ/o.jpg",
+    "url": "https://www.yelp.com/biz/taco-luchador-louisville-8?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1360,6 +1445,7 @@
     "id": 86,
     "name": "Howlin' Ray's",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/9hGoyECcrewigEKYEnrYTw/o.jpg",
+    "url": "https://www.yelp.com/biz/howlin-rays-los-angeles-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1376,6 +1462,7 @@
     "id": 87,
     "name": "Wurstküche",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/gzEMY8RZP2oIBnUMs1-76w/o.jpg",
+    "url": "https://www.yelp.com/biz/wurstk%C3%BCche-los-angeles-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1392,6 +1479,7 @@
     "id": 88,
     "name": "Daikokuya Little Tokyo",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/GG71SxFbzBd9-SRMRtB1EQ/o.jpg",
+    "url": "https://www.yelp.com/biz/daikokuya-little-tokyo-los-angeles?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1408,6 +1496,7 @@
     "id": 89,
     "name": "Slurpin' Ramen Bar - Los Angeles",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/L7jVXlWCLjTIvN9DYS57HA/o.jpg",
+    "url": "https://www.yelp.com/biz/slurpin-ramen-bar-los-angeles-los-angeles?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1424,6 +1513,7 @@
     "id": 90,
     "name": "Morrison Atwater Village",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ng_yCbA4I_xL4UXrk6klVQ/o.jpg",
+    "url": "https://www.yelp.com/biz/morrison-atwater-village-los-angeles?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1440,6 +1530,7 @@
     "id": 91,
     "name": "Eventide Oyster Company",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/x59hv3KQrmsHxObSrcxqew/o.jpg",
+    "url": "https://www.yelp.com/biz/eventide-oyster-company-portland-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1456,6 +1547,7 @@
     "id": 92,
     "name": "Duckfat",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/gEtCTFumkUJyrfAOe_f0sw/o.jpg",
+    "url": "https://www.yelp.com/biz/duckfat-portland?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1472,6 +1564,7 @@
     "id": 93,
     "name": "Street & Co.",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Th4xIgMARbKdOKRgse5MQg/o.jpg",
+    "url": "https://www.yelp.com/biz/street-and-co-portland-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -1488,6 +1581,7 @@
     "id": 94,
     "name": "Central Provisions",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/smX57m1RgLw1MXz0elsv5Q/o.jpg",
+    "url": "https://www.yelp.com/biz/central-provisions-portland?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1504,6 +1598,7 @@
     "id": 95,
     "name": "Hot Suppa",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/_R-JklRiilRTSdXdIn7F1w/o.jpg",
+    "url": "https://www.yelp.com/biz/hot-suppa-portland?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1520,6 +1615,7 @@
     "id": 96,
     "name": "Thames Street Oyster House",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/KuELKbMsqgs-dL4yZWOjtA/o.jpg",
+    "url": "https://www.yelp.com/biz/thames-street-oyster-house-baltimore?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1536,6 +1632,7 @@
     "id": 97,
     "name": "Ekiben",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Wcriq5edNKNhvahXe7SbBQ/o.jpg",
+    "url": "https://www.yelp.com/biz/ekiben-baltimore-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1552,6 +1649,7 @@
     "id": 98,
     "name": "Miss Shirley's Cafe",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/9FsOyVsg-MkdHlNR10xnqA/o.jpg",
+    "url": "https://www.yelp.com/biz/miss-shirleys-cafe-baltimore-9?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1568,6 +1666,7 @@
     "id": 99,
     "name": "Woodberry Kitchen",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/BIO1Z2qwHW_GnGr5D1TAVQ/o.jpg",
+    "url": "https://www.yelp.com/biz/woodberry-kitchen-baltimore?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$$",
     "location": {
@@ -1584,6 +1683,7 @@
     "id": 100,
     "name": "Joe Benny's",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tEVTcQ2VgNnTXjVdWlFSmw/o.jpg",
+    "url": "https://www.yelp.com/biz/joe-bennys-baltimore?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1600,6 +1700,7 @@
     "id": 101,
     "name": "Neptune Oyster",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/HsyTiIEimGNuo-tR-k_joA/o.jpg",
+    "url": "https://www.yelp.com/biz/neptune-oyster-boston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -1616,6 +1717,7 @@
     "id": 102,
     "name": "Mike's Pastry",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/25RXsMac4oKdjxPJNS3sYQ/o.jpg",
+    "url": "https://www.yelp.com/biz/mikes-pastry-boston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$",
     "location": {
@@ -1632,6 +1734,7 @@
     "id": 103,
     "name": "Carmelina's",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/WQi0dkl1EWam9toAwLl3qQ/o.jpg",
+    "url": "https://www.yelp.com/biz/carmelinas-boston-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1648,6 +1751,7 @@
     "id": 104,
     "name": "Giacomo's Ristorante - Boston",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/_GdvzB_J7akPe3Tgly0c3Q/o.jpg",
+    "url": "https://www.yelp.com/biz/giacomos-ristorante-boston-boston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1664,6 +1768,7 @@
     "id": 105,
     "name": "Mike & Patty's - Boston",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/7cknic7LlN3_GX1XGrIB3A/o.jpg",
+    "url": "https://www.yelp.com/biz/mike-and-pattys-boston-boston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -1680,6 +1785,7 @@
     "id": 106,
     "name": "Dime Store",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/tBmxNQQCDvHYj4Fq_drkVw/o.jpg",
+    "url": "https://www.yelp.com/biz/dime-store-detroit-4?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1696,6 +1802,7 @@
     "id": 107,
     "name": "Green Dot Stables",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/n2YYgU9q5DJ5H0n2n9G11g/o.jpg",
+    "url": "https://www.yelp.com/biz/green-dot-stables-detroit-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$",
     "location": {
@@ -1712,6 +1819,7 @@
     "id": 108,
     "name": "Selden Standard",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/6THUqNH-HzWDaEiGonIshw/o.jpg",
+    "url": "https://www.yelp.com/biz/selden-standard-detroit?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1728,6 +1836,7 @@
     "id": 109,
     "name": "Detroit Institute of Arts",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/EdzZChhdhZNT4if3nqReLw/o.jpg",
+    "url": "https://www.yelp.com/biz/detroit-institute-of-arts-detroit?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "location": {
       "address1": "5200 Woodward Ave",
@@ -1743,6 +1852,7 @@
     "id": 110,
     "name": "Chartreuse",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/IN9MzarUkOkRA2D2NejeTw/o.jpg",
+    "url": "https://www.yelp.com/biz/chartreuse-detroit?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -1759,6 +1869,7 @@
     "id": 111,
     "name": "Casper's and Runyon's Nook",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/GgvZclP3xBy0iqDQTvWPvQ/o.jpg",
+    "url": "https://www.yelp.com/biz/caspers-and-runyons-nook-saint-paul?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1775,6 +1886,7 @@
     "id": 112,
     "name": "Tongue In Cheek",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/IaoVpxTgT7GZBKUhedocXg/o.jpg",
+    "url": "https://www.yelp.com/biz/tongue-in-cheek-saint-paul?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1791,6 +1903,7 @@
     "id": 113,
     "name": "Red Cow - Saint Paul",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/DqF3ZdEd8_QG7Ww8nBvfWA/o.jpg",
+    "url": "https://www.yelp.com/biz/red-cow-saint-paul-saint-paul?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1807,6 +1920,7 @@
     "id": 114,
     "name": "The Naughty Greek",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/aAb2Hc1vpwib6pdYIeL0Bw/o.jpg",
+    "url": "https://www.yelp.com/biz/the-naughty-greek-saint-paul?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1823,6 +1937,7 @@
     "id": 115,
     "name": "The Buttered Tin",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/oe0abWrKPl5hhW7hKIZZ2Q/o.jpg",
+    "url": "https://www.yelp.com/biz/the-buttered-tin-saint-paul?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1839,6 +1954,7 @@
     "id": 116,
     "name": "The Pig & Pint",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/qdg4TH8_5i-SzPEhi9uBPA/o.jpg",
+    "url": "https://www.yelp.com/biz/the-pig-and-pint-jackson?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1855,6 +1971,7 @@
     "id": 117,
     "name": "The Manship Wood Fired Kitchen",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/H63bALt20gfORGWfSK5gdQ/o.jpg",
+    "url": "https://www.yelp.com/biz/the-manship-wood-fired-kitchen-jackson?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1871,6 +1988,7 @@
     "id": 118,
     "name": "Babalu",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/PMAUMHATuvoIig8FfZ7CQA/o.jpg",
+    "url": "https://www.yelp.com/biz/babalu-jackson?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1887,6 +2005,7 @@
     "id": 119,
     "name": "Lou's Full-Serv",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/HLZWdPPDJK4_4ySr5R3NQw/o.jpg",
+    "url": "https://www.yelp.com/biz/lous-full-serv-jackson-6?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1903,6 +2022,7 @@
     "id": 120,
     "name": "Saltine",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/YDAxJkxMcU7233jZCgg46w/o.jpg",
+    "url": "https://www.yelp.com/biz/saltine-jackson-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1919,6 +2039,7 @@
     "id": 121,
     "name": "Q39 Midtown",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/myku_oTF3j5B4G0hvDJ2Qg/o.jpg",
+    "url": "https://www.yelp.com/biz/q39-midtown-kansas-city-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1935,6 +2056,7 @@
     "id": 122,
     "name": "Jack Stack Barbecue - Freight House",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/V-t0h1oswX-EgdzAfOU7XQ/o.jpg",
+    "url": "https://www.yelp.com/biz/jack-stack-barbecue-freight-house-kansas-city-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -1951,6 +2073,7 @@
     "id": 123,
     "name": "The Nelson-Atkins Museum of Art",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/73tD76QaAiHRjK56wITYhg/o.jpg",
+    "url": "https://www.yelp.com/biz/the-nelson-atkins-museum-of-art-kansas-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "location": {
       "address1": "4525 Oak St",
@@ -1966,6 +2089,7 @@
     "id": 124,
     "name": "Joe's Kansas City Bar-B-Que",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/gminzak55H9KOyTAJU7LXA/o.jpg",
+    "url": "https://www.yelp.com/biz/joes-kansas-city-bar-b-que-kansas-city-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -1982,6 +2106,7 @@
     "id": 125,
     "name": "National WWI Museum and Memorial",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/6_Z3dZRl2dJeGqnZ0H4ljQ/o.jpg",
+    "url": "https://www.yelp.com/biz/national-wwi-museum-and-memorial-kansas-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "location": {
       "address1": "2 Memorial Dr",
@@ -1997,6 +2122,7 @@
     "id": 126,
     "name": "The Burger Dive",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/18FNXUjKJjCdAVqw-eW_pQ/o.jpg",
+    "url": "https://www.yelp.com/biz/the-burger-dive-billings?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2013,6 +2139,7 @@
     "id": 127,
     "name": "The Fieldhouse",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ZxbKXWe5u4wu2Cu9wb97bg/o.jpg",
+    "url": "https://www.yelp.com/biz/the-fieldhouse-billings?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2029,6 +2156,7 @@
     "id": 128,
     "name": "Uberbrew",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/o59DeDoO_1ZFHXyZZNjuSQ/o.jpg",
+    "url": "https://www.yelp.com/biz/uberbrew-billings?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2045,6 +2173,7 @@
     "id": 129,
     "name": "The Sassy Biscuit",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/BeGjZsm-vgExOm7s5Z3FvQ/o.jpg",
+    "url": "https://www.yelp.com/biz/the-sassy-biscuit-billings?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2061,6 +2190,7 @@
     "id": 130,
     "name": "Montana Brewing Company",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/BYq-yWMpzXr2kxjbivrGcg/o.jpg",
+    "url": "https://www.yelp.com/biz/montana-brewing-company-billings-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -2077,6 +2207,7 @@
     "id": 131,
     "name": "Block 16",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/aqGsdp9g4EIr3Re6TaFdOQ/o.jpg",
+    "url": "https://www.yelp.com/biz/block-16-omaha-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2093,6 +2224,7 @@
     "id": 132,
     "name": "Plank Seafood Provisions",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/c-GScXBYb-NL8Pigr6NYGQ/o.jpg",
+    "url": "https://www.yelp.com/biz/plank-seafood-provisions-omaha?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2109,6 +2241,7 @@
     "id": 133,
     "name": "Coneflower Creamery",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/LyYL32DFdtLAkjXqTCTFmA/o.jpg",
+    "url": "https://www.yelp.com/biz/coneflower-creamery-omaha?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$",
     "location": {
@@ -2125,6 +2258,7 @@
     "id": 134,
     "name": "Omaha's Henry Doorly Zoo and Aquarium",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/all-DBSZ9x3N9MFSrbMqKg/o.jpg",
+    "url": "https://www.yelp.com/biz/omahas-henry-doorly-zoo-and-aquarium-omaha?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "location": {
       "address1": "3701 S 10th St",
@@ -2140,6 +2274,7 @@
     "id": 135,
     "name": "Modern Love",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/skdkI7H3GMtTMdqD5bW3mg/o.jpg",
+    "url": "https://www.yelp.com/biz/modern-love-omaha?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2156,6 +2291,7 @@
     "id": 136,
     "name": "Yardbird Southern Table & Bar",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/_zXRdYX4r1OBfF86xKMbDw/o.jpg",
+    "url": "https://www.yelp.com/biz/yardbird-southern-table-and-bar-las-vegas-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2172,6 +2308,7 @@
     "id": 137,
     "name": "Mon Ami Gabi",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tEcdu80k_iS4OIqEVSDkZw/o.jpg",
+    "url": "https://www.yelp.com/biz/mon-ami-gabi-las-vegas-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -2188,6 +2325,7 @@
     "id": 138,
     "name": "Gordon Ramsay Hell's Kitchen",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/mFimEc6u8JCmbM5X1qgCeQ/o.jpg",
+    "url": "https://www.yelp.com/biz/gordon-ramsay-hells-kitchen-las-vegas-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -2204,6 +2342,7 @@
     "id": 139,
     "name": "Gangnam Asian BBQ Dining",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/SrM8q-cGpbX5RJUYiEFFrQ/o.jpg",
+    "url": "https://www.yelp.com/biz/gangnam-asian-bbq-dining-las-vegas-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2220,6 +2359,7 @@
     "id": 140,
     "name": "Nacho Daddy",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/pu9doqMplB5x5SEs8ikW6w/o.jpg",
+    "url": "https://www.yelp.com/biz/nacho-daddy-las-vegas-7?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2236,6 +2376,7 @@
     "id": 141,
     "name": "El Rincon Zacatecano Taqueria",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Z1zR3IlxN8P3LQsU72DPug/o.jpg",
+    "url": "https://www.yelp.com/biz/el-rincon-zacatecano-taqueria-manchester?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2252,6 +2393,7 @@
     "id": 142,
     "name": "Republic Cafe & Bistro",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/LM5H93iGWXzKxttRNkcreA/o.jpg",
+    "url": "https://www.yelp.com/biz/republic-cafe-and-bistro-manchester?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2268,6 +2410,7 @@
     "id": 143,
     "name": "The Gyro Spot",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/BZK1LAPkGVkgtW56QP0ujw/o.jpg",
+    "url": "https://www.yelp.com/biz/the-gyro-spot-manchester?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -2284,6 +2427,7 @@
     "id": 144,
     "name": "Mr. Mac's",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/MMSH1miENh_hdB6OhE4_hQ/o.jpg",
+    "url": "https://www.yelp.com/biz/mr-macs-manchester?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2300,6 +2444,7 @@
     "id": 145,
     "name": "Hooked Seafood Restaurant",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/GWrrxc8H0IHL0qH4yDDaOg/o.jpg",
+    "url": "https://www.yelp.com/biz/hooked-seafood-restaurant-manchester?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2316,6 +2461,7 @@
     "id": 146,
     "name": "Casa d'Paco",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/MlYqy3dkehDQ8pw9e35JRA/o.jpg",
+    "url": "https://www.yelp.com/biz/casa-d-paco-newark?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2332,6 +2478,7 @@
     "id": 147,
     "name": "Tops Diner",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/n7aJLZFv6XEptOEcwgO_1A/o.jpg",
+    "url": "https://www.yelp.com/biz/tops-diner-east-newark?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2348,6 +2495,7 @@
     "id": 148,
     "name": "Sabor Unido",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/JUGZvqN-A6eaFn8M6IQvJg/o.jpg",
+    "url": "https://www.yelp.com/biz/sabor-unido-newark?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2364,6 +2512,7 @@
     "id": 149,
     "name": "Fornos of Spain",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/aGYMir1nNJNB723dNZbJBw/o.jpg",
+    "url": "https://www.yelp.com/biz/fornos-of-spain-newark?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$$",
     "location": {
@@ -2380,6 +2529,7 @@
     "id": 150,
     "name": "Dinosaur Bar-B-Que",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/rBOK5hZhUz39QkXjKVoQBQ/o.jpg",
+    "url": "https://www.yelp.com/biz/dinosaur-bar-b-que-newark?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 3.5,
     "price": "$$",
     "location": {
@@ -2396,6 +2546,7 @@
     "id": 151,
     "name": "Cocina Azul",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/z-GGbgWUeAzxlpV3Bn8MwQ/o.jpg",
+    "url": "https://www.yelp.com/biz/cocina-azul-albuquerque-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2412,6 +2563,7 @@
     "id": 152,
     "name": "The Grove Cafe & Market",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ym4K6aYAZzfr3VGfE17wzw/o.jpg",
+    "url": "https://www.yelp.com/biz/the-grove-cafe-and-market-albuquerque?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2428,6 +2580,7 @@
     "id": 153,
     "name": "Frontier",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/uHHaQk-yEj8sZVh5QR8iCA/o.jpg",
+    "url": "https://www.yelp.com/biz/frontier-albuquerque-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$",
     "location": {
@@ -2444,6 +2597,7 @@
     "id": 154,
     "name": "Central Grill and Coffee House",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/OBpmfxbIHFsOZ9t-b4tTVQ/o.jpg",
+    "url": "https://www.yelp.com/biz/central-grill-and-coffee-house-albuquerque?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -2460,6 +2614,7 @@
     "id": 155,
     "name": "Fork & Fig",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/w7XRPKCt0okZdyEJC20NWw/o.jpg",
+    "url": "https://www.yelp.com/biz/fork-and-fig-albuquerque?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2476,6 +2631,7 @@
     "id": 156,
     "name": "Levain Bakery",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/jCdrXah--NjPaOLb-30BUw/o.jpg",
+    "url": "https://www.yelp.com/biz/levain-bakery-new-york?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2492,6 +2648,7 @@
     "id": 157,
     "name": "Katz's Delicatessen",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/qr7eSU6CFwRGZ7Rc-QEoTQ/o.jpg",
+    "url": "https://www.yelp.com/biz/katzs-delicatessen-new-york?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -2508,6 +2665,7 @@
     "id": 158,
     "name": "Ippudo NY",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/zF3EgqHCk7zBUwD2B3WTEA/o.jpg",
+    "url": "https://www.yelp.com/biz/ippudo-ny-new-york-7?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -2524,6 +2682,7 @@
     "id": 159,
     "name": "The Halal Guys",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/24lb-VP2zVySsY9cq45ETw/o.jpg",
+    "url": "https://www.yelp.com/biz/the-halal-guys-new-york-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$",
     "location": {
@@ -2540,6 +2699,7 @@
     "id": 160,
     "name": "The Metropolitan Museum of Art",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/oqhwmydKw-jPcUhoxBGGyg/o.jpg",
+    "url": "https://www.yelp.com/biz/the-metropolitan-museum-of-art-new-york-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "location": {
       "address1": "1000 5th Ave",
@@ -2555,6 +2715,7 @@
     "id": 161,
     "name": "Midwood Smokehouse",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/CGN1sNIWEzMpud87iEoiMA/o.jpg",
+    "url": "https://www.yelp.com/biz/midwood-smokehouse-charlotte?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2571,6 +2732,7 @@
     "id": 162,
     "name": "The Cowfish Sushi Burger Bar",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/g7R1om6qxqtTYYbTqzpdng/o.jpg",
+    "url": "https://www.yelp.com/biz/the-cowfish-sushi-burger-bar-charlotte?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2587,6 +2749,7 @@
     "id": 163,
     "name": "Viva Chicken",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/2C1fmFrIEV-i2CNJmnHnDw/o.jpg",
+    "url": "https://www.yelp.com/biz/viva-chicken-charlotte?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2603,6 +2766,7 @@
     "id": 164,
     "name": "Amélie's French Bakery & Café",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/k-DCr0agkGzprffpalYpjQ/o.jpg",
+    "url": "https://www.yelp.com/biz/am%C3%A9lies-french-bakery-and-caf%C3%A9-charlotte-11?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -2619,6 +2783,7 @@
     "id": 165,
     "name": "Soul Gastrolounge",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/vFPlCRZ1r9myHpA5c3k9Fw/o.jpg",
+    "url": "https://www.yelp.com/biz/soul-gastrolounge-charlotte?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -2635,6 +2800,7 @@
     "id": 166,
     "name": "Mezzaluna",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/mIXTb37EnnhLYeZQXO7snQ/o.jpg",
+    "url": "https://www.yelp.com/biz/mezzaluna-fargo?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -2651,6 +2817,7 @@
     "id": 167,
     "name": "Würst Bier Hall",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/RaJDnrraGWn387BZcW-MDw/o.jpg",
+    "url": "https://www.yelp.com/biz/w%C3%BCrst-bier-hall-fargo?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2667,6 +2834,7 @@
     "id": 168,
     "name": "India Palace",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/JIDHiDZkCr0UG9y9Z-dtRQ/o.jpg",
+    "url": "https://www.yelp.com/biz/india-palace-fargo?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2683,6 +2851,7 @@
     "id": 169,
     "name": "Mediterranean Grill",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/AvvwLG_uod1HU_qYxKBGeQ/o.jpg",
+    "url": "https://www.yelp.com/biz/mediterranean-grill-fargo?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2699,6 +2868,7 @@
     "id": 170,
     "name": "Twenty Below Coffee",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/HENLOKiMcZFb5r_kcU6AAg/o.jpg",
+    "url": "https://www.yelp.com/biz/twenty-below-coffee-fargo?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$",
     "location": {
@@ -2715,6 +2885,7 @@
     "id": 171,
     "name": "Brassica",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/1PDNySpRzTliJwQkoK1Z_A/o.jpg",
+    "url": "https://www.yelp.com/biz/brassica-columbus?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2731,6 +2902,7 @@
     "id": 172,
     "name": "Hot Chicken Takeover",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/PAEaF3iFFU7MAgc1YARIvg/o.jpg",
+    "url": "https://www.yelp.com/biz/hot-chicken-takeover-columbus?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2747,6 +2919,7 @@
     "id": 173,
     "name": "Fox In the Snow Cafe",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/SxBS9ixTOX-FpW1N6wqehg/o.jpg",
+    "url": "https://www.yelp.com/biz/fox-in-the-snow-cafe-columbus-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2763,6 +2936,7 @@
     "id": 174,
     "name": "Northstar Café",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/aRvOrR9Dqc80kY1IV6-Rtg/o.jpg",
+    "url": "https://www.yelp.com/biz/northstar-caf%C3%A9-columbus-5?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2779,6 +2953,7 @@
     "id": 175,
     "name": "Pistacia Vera",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/qzeo_U7lbCbIh4Kyoi5-bQ/o.jpg",
+    "url": "https://www.yelp.com/biz/pistacia-vera-columbus?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2795,6 +2970,7 @@
     "id": 176,
     "name": "Cafe Kacao",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/xlW_jF1KHZQHBcCtRT7zwQ/o.jpg",
+    "url": "https://www.yelp.com/biz/cafe-kacao-oklahoma-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2811,6 +2987,7 @@
     "id": 177,
     "name": "Kitchen No 324",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/SlX6A4qDgwFO3b6ghSNqww/o.jpg",
+    "url": "https://www.yelp.com/biz/kitchen-no-324-oklahoma-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2827,6 +3004,7 @@
     "id": 178,
     "name": "Empire Slice House",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/MHEFEe9SUg_FDFalfEA9CQ/o.jpg",
+    "url": "https://www.yelp.com/biz/empire-slice-house-oklahoma-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -2843,6 +3021,7 @@
     "id": 179,
     "name": "Cheever's Cafe",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/jMXD7MfXZBmj1LhOsG_D8w/o.jpg",
+    "url": "https://www.yelp.com/biz/cheevers-cafe-oklahoma-city-14?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2859,6 +3038,7 @@
     "id": 180,
     "name": "Oklahoma City National Memorial & Museum",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/FGw3okfBSrLCMCLxptQ7Sg/o.jpg",
+    "url": "https://www.yelp.com/biz/oklahoma-city-national-memorial-oklahoma-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "location": {
       "address1": "620 N Harvey Ave",
@@ -2874,6 +3054,7 @@
     "id": 181,
     "name": "Screen Door",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/lqmMYlLRV-aoH73koWA6Ew/o.jpg",
+    "url": "https://www.yelp.com/biz/screen-door-portland?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2890,6 +3071,7 @@
     "id": 182,
     "name": "Salt & Straw",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/r6y-0Q2z3cnx1bQKxn-iHw/o.jpg",
+    "url": "https://www.yelp.com/biz/salt-and-straw-portland-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2906,6 +3088,7 @@
     "id": 183,
     "name": "Pip's Original Doughnuts & Chai",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/IOLkS4N0L-fFdjuNVkBPrQ/o.jpg",
+    "url": "https://www.yelp.com/biz/pips-original-doughnuts-and-chai-portland?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -2922,6 +3105,7 @@
     "id": 184,
     "name": "Pine State Biscuits",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/XUBi0it3i2OZKq0187-RSg/o.jpg",
+    "url": "https://www.yelp.com/biz/pine-state-biscuits-portland-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -2938,6 +3122,7 @@
     "id": 185,
     "name": "Andina Restaurant",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Ij9yv97Ch6NwKhNdpezRhw/o.jpg",
+    "url": "https://www.yelp.com/biz/andina-restaurant-portland?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -2954,6 +3139,7 @@
     "id": 186,
     "name": "Reading Terminal Market",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Q2gU9ltGWVDgvHjDIUlCIg/o.jpg",
+    "url": "https://www.yelp.com/biz/reading-terminal-market-philadelphia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -2970,6 +3156,7 @@
     "id": 187,
     "name": "Zahav",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/iuZHAsd1P9GJsWhjNaV6xQ/o.jpg",
+    "url": "https://www.yelp.com/biz/zahav-philadelphia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -2986,6 +3173,7 @@
     "id": 188,
     "name": "Barbuzzo",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/88mJSIDPi3JUsCK2FsVJqg/o.jpg",
+    "url": "https://www.yelp.com/biz/barbuzzo-philadelphia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3002,6 +3190,7 @@
     "id": 189,
     "name": "Beiler's Bakery",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/iDLoMaj0CcP0Iw2jH6AQyw/o.jpg",
+    "url": "https://www.yelp.com/biz/beilers-bakery-philadelphia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -3018,6 +3207,7 @@
     "id": 190,
     "name": "Cafe La Maude",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/NM1xtYuER6MLwPCtvAj3bA/o.jpg",
+    "url": "https://www.yelp.com/biz/cafe-la-maude-philadelphia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3034,6 +3224,7 @@
     "id": 191,
     "name": "Los Andes Restaurant",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/9dzvHFX0XJp4CObLsSVKPw/o.jpg",
+    "url": "https://www.yelp.com/biz/los-andes-restaurant-providence?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3050,6 +3241,7 @@
     "id": 192,
     "name": "Pastiche",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/yQK4b2nAHZCnNWz8KC02cg/o.jpg",
+    "url": "https://www.yelp.com/biz/pastiche-providence?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3066,6 +3258,7 @@
     "id": 193,
     "name": "East Side Pockets",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/EAO_KkZZh-m8T3FdbNssrA/o.jpg",
+    "url": "https://www.yelp.com/biz/east-side-pockets-providence?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -3082,6 +3275,7 @@
     "id": 194,
     "name": "Kitchen",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/pZ7Fz7VADO8vMJOvbuEewA/o.jpg",
+    "url": "https://www.yelp.com/biz/kitchen-providence?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3098,6 +3292,7 @@
     "id": 195,
     "name": "Gracie's",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/2ZWjBaKKV9Z7j_JM9KBvfQ/o.jpg",
+    "url": "https://www.yelp.com/biz/gracies-providence?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -3114,6 +3309,7 @@
     "id": 196,
     "name": "The Devine Cinnamon Roll Deli",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/PtgV1y4fAFzCdaUlJWlNIQ/o.jpg",
+    "url": "https://www.yelp.com/biz/the-devine-cinnamon-roll-deli-columbia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -3130,6 +3326,7 @@
     "id": 197,
     "name": "Southern Belly BBQ",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ktRP-Oi716O1LoEkGZ06Dg/o.jpg",
+    "url": "https://www.yelp.com/biz/southern-belly-bbq-columbia-4?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3146,6 +3343,7 @@
     "id": 198,
     "name": "Midwood Smokehouse",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/hMSev-k-dMfi78T7A-U1Lg/o.jpg",
+    "url": "https://www.yelp.com/biz/midwood-smokehouse-columbia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3162,6 +3360,7 @@
     "id": 199,
     "name": "Real Mexico Restaurant Y Tienda",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/sGPSA0WFlUkUm5_3sVEVVg/o.jpg",
+    "url": "https://www.yelp.com/biz/real-mexico-restaurant-y-tienda-columbia?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3178,6 +3377,7 @@
     "id": 200,
     "name": "Motor Supply Co Bistro",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/RMHbh_OsMlxqFYFXDQTq-w/o.jpg",
+    "url": "https://www.yelp.com/biz/motor-supply-co-bistro-columbia-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3194,6 +3394,7 @@
     "id": 201,
     "name": "Josiah's Coffeehouse and Cafe",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/eJ_Sj1_0K5ZogBXtcq-VYw/o.jpg",
+    "url": "https://www.yelp.com/biz/josiahs-coffeehouse-and-cafe-sioux-falls-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3210,6 +3411,7 @@
     "id": 202,
     "name": "Taphouse 41",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/KhJDXkuIxIFcsj5qdxhMCQ/o.jpg",
+    "url": "https://www.yelp.com/biz/taphouse-41-sioux-falls?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3226,6 +3428,7 @@
     "id": 203,
     "name": "Bread & Circus Sandwich Kitchen",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/rIKRNeIR506bnB_Y3K5GtA/o.jpg",
+    "url": "https://www.yelp.com/biz/bread-and-circus-sandwich-kitchen-sioux-falls-5?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3242,6 +3445,7 @@
     "id": 204,
     "name": "Phillips Avenue Diner",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/iSkJG5rf3nES5SsSw0-1qQ/o.jpg",
+    "url": "https://www.yelp.com/biz/phillips-avenue-diner-sioux-falls?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3258,6 +3462,7 @@
     "id": 205,
     "name": "Sanaa's Gourmet Restaurant",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/8fUa3-Ul-VeKuiqs-eEGiQ/o.jpg",
+    "url": "https://www.yelp.com/biz/sanaas-gourmet-restaurant-sioux-falls?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3274,6 +3479,7 @@
     "id": 206,
     "name": "Gus's World Famous Fried Chicken",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/-B5bFS0KQt3tgaC0MlEDmg/o.jpg",
+    "url": "https://www.yelp.com/biz/guss-world-famous-fried-chicken-memphis-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -3290,6 +3496,7 @@
     "id": 207,
     "name": "Flight Restaurant & Wine Bar",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/EV7l-RIIk5i0QFThx5VtPA/o.jpg",
+    "url": "https://www.yelp.com/biz/flight-restaurant-and-wine-bar-memphis?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -3306,6 +3513,7 @@
     "id": 208,
     "name": "National Civil Rights Museum",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/VyV9mlUpTT_geTO2hFTQUg/o.jpg",
+    "url": "https://www.yelp.com/biz/national-civil-rights-museum-memphis?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "location": {
       "address1": "450 Mulberry St",
@@ -3321,6 +3529,7 @@
     "id": 209,
     "name": "Central BBQ",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/jI-TX0XAofJ7tWV7oVld7g/o.jpg",
+    "url": "https://www.yelp.com/biz/central-bbq-memphis-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3337,6 +3546,7 @@
     "id": 210,
     "name": "Central BBQ",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/FvW2OoCFTwxQy1yRjId3Tg/o.jpg",
+    "url": "https://www.yelp.com/biz/central-bbq-memphis-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3353,6 +3563,7 @@
     "id": 211,
     "name": "The Breakfast Klub",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/VNNIyiBmg-jLAfkNUsby3Q/o.jpg",
+    "url": "https://www.yelp.com/biz/the-breakfast-klub-houston-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3369,6 +3580,7 @@
     "id": 212,
     "name": "JINYA Ramen Bar",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/PUzLHJvQwm0y2bbShD_iDw/o.jpg",
+    "url": "https://www.yelp.com/biz/jinya-ramen-bar-houston-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3385,6 +3597,7 @@
     "id": 213,
     "name": "Uchi",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1xCpAZGrEDL-fEn8fl_pJQ/o.jpg",
+    "url": "https://www.yelp.com/biz/uchi-houston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -3401,6 +3614,7 @@
     "id": 214,
     "name": "The Pit Room",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/kOrAG30CDxnW9FHW7nEL-Q/o.jpg",
+    "url": "https://www.yelp.com/biz/the-pit-room-houston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3417,6 +3631,7 @@
     "id": 215,
     "name": "Local Foods",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/bKgWmpZo3lOkInGE3KyN4A/o.jpg",
+    "url": "https://www.yelp.com/biz/local-foods-houston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3433,6 +3648,7 @@
     "id": 216,
     "name": "Red Iguana",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/qMYKxn76Vvp0dp5ovmkHmw/o.jpg",
+    "url": "https://www.yelp.com/biz/red-iguana-salt-lake-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3449,6 +3665,7 @@
     "id": 217,
     "name": "The Copper Onion",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/I3HOeThG693rceSXiZUx1A/o.jpg",
+    "url": "https://www.yelp.com/biz/the-copper-onion-salt-lake-city-3?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3465,6 +3682,7 @@
     "id": 218,
     "name": "Takashi",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/VwGBbq-g5HjNBV2lvyg5Sg/o.jpg",
+    "url": "https://www.yelp.com/biz/takashi-salt-lake-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -3481,6 +3699,7 @@
     "id": 219,
     "name": "Sweet Lake Biscuits & Limeade",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/odVRTE7zTH0-nGvTUBQIrQ/o.jpg",
+    "url": "https://www.yelp.com/biz/sweet-lake-biscuits-and-limeade-salt-lake-city?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3497,6 +3716,7 @@
     "id": 220,
     "name": "The Park Café",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/YJPxf3IK3J9OLnEcTBPgyw/o.jpg",
+    "url": "https://www.yelp.com/biz/the-park-caf%C3%A9-salt-lake-city-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -3513,6 +3733,7 @@
     "id": 221,
     "name": "Penny Cluse Cafe",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/-uCrjRiRZkvIvgvClVFhsA/o.jpg",
+    "url": "https://www.yelp.com/biz/penny-cluse-cafe-burlington?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3529,6 +3750,7 @@
     "id": 222,
     "name": "American Flatbread",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/mcPX-6oGf1GLDMAYEbtw8Q/o.jpg",
+    "url": "https://www.yelp.com/biz/american-flatbread-burlington?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3545,6 +3767,7 @@
     "id": 223,
     "name": "The Farmhouse Tap & Grill",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/qIiLwVpmr7xTR4jZD4D8ig/o.jpg",
+    "url": "https://www.yelp.com/biz/the-farmhouse-tap-and-grill-burlington?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3561,6 +3784,7 @@
     "id": 224,
     "name": "Hen of the Wood",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/8Dm0SNcwup3SA-vIXvURnw/o.jpg",
+    "url": "https://www.yelp.com/biz/hen-of-the-wood-burlington-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$$",
     "location": {
@@ -3577,6 +3801,7 @@
     "id": 225,
     "name": "Pizzeria Verità",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/bAF4WpH9l07SXqiEd6y8Pg/o.jpg",
+    "url": "https://www.yelp.com/biz/pizzeria-verit%C3%A0-burlington-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3593,6 +3818,7 @@
     "id": 226,
     "name": "Mazari Kebab and More",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/O8HcqBaWHv_oHQ5U5wk6IA/o.jpg",
+    "url": "https://www.yelp.com/biz/mazari-kebab-and-more-virginia-beach?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3609,6 +3835,7 @@
     "id": 227,
     "name": "Waterman's Surfside Grille",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/8Bk8Z7HBB8R1WE57uiMsTg/o.jpg",
+    "url": "https://www.yelp.com/biz/watermans-surfside-grille-virginia-beach?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3625,6 +3852,7 @@
     "id": 228,
     "name": "Repeal Bourbons and Burgers",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/H7Esdqadam0qVlgTDodCLA/o.jpg",
+    "url": "https://www.yelp.com/biz/repeal-bourbons-and-burgers-virginia-beach?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3641,6 +3869,7 @@
     "id": 229,
     "name": "Blue Seafood & Spirits",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/2q67PyTz3tSBk18J_LmoqA/o.jpg",
+    "url": "https://www.yelp.com/biz/blue-seafood-and-spirits-virginia-beach?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$$",
     "location": {
@@ -3657,6 +3886,7 @@
     "id": 230,
     "name": "Bay Local Eatery",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/yadYXssvTwM28fJJG88GbQ/o.jpg",
+    "url": "https://www.yelp.com/biz/bay-local-eatery-virginia-beach?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3673,6 +3903,7 @@
     "id": 231,
     "name": "Pike Place Chowder",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ZyQjV-wJQ2GHyX7l3jfbyg/o.jpg",
+    "url": "https://www.yelp.com/biz/pike-place-chowder-seattle?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3689,6 +3920,7 @@
     "id": 232,
     "name": "Piroshky Piroshky",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/qGlIuj5yn6i82DK8kxw4Uw/o.jpg",
+    "url": "https://www.yelp.com/biz/piroshky-piroshky-seattle?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$",
     "location": {
@@ -3705,6 +3937,7 @@
     "id": 233,
     "name": "The Pink Door",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/SdnJM6TCUmlKlpN6bnP-Rg/o.jpg",
+    "url": "https://www.yelp.com/biz/the-pink-door-seattle-4?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3721,6 +3954,7 @@
     "id": 234,
     "name": "Paseo",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/o5csrmtkMORuMcVBW2dnYg/o.jpg",
+    "url": "https://www.yelp.com/biz/paseo-seattle-11?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3737,6 +3971,7 @@
     "id": 235,
     "name": "Ellenos Real Greek Yogurt",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/jsZkRaDQ6aEa6jwRGWDi5Q/o.jpg",
+    "url": "https://www.yelp.com/biz/ellenos-real-greek-yogurt-seattle?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$",
     "location": {
@@ -3753,6 +3988,7 @@
     "id": 236,
     "name": "Pies & Pints",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/lQLQ6x4XG6e3J82kA5HZnw/o.jpg",
+    "url": "https://www.yelp.com/biz/pies-and-pints-charleston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3769,6 +4005,7 @@
     "id": 237,
     "name": "Dem 2 Brothers And A Grill",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ElwgzzvEf3DaOOtpCUKpIQ/o.jpg",
+    "url": "https://www.yelp.com/biz/dem-2-brothers-and-a-grill-charleston-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3785,6 +4022,7 @@
     "id": 238,
     "name": "Black Sheep Burrito and Brews",
     "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/oVpr3gZD9_wT8o-hnyf5bw/o.jpg",
+    "url": "https://www.yelp.com/biz/black-sheep-burrito-and-brews-charleston?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3801,6 +4039,7 @@
     "id": 239,
     "name": "First Watch",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/63ppLovwcgFYfoLMJLfQCg/o.jpg",
+    "url": "https://www.yelp.com/biz/first-watch-charleston-4?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3817,6 +4056,7 @@
     "id": 240,
     "name": "Lola's",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/cwKrYxIcxKNxHk9XfGQeLQ/o.jpg",
+    "url": "https://www.yelp.com/biz/lolas-charleston-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3833,6 +4073,7 @@
     "id": 241,
     "name": "Blue's Egg - Milwaukee",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/akWUb6VGyGxu7_yDMe1ICg/o.jpg",
+    "url": "https://www.yelp.com/biz/blues-egg-milwaukee-milwaukee?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3849,6 +4090,7 @@
     "id": 242,
     "name": "Story Hill BKC",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/xopMAZ75azcZxW6_TEYvDw/o.jpg",
+    "url": "https://www.yelp.com/biz/story-hill-bkc-milwaukee?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3865,6 +4107,7 @@
     "id": 243,
     "name": "St Paul Fish Company",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/5uaOK5HdyED1diKXON5iiw/o.jpg",
+    "url": "https://www.yelp.com/biz/st-paul-fish-company-milwaukee?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3881,6 +4124,7 @@
     "id": 244,
     "name": "Odd Duck",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/M2dGNEY0v6LivyJxNwyJmA/o.jpg",
+    "url": "https://www.yelp.com/biz/odd-duck-milwaukee?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3897,6 +4141,7 @@
     "id": 245,
     "name": "Swingin' Door Exchange",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/nQglUY8Hik8W41OrJZ-s9Q/o.jpg",
+    "url": "https://www.yelp.com/biz/swingin-door-exchange-milwaukee?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
@@ -3913,6 +4158,7 @@
     "id": 246,
     "name": "Rib & Chop House",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/l4Yfbx-g8c31BMDwwZ5gDQ/o.jpg",
+    "url": "https://www.yelp.com/biz/rib-and-chop-house-cheyenne-2?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3929,6 +4175,7 @@
     "id": 247,
     "name": "Luxury Diner",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/KqHUyWxQjbghiOXqdB53Cw/o.jpg",
+    "url": "https://www.yelp.com/biz/luxury-diner-cheyenne?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$",
     "location": {
@@ -3945,6 +4192,7 @@
     "id": 248,
     "name": "Destination Taiwan",
     "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/SdiA3eyuYm0a4ntUaCkDGg/o.jpg",
+    "url": "https://www.yelp.com/biz/destination-taiwan-cheyenne?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 5,
     "price": "$",
     "location": {
@@ -3961,6 +4209,7 @@
     "id": 249,
     "name": "2 Doors Down",
     "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/I3fLhT9qMrI9_9IxnEHSFw/o.jpg",
+    "url": "https://www.yelp.com/biz/2-doors-down-cheyenne?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4,
     "price": "$$",
     "location": {
@@ -3977,6 +4226,7 @@
     "id": 250,
     "name": "Korean House",
     "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/EkoirEh3bEWaU9wofyjpPQ/o.jpg",
+    "url": "https://www.yelp.com/biz/korean-house-cheyenne?adjust_creative=Raszak7kTQpRpz-v6cDJRw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Raszak7kTQpRpz-v6cDJRw",
     "rating": 4.5,
     "price": "$$",
     "location": {
