@@ -29,7 +29,7 @@ class App extends Component {
           await this.setState({ originValue: input.value });
       } else {
           await this.setState({ destValue: input.value });
-          const respon = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
+          const respon = await fetch(`https://trip-ahead.herokuapp.com/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
 
@@ -50,7 +50,7 @@ class App extends Component {
               const to_city = this.state.destValue.selected;
 
               // perform a request
-              const res = await fetch(`http://localhost:5000/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
+              const res = await fetch(`https://trip-ahead.herokuapp.com/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
                                       .then(res => res.json())
                                       .catch(err => console.log("err: " + err));
               
