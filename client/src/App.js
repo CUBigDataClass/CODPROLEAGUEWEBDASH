@@ -93,7 +93,6 @@ render() {
                 </section>
               </div>
           </div> 
-      </div>
 
         <div className="infoContainer">
             <div>
