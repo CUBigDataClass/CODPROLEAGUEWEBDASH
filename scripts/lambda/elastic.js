@@ -1,7 +1,10 @@
 const AWS = require('aws-sdk');
 const elasticsearch = require('elasticsearch');
 const states = require('../resources/states.json');
-require('dotenv').config();
+
+if (process.env.ENVIRONMENT === 'development') {  
+    require('dotenv').config();  
+}  
 
 let region = process.env.AWS_REGION;
 let domain = process.env.AWS_ELASTIC_DOMAIN;
@@ -43,8 +46,8 @@ function indexState(doc) {
     request.headers['Content-Length'] = Buffer.byteLength(request.body);
 
     let credentials = new AWS.EnvironmentCredentials('AWS');
-    credentials.accessKeyId = process.env.AWS_KEY_ID;
-    credentials.secretAccessKey = process.env.AWS_SECRET;
+    credentials.accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+    credentials.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
 
     let signer = new AWS.Signers.V4(request, 'es');
     signer.addAuthorization(credentials, new Date());
@@ -74,8 +77,8 @@ function deleteIndex(index) {
 
 
     let credentials = new AWS.EnvironmentCredentials('AWS');
-    credentials.accessKeyId = process.env.AWS_KEY_ID;
-    credentials.secretAccessKey = process.env.AWS_SECRET;
+    credentials.accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+    credentials.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
 
     let signer = new AWS.Signers.V4(request, 'es');
     signer.addAuthorization(credentials, new Date());
@@ -112,8 +115,8 @@ function indexFlightQuote(quote) {
     request.headers['Content-Length'] = Buffer.byteLength(request.body);
 
     let credentials = new AWS.EnvironmentCredentials('AWS');
-    credentials.accessKeyId = process.env.AWS_KEY_ID;
-    credentials.secretAccessKey = process.env.AWS_SECRET;
+    credentials.accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+    credentials.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
 
     let signer = new AWS.Signers.V4(request, 'es');
     signer.addAuthorization(credentials, new Date());
@@ -154,7 +157,7 @@ function indexYelpPlaces(place) {
     
     let credentials = new AWS.EnvironmentCredentials('AWS');
     credentials.accessKeyId = process.env.AWS_ACCESS_KEY_ID;
-    credentials.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+    credentials.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY_ACCESS_KEY;
     
     let signer = new AWS.Signers.V4(request, 'es');
     signer.addAuthorization(credentials, new Date());

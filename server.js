@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const cors = require('cors')
+const cors = require('cors');
 
 const cronJob = require('./scripts/cron');
 const pullAirports = require('./scripts/airports');

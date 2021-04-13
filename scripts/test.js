@@ -1,5 +1,9 @@
 const quotes = require('./resources/quotes');
-require('dotenv').config();
+
+if (process.env.ENVIRONMENT === 'development') {  
+    require('dotenv').config();  
+}  
+
 var AWS = require('aws-sdk');
 var region = process.env.AWS_REGION;
 var domain = process.env.AWS_ELASTIC_DOMAIN;

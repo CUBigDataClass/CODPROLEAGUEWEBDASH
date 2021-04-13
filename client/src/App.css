@@ -68,6 +68,14 @@
   align-items: center;
 }
 
+@media all and (max-width:1500px)
+{
+    .yelpRow {
+       width: 1000px;
+       overflow: scroll;
+    }
+}
+
 @media all and (max-width:800px)
 {
     .searchContainer

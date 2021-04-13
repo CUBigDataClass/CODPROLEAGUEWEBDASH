@@ -4,7 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const cities = require('./resources/cities');
 const codes = require('./resources/iatacodes');
-require('dotenv').config();
+
+if (process.env.ENVIRONMENT === 'development') {  
+    require('dotenv').config();  
+}  
 
 async function pull() {
     const code_lookup = new Set(codes.PopAirports.IataCodes);

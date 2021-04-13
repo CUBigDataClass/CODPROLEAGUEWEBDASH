@@ -3,7 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const states = require('./resources/states');
 const airports = require('./resources/airports');
-require('dotenv').config();
+
+if (process.env.ENVIRONMENT === 'development') {  
+    require('dotenv').config();  
+}  
 
 cleanStates();
 
