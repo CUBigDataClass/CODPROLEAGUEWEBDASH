@@ -24,7 +24,7 @@ function addMonths(date, months) {
 function yelpcron() {
     // const cron_qs = '0 0 0 15 * ?'; // fire 15th of every month
 
-    const cron_qs = '0 17 * * * *'; // fire once a min
+    const cron_qs = '0 47 * * * *'; // fire once a min
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute again');
 
@@ -56,7 +56,7 @@ function yelpcron() {
                     business.id = count 
                     delete (business.alias)
                     // delete (business.image_url)
-                    delete (business.url)
+                    // delete (business.url)
                     delete (business.is_closed)
                     delete (business.review_count)
                     delete (business.categories)
@@ -106,12 +106,12 @@ function yelpcron() {
         };
     
         // Uploading files to the bucket
-        // s3.upload(params, function(err, data) {
-        //     if (err) {
-        //         throw err;
-        //     }
-        //     console.log(`File uploaded successfully. ${data.Location}`);
-        // });
+        s3.upload(params, function(err, data) {
+            if (err) {
+                throw err;
+            }
+            console.log(`File uploaded successfully. ${data.Location}`);
+        });
         
         console.log("success");
     });

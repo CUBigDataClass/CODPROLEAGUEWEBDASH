@@ -1,24 +1,32 @@
 .outerContainer {
    display: flex;
    flex-direction: row;
-   width: auto;
+   width: 100%;
+}
+
+.places{
+   width: 100%;
+   margin: 0px 0px 0px 0px;
+   background-color: rgb(141, 189, 251);
 }
 
 .container {
    display: flex;
+   width: 100%;
    flex-direction: column;
    margin: 0px 0px 0px 0px;
-   background-color: white;
+   background-color:rgb(141, 189, 251);
+   opacity: 0.95;
 }
 
 .innerContainer {
-   background-color: white;
+   background-color: rgb(216, 221, 231);
    display: flex;
    flex-direction: column;
    font-size: 14px;
-   width: 300px;
-   height: auto;
-   margin: 30px 10px 20px 10px;
+   width: 100%;
+   height: 100%;
+   margin: 10px 1px 20px 1px;
    border-radius: 35px;
    overflow: hidden;
    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -32,27 +40,27 @@
    color: black;
    display: flex;
    background-color: rgb(85, 81, 81);
-   font-family: courier;
    font-size: 150%;
    font-family: Georgia, serif;
 }
 
 .imgContainer {
    height: 150px;
-   width: 300px;
+   width: 100%;
    background-color: white;
    overflow: hidden;
 }
 
 .cardImg {
    height: auto;
-   width: 350px;
+   width: 100%;
 }
 
 .infoContainer {
    display:flex;
    flex-direction: column;
-   margin: 0px 0px 15px 0px;
+   margin: 0px 0px 0px 0px;
+   width: 100%;
 }
 
 @media all and (max-width:1440px)

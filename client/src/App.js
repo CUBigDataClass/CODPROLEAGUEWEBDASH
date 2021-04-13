@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import Search from './components/Search';
 import Flight from './components/Flight';
 import Yelp from './components/Yelp';
-import Intro from './components/Intro';
+
+import Footer from './components/Footer';
 
 import './App.css';
+
 
 class App extends Component {
   constructor() {
@@ -64,30 +66,31 @@ class App extends Component {
   
 render() {
     return (
-      <div className="App" style={{ position: "relative" }}>
-        <div className="Intro">
-          <header className="App-header">
-              <Intro />
-          </header>
-        </div>
-        <div className="searchAreaContainer">
-            <section className="searchContainer">
-              <div>
-                <Search 
-                  place='Origin' 
-                  inputValue={this.state.originInput}
-                  updateSelection={this.updateSelection}
-                />
+      <div className="App">
+          <div className="Intro">
+            <h1 className="Welcome">Welcome to Trip Planner</h1>
+             <div className="searchAreaContainer">
+              <section className="searchContainer">
+                <div className="Search">
+                  <Search 
+                    place='Origin' 
+                    inputValue={this.state.originInput}
+                    updateSelection={this.updateSelection}
+                    updateInput={this.updateInput}
+                  />
+                </div>
+                <div className="Search">
+                  <Search 
+                    place='Destination' 
+                    inputValue={this.state.destInput}
+                    updateSelection={this.updateSelection}
+                    updateInput={this.updateInput}
+                  />
+                 </div>
+                </section>
               </div>
-              <div>
-                <Search 
-                  place='Destination' 
-                  inputValue={this.state.destInput}
-                  updateSelection={this.updateSelection}
-                />
-              </div>
-            </section>
-        </div>
+          </div> 
+
         <div className="infoContainer">
             <div>
                 <Flight quotes={this.state.flightRes}/>
@@ -95,6 +98,9 @@ render() {
             <div className="yelpRow">
                 <Yelp places={this.state.placeRes}/>
             </div>
+        </div>
+        <div>
+          <Footer/>
         </div>
       </div>
     );
