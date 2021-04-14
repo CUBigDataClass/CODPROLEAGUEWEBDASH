@@ -1,5 +1,5 @@
 .mainContainer {
-    width: 400px;
+    width: 30vw;
 }
 
 
@@ -12,7 +12,6 @@
 {
     .mainContainer
     {
-      width: 250px;
+      width: 60vw;
     }
-
 }

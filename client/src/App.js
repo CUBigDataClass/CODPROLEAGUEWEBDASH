@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
+import { Navbar } from 'react-bootstrap';
 import Search from './components/Search';
 import Flight from './components/Flight';
 import Yelp from './components/Yelp';
-
 import Footer from './components/Footer';
-
 import './App.css';
 
 
@@ -19,7 +18,8 @@ class App extends Component {
       originValue: null,
       destValue: null,
       flightRes: {message: ""},
-      placeRes: {message: ""}
+      placeRes: {message: ""},
+      present: false
     };
 
     this.updateSelection = this.updateSelection.bind(this);
@@ -31,17 +31,17 @@ class App extends Component {
           await this.setState({ originValue: input.value });
       } else {
           await this.setState({ destValue: input.value });
-          const respon = await fetch(`https://trip-ahead.herokuapp.com/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
+          const respon = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
 
           if (typeof(respon) === 'undefined') {
             this.setState({ flightRes: { message: "No places to visit" } })
           } else {
-            // console.log(respon['0']._source)
             let hits = Array.from(respon, h => h._source);
             this.setState({ placeRes: hits });
         }
+        await this.setState({ present: true });
       }
 
       if (this.state.originValue && this.state.destValue &&
@@ -52,7 +52,7 @@ class App extends Component {
               const to_city = this.state.destValue.selected;
 
               // perform a request
-              const res = await fetch(`https://trip-ahead.herokuapp.com/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
+              const res = await fetch(`http://localhost:5000/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
                                       .then(res => res.json())
                                       .catch(err => console.log("err: " + err));
               
@@ -61,48 +61,57 @@ class App extends Component {
               } else {
                   this.setState({ flightRes: res });
               }
+
+              await this.setState({ present: true });
       }
   }
   
 render() {
+  let resultClass = this.state.present ? 'infoContainer' : 'infoContainerHide';
     return (
-      <div className="App">
-          <div className="Intro">
-            <h1 className="Welcome">Welcome to Trip Planner</h1>
-             <div className="searchAreaContainer">
-              <section className="searchContainer">
-                <div className="Search">
-                  <Search 
-                    place='Origin' 
-                    inputValue={this.state.originInput}
-                    updateSelection={this.updateSelection}
-                    updateInput={this.updateInput}
-                  />
-                </div>
-                <div className="Search">
-                  <Search 
-                    place='Destination' 
-                    inputValue={this.state.destInput}
-                    updateSelection={this.updateSelection}
-                    updateInput={this.updateInput}
-                  />
-                 </div>
-                </section>
-              </div>
-          </div> 
+      <>
+        <Navbar bg="light">
+          <Navbar.Brand>Trip Planner</Navbar.Brand>
+        </Navbar>
+        <div className="appContainer">
+          <div className="App">
+              <div className="Intro">
+                <div className="searchAreaContainer">
+                  <section className="searchContainer">
+                    <div className="Search">
+                      <Search 
+                        place='Origin' 
+                        inputValue={this.state.originInput}
+                        updateSelection={this.updateSelection}
+                        updateInput={this.updateInput}
+                      />
+                    </div>
+                    <div className="Search">
+                      <Search 
+                        place='Destination' 
+                        inputValue={this.state.destInput}
+                        updateSelection={this.updateSelection}
+                        updateInput={this.updateInput}
+                      />
+                    </div>
+                    </section>
+                  </div>
+              </div> 
 
-        <div className="infoContainer">
+            <div className={resultClass}>
+                <div>
+                    <Flight quotes={this.state.flightRes}/>
+                </div>
+                <div className="yelpRow">
+                    <Yelp places={this.state.placeRes}/>
+                </div>
+            </div>
             <div>
-                <Flight quotes={this.state.flightRes}/>
+              <Footer/>
             </div>
-            <div className="yelpRow">
-                <Yelp places={this.state.placeRes}/>
-            </div>
+          </div>
         </div>
-        <div>
-          <Footer/>
-        </div>
-      </div>
+      </>
     );
   }
 }

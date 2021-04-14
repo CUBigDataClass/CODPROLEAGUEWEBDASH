@@ -7,24 +7,29 @@
 .places{
    width: 100%;
    margin: 0px 0px 0px 0px;
-   background-color: rgb(141, 189, 251);
+}
+
+.yelpContainer {
+   background-color: white;
+   width: 100vw;
 }
 
 .container {
    display: flex;
-   width: 100%;
+   width: 100vw;
    flex-direction: column;
    margin: 0px 0px 0px 0px;
-   background-color:rgb(141, 189, 251);
+   background-color: white;
    opacity: 0.95;
 }
 
 .innerContainer {
-   background-color: rgb(216, 221, 231);
+   /* background-color: white; */
    display: flex;
    flex-direction: column;
    font-size: 14px;
    width: 100%;
+   background-color: white;
    height: 100%;
    margin: 10px 1px 20px 1px;
    border-radius: 35px;
@@ -39,7 +44,6 @@
 .Intro {
    color: black;
    display: flex;
-   background-color: rgb(85, 81, 81);
    font-size: 150%;
    font-family: Georgia, serif;
 }
@@ -47,7 +51,6 @@
 .imgContainer {
    height: 150px;
    width: 100%;
-   background-color: white;
    overflow: hidden;
 }
 
@@ -59,15 +62,13 @@
 .infoContainer {
    display:flex;
    flex-direction: column;
-   margin: 0px 0px 0px 0px;
+   justify-content: space-between;
+   margin: 0px 0px 10px 0px;
    width: 100%;
 }
 
-@media all and (max-width:1440px)
-{
-    .outerContainer {
-       width: 1000px;
-    }
+.infoContainer > sub {
+   margin: 8px;
 }
 
 @media all and (max-width:800px)
