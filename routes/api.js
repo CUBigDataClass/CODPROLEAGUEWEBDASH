@@ -108,7 +108,16 @@ router.get('/search/flight', async (req, res) => {
 });
 
 
-router.get('/search/yelp', (req, res) => {
+router.get('/search/yelp', async (req, res) => {
+
+    const key = 'yelp_key_' + req.query.location;
+    const reply = await redisClient.getQuery(key);
+
+    if (reply) {
+        res.status(201).json(JSON.parse(reply));
+        return;
+    }
+
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -143,6 +152,7 @@ router.get('/search/yelp', (req, res) => {
         res.sendStatus(404);
     } else {
         // let hits = Array.from(result.hits.hits, h => h._source);
+        redisClient.setQuery('yelp_key_' + req.query.location, JSON.stringify(result.hits.hits));
         res.status(201).json(result.hits.hits);
     }
     })

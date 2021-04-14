@@ -1,0 +1,18 @@
+.logo {
+   width: 6%;
+   padding-left: 35px;
+   padding-top: 10px;
+   display: inline;
+ }
+ 
+ .navtheme {
+   background-color: white;
+   font-size: 30px;
+ }
+
+ .text{
+   font-family: 'Zilla Slab Highlight', bold;
+   display: inline;
+   padding-left: 10px;
+
+ }
