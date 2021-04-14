@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Navbar } from 'react-bootstrap';
 import Search from './components/Search';
 import Flight from './components/Flight';
 import Yelp from './components/Yelp';
