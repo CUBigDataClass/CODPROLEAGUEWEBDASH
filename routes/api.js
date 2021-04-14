@@ -4,22 +4,7 @@ const AWS = require('aws-sdk');
 const elasticsearch = require('elasticsearch');
 const connectionClass = require('http-aws-es');
 const awsHttpClient = require('http-aws-es');
-const redis = require("redis");
-const util = require('util');
-
-//production redis url
-let redis_url = process.env.REDIS_URL;
-
-if (process.env.ENVIRONMENT === 'development') {  
-    require('dotenv').config();  
-    redis_url = "redis://127.0.0.1"; 
-}  
-
-const redisClient = redis.createClient(redis_url);
-
-redisClient.on("error", function(error) {
-    console.error("REDIS [ERROR] " + error);
-});
+const redisClient = require('../scripts/redisClient');
 
 // Test server viability
 router.get('/hello', (req, res) => {
@@ -28,15 +13,9 @@ router.get('/hello', (req, res) => {
 
 //TEST ELASTIC FLIGHT SEARCH 
 router.get('/search/flight', async (req, res) => {
-    // Check redis cache before making request to elasticsearch service
-    redisClient.on('error', function(error) {
-        console.error('Redis err: ' + error);
-        res.status(500);
-        return;
-    });
-
-    redisClient.get = util.promisify(redisClient.get).bind(redisClient);
-    const reply = await redisClient.get('flight_key_' + req.query.from + '_' + req.query.to);
+    // check redis before searching elasticsearch
+    const key = 'flight_key_' + req.query.from + '_' + req.query.to;
+    const reply = await redisClient.redisQuery(key);
 
     if (reply) {
         res.status(201).json(JSON.parse(reply));
@@ -121,6 +100,7 @@ router.get('/search/flight', async (req, res) => {
             redisClient.set('flight_key_' + req.query.from + '_' + req.query.to, JSON.stringify(hits));
 
             res.status(201).send(hits);
+            console.log("2f")
         }
     })
     .catch(err => {
@@ -130,6 +110,7 @@ router.get('/search/flight', async (req, res) => {
 
 
 router.get('/search/yelp', (req, res) => {
+    console.log("1y")
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -145,33 +126,33 @@ router.get('/search/yelp', (req, res) => {
         }
     });
 
-      elasticClient.search({
-          index: 'yelp-places',
-          type: '_doc',
-          body: {
+    elasticClient.search({
+        index: 'yelp-places',
+        type: '_doc',
+        body: {
             query: {
                 match: {
-                  "location.state": {
-                    query: req.query.location,
-                    fuzziness: "AUTO"
-                  }
+                    "location.state": {
+                        query: req.query.location,
+                        fuzziness: "AUTO"
+                    }
                 }
             }
         }
-      })
-      .then(result => {
-        if (result.hits.hits.length === 0) {
-            res.sendStatus(404);
-        } else {
-            // let hits = Array.from(result.hits.hits, h => h._source);
-            res.status(201).send(result.hits.hits);
-        }
+    })
+    .then(result => {
+    if (result.hits.hits.length === 0) {
+        res.sendStatus(404);
+    } else {
+        console.log("2y")
+        // let hits = Array.from(result.hits.hits, h => h._source);
+        res.status(201).json(result.hits.hits);
+    }
     })
     .catch(err => {
         console.log("err " + err);
     });
-
-    
+    console.log("3y")
 });
 
 module.exports = router;

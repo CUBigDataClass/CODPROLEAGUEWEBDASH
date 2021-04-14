@@ -8,7 +8,8 @@ const Yelp = (props) => {
       return ( <p>{ props.message }</p>)
    } else {
       let arr = []
-      var state = props.places[0].location.state
+      let state = props.places[0].location.state
+      let upper = 5;
 
       for (const place of props.places){
          let add2 = place.location.address2 ? '' : ', ' + place.location.address2 ;
@@ -39,10 +40,13 @@ const Yelp = (props) => {
             </Fragment>
          )
          arr.push(component)
+         upper -= 1;
+
+         if (!upper) break;
       }
 
       return (
-         <div>
+         <div className={Styles.yelpContainer}>
             <h2 className={Styles.places}>Places in {state} to visit</h2>
             <div className={Styles.outerContainer}>
                   {arr}

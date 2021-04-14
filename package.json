@@ -10,12 +10,12 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
-    "opencollective-postinstall": "^2.0.0",
     "@elastic/elasticsearch": "^7.11.0",
     "aws-elasticsearch-connector": "^9.0.3",
     "aws-sdk": "^2.864.0",
     "aws-xray-sdk": "^3.2.0",
     "aws4": "^1.11.0",
+    "bluebird": "^3.7.2",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
