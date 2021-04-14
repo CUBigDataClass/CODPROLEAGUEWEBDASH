@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Navbar } from 'react-bootstrap';
 import Search from './components/Search';
 import Flight from './components/Flight';
 import Yelp from './components/Yelp';
+import Navbar from './components/Navbar'
 import Footer from './components/Footer';
 import './App.css';
 
@@ -31,7 +31,7 @@ class App extends Component {
           await this.setState({ originValue: input.value });
       } else {
           await this.setState({ destValue: input.value });
-          const respon = await fetch(`https://trip-ahead.herokuapp.com/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
+          const respon = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
 
@@ -52,7 +52,7 @@ class App extends Component {
               const to_city = this.state.destValue.selected;
 
               // perform a request
-              const res = await fetch(`https://trip-ahead.herokuapp.com/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
+              const res = await fetch(`http://localhost:5000/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
                                       .then(res => res.json())
                                       .catch(err => console.log("err: " + err));
               
@@ -70,9 +70,10 @@ render() {
   let resultClass = this.state.present ? 'infoContainer' : 'infoContainerHide';
     return (
       <>
-        <Navbar bg="light">
+        {/* <Navbar bg="light">
           <Navbar.Brand>Trip Planner</Navbar.Brand>
-        </Navbar>
+        </Navbar> */}
+        <Navbar />
         <div className="appContainer">
           <div className="App">
               <div className="Intro">
