@@ -16,7 +16,7 @@ redisClient.on("error", function(error) {
     console.error("REDIS [ERROR] " + error);
 });
 
-function redisQuery(key) {
+function getQuery(key) {
     return new Promise((resolve, reject) => {
         redisClient.getAsync(key).then(function(reply) {
             resolve(reply);
@@ -25,4 +25,8 @@ function redisQuery(key) {
     });
 }
 
-module.exports = { redisQuery };
+function setQuery(key, value) {
+    redisClient.set(key, value);
+}
+
+module.exports = { getQuery, setQuery };

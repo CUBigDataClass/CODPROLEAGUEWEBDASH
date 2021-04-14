@@ -15,7 +15,7 @@ router.get('/hello', (req, res) => {
 router.get('/search/flight', async (req, res) => {
     // check redis before searching elasticsearch
     const key = 'flight_key_' + req.query.from + '_' + req.query.to;
-    const reply = await redisClient.redisQuery(key);
+    const reply = await redisClient.getQuery(key);
 
     if (reply) {
         res.status(201).json(JSON.parse(reply));
@@ -97,10 +97,9 @@ router.get('/search/flight', async (req, res) => {
             res.sendStatus(404);
         } else {
             let hits = Array.from(result.hits.hits, h => h._source);
-            redisClient.set('flight_key_' + req.query.from + '_' + req.query.to, JSON.stringify(hits));
+            redisClient.setQuery('flight_key_' + req.query.from + '_' + req.query.to, JSON.stringify(hits));
 
             res.status(201).send(hits);
-            console.log("2f")
         }
     })
     .catch(err => {
@@ -110,7 +109,6 @@ router.get('/search/flight', async (req, res) => {
 
 
 router.get('/search/yelp', (req, res) => {
-    console.log("1y")
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -144,7 +142,6 @@ router.get('/search/yelp', (req, res) => {
     if (result.hits.hits.length === 0) {
         res.sendStatus(404);
     } else {
-        console.log("2y")
         // let hits = Array.from(result.hits.hits, h => h._source);
         res.status(201).json(result.hits.hits);
     }
@@ -152,7 +149,6 @@ router.get('/search/yelp', (req, res) => {
     .catch(err => {
         console.log("err " + err);
     });
-    console.log("3y")
 });
 
 module.exports = router;
