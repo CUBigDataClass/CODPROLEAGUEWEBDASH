@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/navbar';
-import Nav from 'react-bootstrap/nav';
 import Logo  from '../images/logo2.png'
 import Styles from '../styles/Navbar.module.css'
 
