@@ -45,4 +45,12 @@ exports.handler = async (event, context) => {
          
         }
     }
+    else if (Key == "weather_api.json"){
+        console.log("Raw text:\n" + data.Body.toString('ascii'));
+        const w = JSON.parse(data.Body.toString('utf-8'))
+        for (const yelp_doc of w) {
+            elastic_client.indexYelpPlaces(yelp_doc);
+         
+        }
+    }
 };

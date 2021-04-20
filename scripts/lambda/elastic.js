@@ -193,4 +193,59 @@ function indexYelpPlaces(place) {
     
 }
 
-module.exports = { indexFlightQuote, indexYelpPlaces };
+
+
+function indexWeather(place) {
+    var endpoint = new AWS.Endpoint(domain);
+    var request = new AWS.HttpRequest(endpoint, region);
+    var index = 'weather-index';
+    var type = '_doc';
+    var id = place['id']; // might need to change
+
+    request.method = 'PUT';
+    request.path += index + '/' + type + '/' + id;
+    request.body = JSON.stringify(place);
+    request.headers['host'] = domain;
+    request.headers['Content-Type'] = 'application/json';
+    // Content-Length is only needed for DELETE requests that include a request
+    // body, but including it for all requests doesn't seem to hurt anything.
+    request.headers['Content-Length'] = Buffer.byteLength(request.body);
+    
+    var credentials = new AWS.EnvironmentCredentials('AWS');
+    credentials.accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+    credentials.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+    
+    var signer = new AWS.Signers.V4(request, 'es');
+    signer.addAuthorization(credentials, new Date());
+    var client = new AWS.HttpClient();
+    
+    return new Promise((resolve, reject) => {
+        client.handleRequest(request, null,
+            response => {
+                const { statusCode, statusMessage, headers } = response;
+                let body = '';
+                response.on('data', chunk => {
+                    body += chunk;
+                });
+                response.on('end', () => {
+                    const data = {
+                        statusCode,
+                        statusMessage,
+                        headers
+                    };
+                    console.log('Response body: ' + JSON.stringify(data));
+                    if (body) {
+                        data.body = body;
+                    }
+                    resolve(data);
+                });
+            },
+            err => {
+                console.log("ERR: " + err);
+                reject(err);
+            });
+    });
+    
+}
+
+module.exports = { indexFlightQuote, indexYelpPlaces, indexWeather };

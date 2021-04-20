@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import { Navbar } from 'react-bootstrap';
 import Search from './components/Search';
 import Flight from './components/Flight';
+// import Weather from './components/Weather'
 import Yelp from './components/Yelp';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer';
@@ -20,6 +21,7 @@ class App extends Component {
       destValue: null,
       flightRes: {message: ""},
       placeRes: {message: ""},
+      // tempRes: {message: ""},
       present: false
     };
 
@@ -27,12 +29,21 @@ class App extends Component {
   }
 
   updateSelection = async (input, place) => {
+
+      let root = ""
+      if (process.env.REACT_APP_ENVIRONMENT === "development"){
+         root = "http://localhost:5000"
+      }
+      else{
+         root = "https://trip-ahead.herokuapp.com"
+      }
     
       if (place === 'Origin') {
           await this.setState({ originValue: input.value });
       } else {
+          // put weather fetch in here 
           await this.setState({ destValue: input.value });
-          const respon = await fetch(`http://localhost:5000/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
+          const respon = await fetch(`${root}/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
 
@@ -53,7 +64,7 @@ class App extends Component {
               const to_city = this.state.destValue.selected;
 
               // perform a request
-              const res = await fetch(`http://localhost:5000/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
+              const res = await fetch(`${root}/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
                                       .then(res => res.json())
                                       .catch(err => console.log("err: " + err));
               
@@ -104,6 +115,9 @@ render() {
                 <div>
                     <Flight quotes={this.state.flightRes}/>
                 </div>
+                {/* <div>
+                  <Weather temprature={this.state.tempRes}/>
+                </div> */}
                 <div className="yelpRow">
                     <Yelp places={this.state.placeRes}/>
                 </div>
