@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Navbar } from 'react-bootstrap';
 import Search from './components/Search';
 import Flight from './components/Flight';
 // import Weather from './components/Weather'
@@ -43,7 +42,11 @@ class App extends Component {
       } else {
           // put weather fetch in here 
           await this.setState({ destValue: input.value });
+<<<<<<< HEAD
           const respon = await fetch(`${root}/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
+=======
+          const respon = await fetch(`https://trip-ahead.herokuapp.com/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
+>>>>>>> dev
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
 
@@ -64,7 +67,11 @@ class App extends Component {
               const to_city = this.state.destValue.selected;
 
               // perform a request
+<<<<<<< HEAD
               const res = await fetch(`${root}/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
+=======
+              const res = await fetch(`https://trip-ahead.herokuapp.com/api/search/flight?from=${encodeURIComponent(from_city)},${encodeURIComponent(from_state)}&to=${encodeURIComponent(to_city)},${encodeURIComponent(to_state)}`)
+>>>>>>> dev
                                       .then(res => res.json())
                                       .catch(err => console.log("err: " + err));
               
