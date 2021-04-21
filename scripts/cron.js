@@ -118,7 +118,7 @@ function yelpcron() {
 
 }
 
-
+// MAKE CHANGES TO MAKE IT WORK
 function weathercron() {
     const cron_qs = '0 * * * * *'; // fire once a min
     cron.schedule(cron_qs, function() {
@@ -132,13 +132,14 @@ function weathercron() {
                 APPID: process.env.WEATHER_API_KEY 
             }
         };
+
+
     
         // send request to API
         request(options, function (error, response, body) {
             if (error) throw new Error(error);
-        
-            console.log("HERE" + typeof(body));
-            console.log("!!!" + body);
+
+            // PARSE WEATHER JSON THAT IS PULLED FROM API, DELETE ALL ATTRIBUTES THAT WE DO NOT NEED
 
 
             const s3 = new AWS.S3({
