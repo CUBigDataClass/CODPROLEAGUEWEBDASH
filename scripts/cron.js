@@ -19,6 +19,10 @@ function addMonths(date, months) {
     }
     return date;
 }
+function tempConversion(k){
+    let ret =  ((k - 273.15)*1.8)+32
+    return ret | 0
+}
 
 
 function yelpcron() {
@@ -117,51 +121,89 @@ function yelpcron() {
     });
 
 }
-
+function timeConverter(UNIX_timestamp){
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var sec = a.getSeconds();
+    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    return time;
+  }
 // MAKE CHANGES TO MAKE IT WORK
 function weathercron() {
-    const cron_qs = '0 * * * * *'; // fire once a min
-    cron.schedule(cron_qs, function() {
+    const cron_qs = '0 25 * * * *'; // fire once a min
+    cron.schedule(cron_qs, async function() {
+        let date = new Date();
+        let first_day = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+        let last_day = new Date(date.getFullYear(), date.getMonth() + 2, 0);
+        let unix_from = first_day.getTime() / 1000
+        let unix_to = last_day.getTime() / 1000
         console.log('running a task every minute');
-        const options = {
-            method: 'GET',
-            url: 'http://api.openweathermap.org/data/2.5/weather',
-            qs: {
-                q: 'Moscow',
-                type: 'hour',
-                APPID: process.env.WEATHER_API_KEY 
-            }
-        };
-
-
-    
-        // send request to API
-        request(options, function (error, response, body) {
-            if (error) throw new Error(error);
-
-            // PARSE WEATHER JSON THAT IS PULLED FROM API, DELETE ALL ATTRIBUTES THAT WE DO NOT NEED
-
-
-            const s3 = new AWS.S3({
-                accessKeyId: process.env.AWS_KEY_ID,
-                secretAccessKey: process.env.AWS_SECRET
-            });
-        
-            // Setting up S3 upload parameters
-            const params = {
-                Bucket: 'trip-plannerrr',
-                Key: 'weather_api.json',
-                Body: body,
-                ContentType: 'application/json'
-            };
-        
-            // Uploading files to the bucket
-            s3.upload(params, function(err, data) {
-                if (err) {
-                    throw err;
+        var response_arr = []
+        count = 0
+        //const states_origin = state
+        for (const city of cit){
+            const options = {
+                method: 'GET',
+                url: 'http://api.openweathermap.org/data/2.5/weather',
+                qs: {
+                    q: city.name,
+                    type: 'hour',
+                    start: unix_from,
+                    end: unix_to,
+                    APPID: process.env.WEATHER_API_KEY
                 }
-                console.log(`File uploaded successfully. ${data.Location}`);
+            };
+    
+            // send request to API
+            request(options, function (error, response, body) {
+                let res_obj =  {}
+                if (error) throw new Error(error);
+                else{
+                    var json_obj = JSON.parse(body);
+                    res_obj = {"id": count, "description": json_obj.weather[0].description,
+                     "temp": tempConversion(json_obj.main.temp), "temp_min":  tempConversion(json_obj.main.temp_min), "temp_max":  tempConversion(json_obj.main.temp_max), 
+                     "humidity": json_obj.main.humidity, "sunrise": timeConverter(json_obj.sys.sunrise),"sunset": timeConverter(json_obj.sys.sunset),
+                      "state": city.usps,"city": json_obj.name}
+                    //console.log("!!!" + res_obj);
+                    response_arr.push(res_obj)
+                    //console.log(JSON.stringify(response_arr,null,2))
+                
+                }
+                count += 1
+                //console.log("HERE" + type   of(body));
+                //console.log("!!!" + body);
             });
+            await new Promise(r => setTimeout(r, 1500)); // sleeps for 1.5 sec
+        }
+        
+        // write to file add to s3
+        //if (responce_arr.length == 0) return;
+
+        const res_formatted = JSON.stringify(response_arr,null,2);
+    
+        console.log(res_formatted)
+        const s3 = new AWS.S3({
+            accessKeyId: process.env.AWS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET
+        });
+        // Setting up S3 upload parameters
+        const params = {
+            Bucket: 'trip-plannerrr',
+            Key: 'weather_api.json',
+            Body: res_formatted,
+            ContentType: 'application/json'
+        };
+        // Uploading files to the bucket
+        s3.upload(params, function(err, data) {
+            if (err) {
+                throw err;
+            }
+            console.log(`File uploaded successfully. ${data.Location}`);
         });
     });
 }
