@@ -162,57 +162,71 @@ router.get('/search/yelp', async (req, res) => {
 });
 
 
-// router.get('/search/weather', async (req, res) => {
+router.get('/search/weather', async (req, res) => {
 
-//     const key = 'yelp_key_' + req.query.location;
-//     const reply = await redisClient.getQuery(key);
+    const key = 'weather_key_' + req.query.city + req.query.region;
+    const reply = await redisClient.getQuery(key);
 
-//     if (reply) {
-//         res.status(201).json(JSON.parse(reply));
-//         return;
-//     }
+    // if (reply) {
+    //     res.status(201).json(JSON.parse(reply));
+    //     return;
+    // }
 
-//     AWS.config.update({
-//         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-//         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-//         region: process.env.AWS_REGION
-//     });
+    AWS.config.update({
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        region: process.env.AWS_REGION
+    });
 
-//     let elasticClient = new elasticsearch.Client({
-//         host: "https://search-trip-planner-search-7ibogrjydq3fzylipyslejm3wi.us-west-1.es.amazonaws.com/",
-//         log: 'error',
-//         connectionClass: connectionClass,
-//         amazonES: {
-//             credentials: new AWS.EnvironmentCredentials('AWS'),
-//         }
-//     });
+    let elasticClient = new elasticsearch.Client({
+        host: "https://search-trip-planner-search-7ibogrjydq3fzylipyslejm3wi.us-west-1.es.amazonaws.com/",
+        log: 'error',
+        connectionClass: connectionClass,
+        amazonES: {
+            credentials: new AWS.EnvironmentCredentials('AWS'),
+        }
+    });
 
-//     elasticClient.search({
-//         index: 'yelp-places',
-//         type: '_doc',
-//         body: {
-//             query: {
-//                 match: {
-//                     "location.state": {
-//                         query: req.query.location,
-//                         fuzziness: "AUTO"
-//                     }
-//                 }
-//             }
-//         }
-//     })
-//     .then(result => {
-//     if (result.hits.hits.length === 0) {
-//         res.sendStatus(404);
-//     } else {
-//         // let hits = Array.from(result.hits.hits, h => h._source);
-//         redisClient.setQuery('yelp_key_' + req.query.location, JSON.stringify(result.hits.hits));
-//         res.status(201).json(result.hits.hits);
-//     }
-//     })
-//     .catch(err => {
-//         console.log("err " + err);
-//     });
-// });
+    elasticClient.search({
+        index: 'weather-index',
+        type: '_doc',
+        body: {
+            query: {
+                bool: {
+                    must: [
+                        {
+                            match: {
+                                city: {
+                                    query: req.query.city,
+                                    fuzziness: "AUTO"
+                                }
+                            }
+                        },
+                        {
+                            match: {
+                                state: {
+                                    query: req.query.region,
+                                    fuzziness: "AUTO"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    })
+    .then(result => {
+    if (result.hits.hits.length === 0) {
+        res.sendStatus(404);
+    } else {
+        let hits = Array.from(result.hits.hits, h => h._source);
+        redisClient.setQuery('weather_key_' + req.query.city + req.query.region, JSON.stringify(hits));
+        res.status(201).json(hits);
+    }
+    })
+    .catch(err => {
+        console.log("err " + err);
+    });
+});
 
 module.exports = router;
