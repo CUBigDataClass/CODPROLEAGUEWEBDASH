@@ -16,20 +16,20 @@ You enter the destination and we will provide with the cheapest flight tickets, 
   
 ### Setup Environment Variables 
   
-  PORT (optional, defaults to 5000)  
-  YELP_API_KEY  
-  WEATHER_API_KEY  
-    * From OpenWeatherMap, Historical Weather Data Key
-  AIRLINE_API_KEY  
-    * From RapidAPI, Skyscanner API
-  AIRLINE_HOST  
-    * Skyscanner RapidAPI host url
-  AWS_ACCESS_KEY_ID  
-  AWS_SECRET_ACCESS_KEY  
-  AWS_REGION  
-  AWS_ELASTIC_DOMAIN  
-  REDIS_URL  
-    * Locally we used `brew install redis` & `redis-server`
+- PORT (optional, defaults to 5000)  
+- YELP_API_KEY  
+- WEATHER_API_KEY  
+  * From OpenWeatherMap, Historical Weather Data Key
+- AIRLINE_API_KEY  
+  * From RapidAPI, Skyscanner API
+- AIRLINE_HOST  
+  * Skyscanner RapidAPI host url
+- AWS_ACCESS_KEY_ID  
+- AWS_SECRET_ACCESS_KEY  
+- AWS_REGION  
+- AWS_ELASTIC_DOMAIN  
+- REDIS_URL  
+  * Locally we used `brew install redis` & `redis-server`
 
 ### From Terminal  
   * `npm run build` from root level directory to build client
