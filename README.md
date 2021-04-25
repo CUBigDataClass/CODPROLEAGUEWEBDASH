@@ -20,14 +20,22 @@ You enter the destination and we will provide with the cheapest flight tickets, 
   PORT (optional, defaults to 5000)  
   YELP_API_KEY  
   WEATHER_API_KEY  
+    * From OpenWeatherMap, Historical Weather Data Key
   AIRLINE_API_KEY  
+    * From RapidAPI, Skyscanner API
   AIRLINE_HOST  
-  AWS_KEY_ID  
-  AWS_SECRET  
+    * Skyscanner RapidAPI host url
+  AWS_ACCESS_KEY_ID  
+  AWS_SECRET_ACCESS_KEY  
   AWS_REGION  
   AWS_ELASTIC_DOMAIN  
-  
-* Enter:  
-`npm run build` && `npm run start`  
+  REDIS_URL  
+    * Locally we used `brew install redis` & `redis-server`
+
+* To then run locally:
+  * `npm run build` from root level directory to build client
+  * `npm install` to refresh package-lock.json in root level directory
+  * Clear processes running on ports 3000 and 5000 (If port specified, ignore latter)
+  * `npm run dev` and it will concurrently run create-react-app app and nodeJS server instance 
 
 **Hosted on [Heroku](https://trip-ahead.herokuapp.com)**
