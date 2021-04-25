@@ -11,8 +11,8 @@ You enter the destination and we will provide with the cheapest flight tickets, 
 ## To Run Project Locally
 
 ### From Terminal  
-`git clone git@github.com:CUBigDataClass/Trip-Planner.git` to clone project  
-`cd Trip-Planner` to go to root level  
+- `git clone git@github.com:CUBigDataClass/Trip-Planner.git` to clone project  
+- `cd Trip-Planner` to go to root level  
   
 ### Setup Environment Variables 
   
