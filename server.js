@@ -16,9 +16,9 @@ app.use("/", express.static(path.join(__dirname + '/client/build')));
 app.use('/api', require('./routes/api'));
 
 // catch-all
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname + '/client/build/index.html'));
+// });
 
 // refresh data in S3 bucket
 // cronJob.yelpcron();

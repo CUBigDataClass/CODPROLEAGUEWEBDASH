@@ -24,6 +24,7 @@
     "http-aws-es": "^6.0.0",
     "missing": "0.0.1",
     "node-cron": "^2.0.3",
+    "nodemon": "^2.0.7",
     "opencollective-postinstall": "^2.0.0",
     "react-bootstrap": "^1.5.1",
     "redis": "^3.1.0",
