@@ -9,6 +9,7 @@ const Yelp = (props) => {
    } else {
       let arr = []
       let state = props.places[0].location.state
+      let city = props.places[0].location.city
       let upper = 5;
 
       for (const place of props.places){
@@ -47,7 +48,7 @@ const Yelp = (props) => {
 
       return (
          <div className={Styles.yelpContainer}>
-            <h2 className={Styles.places}>Places in {state} to visit</h2>
+            <h2 className={Styles.places}>Places in {city} {state} to visit</h2>
             <div className={Styles.outerContainer}>
                   {arr}
             </div>
