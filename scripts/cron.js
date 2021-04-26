@@ -1,100 +1,91 @@
 const cron = require('node-cron');
 const request = require('request');
 const AWS = require('aws-sdk');
-const fs = require('fs');
-const path = require('path');
 const airports = require('./resources/airports');
-const sts = require('./resources/states');
-const { STATUS_CODES } = require('http');
+const states = require('./resources/states');
 
 if (process.env.ENVIRONMENT === 'development') {  
     require('dotenv').config();  
 }  
 
 function addMonths(date, months) {
-    var d = date.getDate();
+    let d = date.getDate();
     date.setMonth(date.getMonth() + months);
     if (date.getDate() != d) {
         date.setDate(0);
     }
     return date;
 }
-function tempConversion(k){
+function tempConvert(k){
     let ret =  ((k - 273.15)*1.8)+32
     return ret | 0
 }
 
+function timeConvert(UNIX_timestamp){
+    let a = new Date(UNIX_timestamp * 1000);
+    let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    let year = a.getFullYear();
+    let month = months[a.getMonth()];
+    let date = a.getDate();
+    let hour = a.getHours();
+    let min = a.getMinutes();
+    let sec = a.getSeconds();
+    let time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    return time;
+}
 
 function yelpcron() {
-    // const cron_qs = '0 0 0 15 * ?'; // fire 15th of every month
-
-    const cron_qs = '0 47 * * * *'; // fire once a min
+    const cron_qs = '0 0 0 15 * *'; // fire 15th of every month
     cron.schedule(cron_qs, async function() {
-        console.log('running a task every minute again');
-
-        var responce_arr = []
+        let response_arr = []
         count = 0
-        for (const state of sts){
-            const states_origin = state.abbreviation
+        for (const state of states){
             const options = {
                 method: 'GET',
                 url: 'https://api.yelp.com/v3/businesses/search',// + 'location=' + states_origin + 'limit=1',
                 qs: {
-                    location: states_origin,
+                    location: state.abbreviation,
                     limit: '5'
                 },
                 headers: {
                     'Authorization': 'Bearer ' + process.env.YELP_API_KEY
                 }
             }
-            // console.log(options)
+
             request(options, function(err, res, body) {
                 if (err) throw new Error(err)
 
-                var json_obj = JSON.parse(body);
+                let json_obj = JSON.parse(body);
             
+                // clean object before appending
                 for (business of json_obj.businesses){
                     
                     count = count + 1 
 
                     business.id = count 
                     delete (business.alias)
-                    // delete (business.image_url)
-                    // delete (business.url)
                     delete (business.is_closed)
                     delete (business.review_count)
                     delete (business.categories)
                     delete (business.coordinates)
                     delete (business.transactions)
-                    // delete (json_obj.businesses['0'].location.address1)
-                    // delete (json_obj.businesses['0'].location.address2)
                     delete (business.location.address3)
-                    // delete (json_obj.businesses['0'].location.city)
-                    // delete (json_obj.businesses['0'].location.zip_code)
-                    // delete (json_obj.businesses['0'].location.country)
                     delete (business.location.display_address)
-                    // delete (json_obj.businesses['0'].location.state)
                     delete (business.display_phone)
                     delete (business.distance)
                     delete (business.total)
                     delete (business.region)
 
-                    responce_arr.push(business)
-                        
+                    response_arr.push(business)
                 }
             });
             await new Promise(r => setTimeout(r, 1500)); // sleeps for 1.5 sec
         }
+
         // write to file add to s3 
-        if (responce_arr.length == 0) return;
+        if (response_arr.length == 0) return;
 
-        const res_formatted = JSON.stringify(responce_arr,null,2);
-      
-
-        fs.writeFile(path.join(__dirname, 'resources/yelpPlaces.json'), res_formatted, 'utf8', function(err) {
-            if (err) throw err;
-            console.log("file success");
-        });
+        const res_formatted = JSON.stringify(response_arr,null,2);
 
         const s3 = new AWS.S3({
             accessKeyId: process.env.AWS_KEY_ID,
@@ -116,36 +107,22 @@ function yelpcron() {
             }
             console.log(`File uploaded successfully. ${data.Location}`);
         });
-        
-        console.log("success");
     });
-
 }
-function timeConverter(UNIX_timestamp){
-    var a = new Date(UNIX_timestamp * 1000);
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    var year = a.getFullYear();
-    var month = months[a.getMonth()];
-    var date = a.getDate();
-    var hour = a.getHours();
-    var min = a.getMinutes();
-    var sec = a.getSeconds();
-    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
-    return time;
-  }
+
 // MAKE CHANGES TO MAKE IT WORK
 function weathercron() {
-    const cron_qs = '0 25 * * * *'; // fire once a min
+    const cron_qs = '0 0 0 15 * *'; // fire 15th of every month
     cron.schedule(cron_qs, async function() {
         let date = new Date();
         let first_day = new Date(date.getFullYear(), date.getMonth() + 1, 1);
         let last_day = new Date(date.getFullYear(), date.getMonth() + 2, 0);
         let unix_from = first_day.getTime() / 1000
         let unix_to = last_day.getTime() / 1000
-        console.log('running a task every minute');
-        var response_arr = []
-        count = 0
-        //const states_origin = state
+
+        let response_arr = []
+        let count = 0
+
         for (const city of cit){
             const options = {
                 method: 'GET',
@@ -164,33 +141,30 @@ function weathercron() {
                 let res_obj =  {}
                 if (error) throw new Error(error);
                 else{
-                    var json_obj = JSON.parse(body);
-                    res_obj = {"id": count, "description": json_obj.weather[0].description,
-                     "temp": tempConversion(json_obj.main.temp), "temp_min":  tempConversion(json_obj.main.temp_min), "temp_max":  tempConversion(json_obj.main.temp_max), 
-                     "humidity": json_obj.main.humidity, "sunrise": timeConverter(json_obj.sys.sunrise),"sunset": timeConverter(json_obj.sys.sunset),
-                      "state": city.usps,"city": json_obj.name}
-                    //console.log("!!!" + res_obj);
-                    response_arr.push(res_obj)
-                    //console.log(JSON.stringify(response_arr,null,2))
-                
+                    let json_obj = JSON.parse(body);
+                    res_obj = {
+                        "id": count, "description": json_obj.weather[0].description,
+                        "temp": tempConvert(json_obj.main.temp), "temp_min":  tempConvert(json_obj.main.temp_min), "temp_max":  tempConvert(json_obj.main.temp_max), 
+                        "humidity": json_obj.main.humidity, "sunrise": timeConvert(json_obj.sys.sunrise),"sunset": timeConvert(json_obj.sys.sunset),
+                        "state": city.usps,"city": json_obj.name
+                    }
+
+                    response_arr.push(res_obj)                
                 }
                 count += 1
-                //console.log("HERE" + type   of(body));
-                //console.log("!!!" + body);
             });
             await new Promise(r => setTimeout(r, 1500)); // sleeps for 1.5 sec
         }
         
-        // write to file add to s3
-        //if (responce_arr.length == 0) return;
+        if (response_arr.length == 0) return;
 
         const res_formatted = JSON.stringify(response_arr,null,2);
     
-        console.log(res_formatted)
         const s3 = new AWS.S3({
             accessKeyId: process.env.AWS_KEY_ID,
             secretAccessKey: process.env.AWS_SECRET
         });
+
         // Setting up S3 upload parameters
         const params = {
             Bucket: 'trip-plannerrr',
@@ -198,6 +172,7 @@ function weathercron() {
             Body: res_formatted,
             ContentType: 'application/json'
         };
+
         // Uploading files to the bucket
         s3.upload(params, function(err, data) {
             if (err) {
@@ -210,19 +185,19 @@ function weathercron() {
 
 // Pull flight price quotes from Skyscanner API
 function flightcron() {
-    const cron_qs = '40 27 * * * *'; // fire once a min
+    const cron_qs = '0 0 0 15 * *'; // fire 15th of every month
     cron.schedule(cron_qs, async function() {
         console.log('running a task every minute');
         let res_arr = [];
         let visited_airports = new Set();
 
-        // get 6 months 
+        // get 1 month out for now 
         for (let month=1; month<=1; ++month) {
             let date = new Date();
             const month_formatted = addMonths(date, month).toISOString().split('T')[0].substring(0,7);
             let id = 1;
 
-            // prices vary both ways from airports, so getting all possible matches is required
+            // prices lety both ways from airports, so getting all possible matches is required
             for (let j=0; j<airports.length; ++j) {
                 for (let k=0; k<airports.length; ++k) {
 
@@ -297,16 +272,8 @@ function flightcron() {
         }
 
         if (res_arr.length == 0) return;
-        console.log("!!!!!!!!")
-        console.log(res_arr.length);
 
         const res_formatted = JSON.stringify(res_arr,null,2);
-
-        // write to local file for testing purposes
-        // fs.writeFile(path.join(__dirname, 'resources/quotes.json'), res_formatted, 'utf8', function(err) {
-        //     if (err) throw err;
-        //     console.log("file success");
-        // });
 
         const s3 = new AWS.S3({
             accessKeyId: process.env.AWS_KEY_ID,

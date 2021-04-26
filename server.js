@@ -20,15 +20,15 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
-// refresh data in S3 bucket
-// cronJob.yelpcron();
-// cronJob.weathercron();
-// cronJob.flightcron();
-
-// scripts to get ready for data pulls
+// scripts to get ready for data pulls, uncomment as needed
 // pullAirports.pull();
 // yelpPars.download();
 // yelpPars.parse();
+
+// refresh data in S3 bucket
+cronJob.yelpcron();
+cronJob.weathercron();
+cronJob.flightcron();
 
 app.listen(process.env.PORT || 5000, function() {
     console.log('Successfully connected...');
