@@ -94,14 +94,12 @@
     margin:0px 0px 0px 10px
 
 }
- 
-
- 
- @media all and (max-width:800px)
- {
-     .outerContainer {
-        display: flex;
-        flex-direction: column;
-     }
- }
+  
+@media all and (max-width:800px)
+{
+   .outerContainer {
+      display: flex;
+      flex-direction: column;
+   }
+}
  
