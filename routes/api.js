@@ -163,10 +163,9 @@ router.get('/search/yelp', async (req, res) => {
 
 
 router.get('/search/weather', async (req, res) => {
-
     const key = 'weather_key_' + req.query.city + req.query.region;
     const reply = await redisClient.getQuery(key);
-
+    console.log(key)
     // if (reply) {
     //     res.status(201).json(JSON.parse(reply));
     //     return;
@@ -219,9 +218,11 @@ router.get('/search/weather', async (req, res) => {
     if (result.hits.hits.length === 0) {
         res.sendStatus(404);
     } else {
-        let hits = Array.from(result.hits.hits, h => h._source);
-        redisClient.setQuery('weather_key_' + req.query.city + req.query.region, JSON.stringify(hits));
-        res.status(201).json(hits);
+        console.log(result.hits.hits)
+        let search_results = result.hits.hits[0]._source
+        console.log(search_results)
+        redisClient.setQuery('weather_key_' + req.query.city + req.query.region, JSON.stringify(search_results));
+        res.status(201).json(search_results);
     }
     })
     .catch(err => {
