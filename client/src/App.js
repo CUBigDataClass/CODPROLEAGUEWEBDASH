@@ -42,13 +42,13 @@ class App extends Component {
           await this.setState({ originValue: input.value });
       } 
       else{
-          // put weather fetch in here 
           await this.setState({ destValue: input.value });
 
-          //console.log(this.state.destValue)
+
+          // fetching weather responce
           console.log(this.state.destValue.selected)
           console.log(this.state.destValue.abbreviation)
-          const responnn = await fetch(`http://localhost:5000/api/search/weather?city=${encodeURIComponent(this.state.destValue.selected)}&region=${encodeURIComponent(this.state.destValue.abbreviation)} `)
+          const responnn = await fetch(`${root}/api/search/weather?city=${encodeURIComponent(this.state.destValue.selected)}&region=${encodeURIComponent(this.state.destValue.abbreviation)} `)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
           console.log(responnn)
@@ -56,10 +56,9 @@ class App extends Component {
             await this.setState({ weatherRes: { message: "No weather records found" } })
           } 
           else {
-            //let hits = Array.from(responnn, h => h._source);
             await this.setState({ weatherRes: responnn });
           }
-        //
+          // fetching yelp responce 
           const respon = await fetch(`${root}/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
@@ -70,10 +69,11 @@ class App extends Component {
             let hits = Array.from(respon, h => h._source);
             await this.setState({ placeRes: hits });
         }
-        //
+        
         await this.setState({ present: true });
       }
 
+      // fetching flight responce 
       if (this.state.originValue && this.state.destValue &&
           this.state.originValue.cities.length && this.state.destValue.cities.length) {
               const from_state = this.state.originValue.abbreviation;
@@ -102,9 +102,6 @@ render() {
   let resultClass = this.state.present ? 'infoContainer' : 'infoContainerHide';
     return (
       <>
-        {/* <Navbar bg="light">
-          <Navbar.Brand>Trip Planner</Navbar.Brand>
-        </Navbar> */}
         <Navbar />
         <div className="appContainer">
           <div className="App">

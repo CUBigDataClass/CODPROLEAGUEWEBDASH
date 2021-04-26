@@ -6,11 +6,6 @@ const connectionClass = require('http-aws-es');
 const awsHttpClient = require('http-aws-es');
 const redisClient = require('../scripts/redisClient');
 
-// Test server viability
-router.get('/hello', (req, res) => {
-    res.send({ express: 'Hello From Express' });
-});
-
 //TEST ELASTIC FLIGHT SEARCH 
 router.get('/search/flight', async (req, res) => {
     // check redis before searching elasticsearch
@@ -108,6 +103,7 @@ router.get('/search/flight', async (req, res) => {
 });
 
 
+// endpoint for yelp
 router.get('/search/yelp', async (req, res) => {
 
     const key = 'yelp_key_' + req.query.location;
@@ -132,7 +128,7 @@ router.get('/search/yelp', async (req, res) => {
             credentials: new AWS.EnvironmentCredentials('AWS'),
         }
     });
-
+    // match query by state
     elasticClient.search({
         index: 'yelp-places',
         type: '_doc',
@@ -151,7 +147,6 @@ router.get('/search/yelp', async (req, res) => {
     if (result.hits.hits.length === 0) {
         res.sendStatus(404);
     } else {
-        // let hits = Array.from(result.hits.hits, h => h._source);
         redisClient.setQuery('yelp_key_' + req.query.location, JSON.stringify(result.hits.hits));
         res.status(201).json(result.hits.hits);
     }
@@ -161,15 +156,15 @@ router.get('/search/yelp', async (req, res) => {
     });
 });
 
-
+// weather endpoint for search 
 router.get('/search/weather', async (req, res) => {
     const key = 'weather_key_' + req.query.city + req.query.region;
     const reply = await redisClient.getQuery(key);
     console.log(key)
-    // if (reply) {
-    //     res.status(201).json(JSON.parse(reply));
-    //     return;
-    // }
+    if (reply) {
+        res.status(201).json(JSON.parse(reply));
+        return;
+    }
 
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -185,7 +180,7 @@ router.get('/search/weather', async (req, res) => {
             credentials: new AWS.EnvironmentCredentials('AWS'),
         }
     });
-
+    // match query by city and state 
     elasticClient.search({
         index: 'weather-index',
         type: '_doc',
@@ -218,9 +213,7 @@ router.get('/search/weather', async (req, res) => {
     if (result.hits.hits.length === 0) {
         res.sendStatus(404);
     } else {
-        console.log(result.hits.hits)
         let search_results = result.hits.hits[0]._source
-        console.log(search_results)
         redisClient.setQuery('weather_key_' + req.query.city + req.query.region, JSON.stringify(search_results));
         res.status(201).json(search_results);
     }
