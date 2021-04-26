@@ -160,11 +160,11 @@ router.get('/search/yelp', async (req, res) => {
 router.get('/search/weather', async (req, res) => {
     const key = 'weather_key_' + req.query.city + req.query.region;
     const reply = await redisClient.getQuery(key);
-    console.log(key)
-    if (reply) {
-        res.status(201).json(JSON.parse(reply));
-        return;
-    }
+
+    // if (reply) {
+    //     res.status(201).json(JSON.parse(reply));
+    //     return;
+    // }
 
     AWS.config.update({
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -180,6 +180,7 @@ router.get('/search/weather', async (req, res) => {
             credentials: new AWS.EnvironmentCredentials('AWS'),
         }
     });
+
     // match query by city and state 
     elasticClient.search({
         index: 'weather-index',

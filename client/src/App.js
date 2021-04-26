@@ -30,7 +30,7 @@ class App extends Component {
 
   updateSelection = async (input, place) => {
       let root = ""
-      console.log(process.env.REACT_APP_ENVIRONMENT)
+      
       if (process.env.REACT_APP_ENVIRONMENT === "development"){
          root = "http://localhost:5000"
       }
@@ -44,29 +44,28 @@ class App extends Component {
       else{
           await this.setState({ destValue: input.value });
 
-
+          console.log("ROOT")
+          console.log(root)
           // fetching weather responce
-          console.log(this.state.destValue.selected)
-          console.log(this.state.destValue.abbreviation)
-          const responnn = await fetch(`${root}/api/search/weather?city=${encodeURIComponent(this.state.destValue.selected)}&region=${encodeURIComponent(this.state.destValue.abbreviation)} `)
+          const weather_response = await fetch(`${root}/api/search/weather?city=${encodeURIComponent(this.state.destValue.selected)}&region=${encodeURIComponent(this.state.destValue.abbreviation)} `)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
-          console.log(responnn)
-          if (typeof(responnn) === 'undefined') {
+
+          if (typeof(weather_response) === 'undefined') {
             await this.setState({ weatherRes: { message: "No weather records found" } })
           } 
           else {
-            await this.setState({ weatherRes: responnn });
+            await this.setState({ weatherRes: weather_response });
           }
-          // fetching yelp responce 
-          const respon = await fetch(`${root}/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
+          // fetching yelp response 
+          const yelp_response = await fetch(`${root}/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
 
-          if (typeof(respon) === 'undefined') {
+          if (typeof(yelp_response) === 'undefined') {
             await this.setState({ placeRes: { message: "No places to visit" } })
           } else {
-            let hits = Array.from(respon, h => h._source);
+            let hits = Array.from(yelp_response, h => h._source);
             await this.setState({ placeRes: hits });
         }
         
@@ -97,8 +96,6 @@ class App extends Component {
   }
   
 render() {
-  let z = this.state.weatherRes
-  console.log(z)
   let resultClass = this.state.present ? 'infoContainer' : 'infoContainerHide';
     return (
       <>
@@ -131,7 +128,7 @@ render() {
             <div className={resultClass}>
                 <div className="flightWeather">
                     <Flight quotes={this.state.flightRes}/>
-                    <Weather weath={z}/>
+                    <Weather weath={this.state.weatherRes}/>
                 </div>
                 <div className="yelpRow">
                     <Yelp places={this.state.placeRes}/>

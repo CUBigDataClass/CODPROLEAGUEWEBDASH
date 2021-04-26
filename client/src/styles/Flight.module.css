@@ -1,8 +1,10 @@
 .container {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 5px;
     opacity: 0.95;
-    width: 50%;
+    width: 100%;
 }
 
 .innerContainer {

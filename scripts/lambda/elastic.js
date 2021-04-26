@@ -13,6 +13,7 @@ let domain = process.env.AWS_ELASTIC_DOMAIN;
 
 // deleteIndex('flight-quotes');
 // deleteIndex('yelp-places');
+deleteIndex('weather-index');
 
 // for (const state of states) {
 //     indexState(state);
