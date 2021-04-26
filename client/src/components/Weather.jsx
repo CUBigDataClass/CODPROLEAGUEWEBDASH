@@ -19,8 +19,8 @@ const Weather =  (props) => {
                         <div className={Styles.infoContainer}>
                             <p>Sunset time: {props.weath.sunrise} AM</p>
                             <p>Sunrise time: {props.weath.sunset} PM</p>
-                            <p>Minimum Temperature: {props.weath.temp_min}F</p> 
-                            <p>Max Temperature: {props.weath.temp_max}F</p>
+                            <p>Minimum Temperature: {props.weath.temp_min}</p> 
+                            <p> Max Temperature: {props.weath.temp_max}F</p> 
                             <p>Humidity: {props.weath.humidity}%</p>
                         </div>
                     </div>

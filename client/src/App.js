@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Search from './components/Search';
 import Flight from './components/Flight';
@@ -131,10 +132,8 @@ render() {
               </div> 
 
             <div className={resultClass}>
-                <div>
+                <div className="flightWeather">
                     <Flight quotes={this.state.flightRes}/>
-                </div>
-                <div>
                     <Weather weath={z}/>
                 </div>
                 <div className="yelpRow">

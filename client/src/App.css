@@ -9,7 +9,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.flightWeather{
+  display: flex;
+  flex-direction: row;
+}
 .infoContainer {
   display: flex;
   flex-direction: column;
