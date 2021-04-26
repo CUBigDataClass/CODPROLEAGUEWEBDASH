@@ -1,7 +1,8 @@
+
 import React, { Component } from 'react';
 import Search from './components/Search';
 import Flight from './components/Flight';
-// import Weather from './components/Weather'
+import Weather from './components/Weather'
 import Yelp from './components/Yelp';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer';
@@ -20,7 +21,7 @@ class App extends Component {
       destValue: null,
       flightRes: {message: ""},
       placeRes: {message: ""},
-      // tempRes: {message: ""},
+      weatherRes: {message: ""},
       present: false
     };
 
@@ -28,34 +29,51 @@ class App extends Component {
   }
 
   updateSelection = async (input, place) => {
-
       let root = ""
+      console.log(process.env.REACT_APP_ENVIRONMENT)
       if (process.env.REACT_APP_ENVIRONMENT === "development"){
          root = "http://localhost:5000"
       }
       else{
          root = "https://trip-ahead.herokuapp.com"
       }
-    
+
       if (place === 'Origin') {
           await this.setState({ originValue: input.value });
-      } else {
-          // put weather fetch in here 
+      } 
+      else{
           await this.setState({ destValue: input.value });
-        
+
+
+          // fetching weather responce
+          console.log(this.state.destValue.selected)
+          console.log(this.state.destValue.abbreviation)
+          const responnn = await fetch(`${root}/api/search/weather?city=${encodeURIComponent(this.state.destValue.selected)}&region=${encodeURIComponent(this.state.destValue.abbreviation)} `)
+                                    .then(res => res.json())
+                                    .catch(err => console.log("err: " + err));
+          console.log(responnn)
+          if (typeof(responnn) === 'undefined') {
+            await this.setState({ weatherRes: { message: "No weather records found" } })
+          } 
+          else {
+            await this.setState({ weatherRes: responnn });
+          }
+          // fetching yelp responce 
           const respon = await fetch(`${root}/api/search/yelp?location=${encodeURIComponent(this.state.destValue.abbreviation)}`)
                                     .then(res => res.json())
                                     .catch(err => console.log("err: " + err));
 
           if (typeof(respon) === 'undefined') {
-            this.setState({ flightRes: { message: "No places to visit" } })
+            await this.setState({ placeRes: { message: "No places to visit" } })
           } else {
             let hits = Array.from(respon, h => h._source);
-            this.setState({ placeRes: hits });
+            await this.setState({ placeRes: hits });
         }
+        
         await this.setState({ present: true });
       }
 
+      // fetching flight responce 
       if (this.state.originValue && this.state.destValue &&
           this.state.originValue.cities.length && this.state.destValue.cities.length) {
               const from_state = this.state.originValue.abbreviation;
@@ -79,12 +97,11 @@ class App extends Component {
   }
   
 render() {
+  let z = this.state.weatherRes
+  console.log(z)
   let resultClass = this.state.present ? 'infoContainer' : 'infoContainerHide';
     return (
       <>
-        {/* <Navbar bg="light">
-          <Navbar.Brand>Trip Planner</Navbar.Brand>
-        </Navbar> */}
         <Navbar />
         <div className="appContainer">
           <div className="App">
@@ -112,12 +129,10 @@ render() {
               </div> 
 
             <div className={resultClass}>
-                <div>
+                <div className="flightWeather">
                     <Flight quotes={this.state.flightRes}/>
+                    <Weather weath={z}/>
                 </div>
-                {/* <div>
-                  <Weather temprature={this.state.tempRes}/>
-                </div> */}
                 <div className="yelpRow">
                     <Yelp places={this.state.placeRes}/>
                 </div>

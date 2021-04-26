@@ -34,6 +34,8 @@ class Search extends Component {
     };
 
     handleChange = (selectedOption) => { 
+        console.log(selectedOption)
+        console.log(this.props.place)
         this.props.updateSelection(selectedOption, this.props.place); 
     }
 
