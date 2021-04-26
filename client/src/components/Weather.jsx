@@ -1,7 +1,20 @@
 import React, { Fragment } from 'react'
 import Styles from '../styles/Weather.module.css'
-import partialcloudimage from '../images/weatherforec.jpg'
+
+import cloud from '../images/Clouds.png'
+import clear from '../images/Clear.png'
+import rain from '../images/Rain.png'
+import snow from '../images/Snow.png'
+
+const weather_obj = {
+    'Clouds': cloud,
+    'Clear': clear,
+    'Rain': rain,
+    'Snow': snow
+}
+
 const Weather =  (props) => {
+    let img_src = weather_obj[props.weath.short_desc];
 
     if (props.weath.hasOwnProperty('message')) {
         return ( <p>{ props.message }</p>)
@@ -38,7 +51,7 @@ const Weather =  (props) => {
                     <div>
                         &nbsp;&nbsp;{props.weath.city},&nbsp;{props.weath.state}
                         <div className={Styles.imgContainer}>
-                            <p><img className={Styles.cardImg} src={partialcloudimage} alt=''/></p>
+                            <p><img className={Styles.cardImg} src={img_src} alt=''/></p>
                         </div>
                     </div>
                 </div>

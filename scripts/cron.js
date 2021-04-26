@@ -3,6 +3,7 @@ const request = require('request');
 const AWS = require('aws-sdk');
 const airports = require('./resources/airports');
 const states = require('./resources/states');
+const cities = require('./resources/cities.json');
 
 if (process.env.ENVIRONMENT === 'development') {  
     require('dotenv').config();  
@@ -112,7 +113,7 @@ function yelpcron() {
 
 // MAKE CHANGES TO MAKE IT WORK
 function weathercron() {
-    const cron_qs = '0 0 0 15 * *'; // fire 15th of every month
+    const cron_qs = '05 54 * * * *'; // fire 15th of every month
     cron.schedule(cron_qs, async function() {
         let date = new Date();
         let first_day = new Date(date.getFullYear(), date.getMonth() + 1, 1);
@@ -123,7 +124,7 @@ function weathercron() {
         let response_arr = []
         let count = 0
 
-        for (const city of cit){
+        for (const city of cities){
             const options = {
                 method: 'GET',
                 url: 'http://api.openweathermap.org/data/2.5/weather',
@@ -143,10 +144,17 @@ function weathercron() {
                 else{
                     let json_obj = JSON.parse(body);
                     res_obj = {
-                        "id": count, "description": json_obj.weather[0].description,
-                        "temp": tempConvert(json_obj.main.temp), "temp_min":  tempConvert(json_obj.main.temp_min), "temp_max":  tempConvert(json_obj.main.temp_max), 
-                        "humidity": json_obj.main.humidity, "sunrise": timeConvert(json_obj.sys.sunrise),"sunset": timeConvert(json_obj.sys.sunset),
-                        "state": city.usps,"city": json_obj.name
+                        "id": count, 
+                        "description": json_obj.weather[0].description,
+                        "short_desc": json_obj.weather[0].main,
+                        "temp": tempConvert(json_obj.main.temp), 
+                        "temp_min":  tempConvert(json_obj.main.temp_min), 
+                        "temp_max":  tempConvert(json_obj.main.temp_max), 
+                        "humidity": json_obj.main.humidity, 
+                        "sunrise": timeConvert(json_obj.sys.sunrise),
+                        "sunset": timeConvert(json_obj.sys.sunset),
+                        "state": city.usps,
+                        "city": json_obj.name
                     }
 
                     response_arr.push(res_obj)                

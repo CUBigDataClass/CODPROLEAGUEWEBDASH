@@ -12,6 +12,8 @@
 .flightWeather{
   display: flex;
   flex-direction: row;
+  width: 100%;
+  background-color: white;
 }
 .infoContainer {
   display: flex;
@@ -55,6 +57,7 @@
 .searchAreaContainer {
   display: flex;
   justify-content: center;
+  margin: 50px;
 }
 
 .searchContainer Search:hover{
@@ -69,7 +72,10 @@
   align-items: center;
 }
 
-
+.resultClass {
+  width: 100vw;
+  background-color: white;
+}
 
 @media all and (max-width:1400px)
 {
@@ -81,6 +87,11 @@
     align-items: center;
     font-size: calc(10px + 2vmin);
     font-family: 'New Tegomin', serif;
+  }
+
+  .flightWeather {
+    display: flex;
+    flex-direction: column;
   }
 
   .searchContainer {

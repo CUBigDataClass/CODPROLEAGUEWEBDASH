@@ -39,7 +39,6 @@ const Flight = (props) => {
                     <br/>
                 </Fragment>
             )
-    
             container.push(component)
         }
 
